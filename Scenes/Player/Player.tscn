@@ -149,7 +149,7 @@ radius = 8.06226
 bg_color = Color(0.0352941, 0.0156863, 0.00784314, 0.427451)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0guox"]
-bg_color = Color(1, 0, 0, 1)
+bg_color = Color(0.391969, 0.478421, 0.97647, 1)
 
 [sub_resource type="Curve" id="Curve_h7vsg"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.71062, 0.0, 0, 0]
@@ -418,8 +418,7 @@ occluder = SubResource("OccluderPolygon2D_uky13")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vax36")
-animation = &"Dash"
-frame = 3
+animation = &"Attack"
 
 [node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("21_gooki")]
 position = Vector2(15, 5)
@@ -505,7 +504,7 @@ offset_left = -151.5
 offset_top = 63.5
 offset_right = -105.5
 offset_bottom = 76.5
-text = "Health"
+text = "Breath"
 label_settings = ExtResource("28_5mc6f")
 
 [node name="hit_particle_blood" type="GPUParticles2D" parent="."]

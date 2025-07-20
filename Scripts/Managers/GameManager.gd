@@ -1,15 +1,26 @@
 extends Node
 
-var money = 0
+var slime = 0
+var wood = 0
+var metal = 0
 
-#NOTE This class is our game manager and handles the players money and loading scenes
-#These functions can be called globally from anywhere
+func reset_metal():
+	metal = 0
+	
+func reset_slime():
+	slime = 0
+	
+func reset_wood():
+	wood = 0
 
-func reset_money():
-	money = 0
+func add_metal(addsmetal : int):
+	metal += addsmetal
 
-func add_money(addmoney : int):
-	money += addmoney
+func add_slime(addslime : int):
+	slime += addslime
+
+func add_wood(addswood : int):
+	wood += addswood
 
 func load_next_level(next_scene : PackedScene):
 	get_tree().change_scene_to_packed(next_scene)

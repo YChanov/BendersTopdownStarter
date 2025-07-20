@@ -6,7 +6,7 @@
 [node name="Score_tracker_layer" type="CanvasLayer"]
 layer = 2
 
-[node name="GameUI" type="Control" parent="." node_paths=PackedStringArray("money_label")]
+[node name="GameUI" type="Control" parent="." node_paths=PackedStringArray("slime_label", "wood_label", "metal_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,13 +14,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3k7kl")
-money_label = NodePath("MoneyLabel")
+slime_label = NodePath("SlimeLabel")
+wood_label = NodePath("WoodLabel")
+metal_label = NodePath("MetalLabel")
 
-[node name="MoneyLabel" type="Label" parent="GameUI"]
+[node name="SlimeLabel" type="Label" parent="GameUI"]
 z_index = 1
 layout_mode = 0
 offset_left = 533.0
 offset_top = 9.0
 offset_right = 573.0
 offset_bottom = 35.0
+label_settings = ExtResource("2_ygwdu")
+
+[node name="WoodLabel" type="Label" parent="GameUI"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 35.0
+offset_right = 573.0
+offset_bottom = 58.0
+label_settings = ExtResource("2_ygwdu")
+
+[node name="MetalLabel" type="Label" parent="GameUI"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 63.0
+offset_right = 573.0
+offset_bottom = 86.0
 label_settings = ExtResource("2_ygwdu")

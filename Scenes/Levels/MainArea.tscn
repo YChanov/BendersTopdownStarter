@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=9 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="Texture2D" uid="uid://c7ig1vvvpwrc" path="res://Art/Tilemap_walkable.png" id="4_24t5w"]
 [ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="5_tfohx"]
-[ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="6_s5vgf"]
 [ext_resource type="Script" path="res://Scripts/QuestGeneral/Quest.gd" id="13_clovc"]
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
@@ -24,6 +23,7 @@ texture_region_size = Vector2i(64, 64)
 7:0/0 = 0
 8:0/0 = 0
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.1818, -32, -26.1818, 32, -32, 32, -32, -32)
 1:1/0 = 0
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(26.1818, -32, 26.1818, 32, 32, 32, 32, -32)
@@ -34,8 +34,11 @@ texture_region_size = Vector2i(64, 64)
 7:1/0 = 0
 8:1/0 = 0
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.1818, -32, -26.1818, 26.1818, 32, 26.1818, 32, 32, -32, 32, -32, -32)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 26.1818, 32, 26.1818, 32, 32, -32, 32)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(26.1818, -32, 26.1818, 26.1818, -32, 26.1818, -32, 32, 32, 32, 32, -32)
 3:2/0 = 0
 4:2/0 = 0
 5:2/0 = 0
@@ -89,25 +92,11 @@ position = Vector2(-85, -117)
 
 [node name="Scene" type="Node" parent="."]
 
-[node name="Welcome Label" type="Label" parent="Scene"]
-texture_filter = 1
-offset_left = -59.0
-offset_top = -141.0
-offset_right = 209.0
-offset_bottom = -48.0
-text = "Hold your breath!
-WASD - Move
-SPACE - Dash
-
-LMB - Punch
-RMB - Spinning kick"
-label_settings = ExtResource("6_s5vgf")
-
 [node name="TileMap" type="TileMapLayer" parent="Scene"]
 z_index = -1
 texture_filter = 1
 use_parent_material = true
-tile_map_data = PackedByteArray(0, 0, 252, 255, 254, 255, 4, 0, 0, 0, 0, 0, 0, 0, 253, 255, 254, 255, 4, 0, 1, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray("AAD9//3/BAAAAAAAAAD+//3/BAABAAAAAAD///3/BAACAAAAAAD///7/BAACAAEAAAD/////BAACAAIAAAD+////BAABAAIAAAD9////BAAAAAIAAAD9//7/BAAAAAEAAAD+//7/BAABAAEAAAA=")
 tile_set = SubResource("TileSet_hrehs")
 
 [node name="Quests" type="Node" parent="Scene"]
