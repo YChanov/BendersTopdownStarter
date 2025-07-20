@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bvt7e871e6jeg"]
+[gd_scene load_steps=43 format=3 uid="uid://bvt7e871e6jeg"]
 
 [ext_resource type="Texture2D" uid="uid://d3u5e5gpffpwe" path="res://Scenes/NPC's/Enemy/Sprites/Enemy09.png" id="1_chwbu"]
 [ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/EnemyMain.gd" id="1_db41y"]
@@ -114,10 +114,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqf5a"]
 size = Vector2(27, 36.5)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_e04wa"]
-cull_mode = 2
-polygon = PackedVector2Array(3, -8, 6.5, -4, 7.5, 3.5, 4.5, 10, -1.5, 10.5, -6, 4, -4.5, -6, -1, -8.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mbmt"]
 radius = 7.0
@@ -321,7 +317,7 @@ attack_node = NodePath("FSM/enemy_attack_state")
 chase_node = NodePath("FSM/enemy_chase_state")
 sprite = NodePath("AnimatedSprite2D")
 healthbar = NodePath("ProgressBar")
-health = 75
+health = 1
 flipped_horizontal = true
 hit_particles = NodePath("HitParticles")
 
@@ -338,9 +334,6 @@ shape = SubResource("RectangleShape2D_cqf5a")
 disabled = true
 
 [node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("21_d5isq")]
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="AnimatedSprite2D"]
-occluder = SubResource("OccluderPolygon2D_e04wa")
 
 [node name="BodyCollider" type="CollisionShape2D" parent="."]
 position = Vector2(1, 3)

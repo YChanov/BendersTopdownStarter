@@ -23,6 +23,6 @@ func body_hover(delta):
 #Get picked up by our player
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
-		GameManager.add_money(value)
+		GameManager.add_slime(value)
 		AudioManager.play_sound(AudioManager.COIN_PICK, 0, -10)
 		queue_free()

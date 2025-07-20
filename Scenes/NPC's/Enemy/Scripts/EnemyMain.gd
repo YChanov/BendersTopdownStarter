@@ -6,6 +6,7 @@ var player_in_range = false
 
 @export var attack_node : Node
 @export var chase_node : Node
+@export var drop : PackedScene
 
 #After finishing an attack, we return here to determine our next action based on the players proximity
 func finished_attacking():
@@ -31,5 +32,10 @@ func _on_detection_area_body_exited(body):
 func _die():
 	super() #calls _die() on base-class CharacterBase
 	fsm.force_change_state("enemy_death_state")
+	var new_drop = drop.instantiate()
+	
+	new_drop.initial_position = position;
+	new_drop.position = position;
+	get_parent().get_parent().add_child(new_drop)
 	
 	
