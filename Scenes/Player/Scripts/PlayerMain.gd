@@ -13,7 +13,8 @@ func _process(delta: float) -> void:
 	PutTile()
 	TileHandle(delta)
 	
-var breath_time = 1
+const BREATH_INTERVAL = 0.5
+var breath_time: float = BREATH_INTERVAL
 func TileHandle(delta: float):
 	breath_time -= delta
 	if breath_time > 0:
@@ -24,7 +25,9 @@ func TileHandle(delta: float):
 	if tile_source_id != 2:
 		self._take_damage(5)
 		print('breathing')
-	breath_time = 1
+	else: 
+		self._take_damage(-5)
+	breath_time = BREATH_INTERVAL
 	
 func PutTile():
 	if Input.is_action_just_pressed("Enter") :

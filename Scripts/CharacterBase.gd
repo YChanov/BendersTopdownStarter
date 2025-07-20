@@ -51,6 +51,9 @@ func after_damage_iframes():
 	invincible = false
 	
 func _take_damage(amount):
+	if health >= healthbar.max_value && amount < 0 :
+		health = healthbar.max_value
+		return
 	health -= amount
 	healthbar.value = health;
 	#damage_effects()
