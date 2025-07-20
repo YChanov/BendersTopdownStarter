@@ -51,12 +51,9 @@ func after_damage_iframes():
 	invincible = false
 	
 func _take_damage(amount):
-	if(invincible == true || is_dead == true):
-		return
-		
 	health -= amount
 	healthbar.value = health;
-	damage_effects()
+	#damage_effects()
 	
 	if(health <= 0):
 		_die()

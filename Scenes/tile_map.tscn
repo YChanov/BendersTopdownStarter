@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=4 uid="uid://de3vla3h2em6x"]
+
+[ext_resource type="Texture2D" uid="uid://c7ig1vvvpwrc" path="res://Art/Tilemap_walkable.png" id="1_xuapk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jubbi"]
+texture = ExtResource("1_xuapk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -26.1818, -26.1818, -26.1818, -26.1818, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -26.1818, 32, -26.1818, 32, -32, -32, -32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25.5, 26.1818, -26.1818, 26.1818, 32, 32, 32, 32, -32, -32, -32)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.1818, -32, -26.1818, 32, -32, 32, -32, -32)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(26.1818, -32, 26.1818, 32, 32, 32, 32, -32)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.1818, -32, -26.1818, 26.1818, 32, 26.1818, 32, 32, -32, 32, -32, -32)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 26.1818, 32, 26.1818, 32, 32, -32, 32)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(26.1818, -32, 26.1818, 26.1818, -32, 26.1818, -32, 32, 32, 32, 32, -32)
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hrehs"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/4 = SubResource("TileSetAtlasSource_jubbi")
+
+[node name="TileMap" type="TileMapLayer"]
+z_index = -1
+texture_filter = 1
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD5//v/BAAAAAAAAAD5//z/BAAAAAEAAAD5//3/BAAAAAEAAAD5//7/BAAAAAEAAAD5////BAAAAAEAAAD5/wAABAAAAAIAAAD6/wAABAABAAIAAAD7/wAABAABAAIAAAD8/wAABAABAAIAAAD9/wAABAABAAIAAAD+/wAABAABAAIAAAD//wAABAABAAIAAAAAAAAABAABAAIAAAABAAAABAABAAIAAAACAAAABAABAAIAAAADAAAABAACAAIAAAADAP//BAACAAEAAAADAP7/BAACAAEAAAADAP3/BAACAAEAAAADAPz/BAACAAEAAAADAPv/BAACAAAAAAACAPv/BAABAAAAAAABAPv/BAABAAAAAAAAAPv/BAABAAAAAAD///v/BAABAAAAAAD8//v/BAABAAAAAAD9//v/BAABAAAAAAD+//v/BAABAAAAAAD7//v/BAABAAAAAAD6//v/BAABAAAAAAD6//z/BAAIAAQAAAD6//3/BAAGAAMAAAD6//7/BAAGAAMAAAD6////BAAGAAMAAAD7////BAAIAAQAAAD7//7/BAAIAAMAAAD7//3/BAAGAAQAAAD7//z/BAAGAAMAAAD8//z/BAAGAAMAAAD8//3/BAAIAAMAAAD8//7/BAAIAAQAAAD8////BAAGAAMAAAD9////BAAGAAMAAAD9//7/BAAGAAMAAAD9//3/BAAIAAQAAAD+//3/BAAIAAMAAAD+//7/BAAIAAMAAAD///7/BAAIAAMAAAD/////BAAIAAMAAAAAAP//BAAIAAMAAAABAPz/BAAIAAMAAAABAP7/BAAIAAQAAAACAP//BAAIAAUAAAAAAP7/BAAGAAUAAAD///z/BAAGAAUAAAD+//z/BAAGAAUAAAD9//z/BAAGAAQAAAACAP7/BAAIAAMAAAABAP3/BAAIAAMAAAD+////BAAGAAQAAAABAP//BAAGAAUAAAACAP3/BAAIAAMAAAAAAPz/BAAIAAMAAAAAAP3/BAAIAAMAAAD///3/BAABAAEAAAACAPz/BAABAAEAAAA=")
+tile_set = SubResource("TileSet_hrehs")
