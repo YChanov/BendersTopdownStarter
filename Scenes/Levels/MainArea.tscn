@@ -178,7 +178,7 @@ quest_objective = Array[String](["Expore the corridoors", "Find a way past the e
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Scene"]
 stream = ExtResource("14_ph0ns")
-volume_db = -1.0
+volume_db = -10.0
 autoplay = true
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]

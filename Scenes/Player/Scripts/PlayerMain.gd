@@ -32,14 +32,29 @@ func PutTile():
 		if !slime_amount:
 			return
 			
-		var tile_map_layer = 0
 		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMap")
-		var tile_map_cell_position = Vector2i(4,4)
 		var current_position = tile_map.local_to_map(position)
+		if tile_map.get_cell_source_id(current_position) == BREATHABLE_SOURCE_ID:
+			return
+			
+		if !NextToBreathable(tile_map, current_position) :
+			return
 		var tile_at_position = tile_map.get_cell_atlas_coords(current_position)
 		tile_map.set_cell(current_position, BREATHABLE_SOURCE_ID, tile_at_position)
 		GameManager.add_slime(-1)
 	return
+	
+func NextToBreathable(tile_map: TileMapLayer, current_position: Vector2i):
+	if tile_map.get_cell_source_id(Vector2i(current_position.x - 1, current_position.y)) == BREATHABLE_SOURCE_ID:
+		return true
+	if tile_map.get_cell_source_id(Vector2i(current_position.x, current_position.y - 1)) == BREATHABLE_SOURCE_ID:
+		return true
+	if tile_map.get_cell_source_id(Vector2i(current_position.x + 1, current_position.y)) == BREATHABLE_SOURCE_ID:
+		return true
+	if tile_map.get_cell_source_id(Vector2i(current_position.x, current_position.y + 1)) == BREATHABLE_SOURCE_ID:
+		return true
+	
+	return false
 	
 func _die():
 	super() #calls _die() on base-class CharacterBase
