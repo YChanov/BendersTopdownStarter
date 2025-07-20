@@ -14,7 +14,7 @@ func _ready():
 	
 func _process(_delta):
 	Turn()
-	
+
 #Add anything here that needs to be initialized on the character
 func init_character():
 	healthbar.max_value = health

@@ -17,6 +17,7 @@ var starting_players = 3
 func _ready() -> void:
 	initiate_audio_stream()
 	
+	
 #Play a sound, call this function from anywhere
 #offset lets you start the sound with an offset, like starting the sound at 0.1s into the clip
 #Arguments(audio_clip, offset, volume)
