@@ -319,6 +319,8 @@ position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
 position = Vector2(-85, -117)
+enemy_scene = null
+flipped_horizontal = null
 
 [node name="NPCs" type="Node" parent="."]
 
