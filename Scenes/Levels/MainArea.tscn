@@ -1,12 +1,13 @@
-[gd_scene load_steps=15 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=16 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
+[ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
 [ext_resource type="Texture2D" uid="uid://c7ig1vvvpwrc" path="res://Art/Tilemap_walkable.png" id="4_24t5w"]
 [ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="5_tfohx"]
 [ext_resource type="Texture2D" uid="uid://dsiehw85wvcqv" path="res://Art/TileMap_breathable.png" id="6_626gg"]
 [ext_resource type="PackedScene" uid="uid://bvt7e871e6jeg" path="res://Scenes/NPC's/Enemy/Enemy.tscn" id="7_c7mvt"]
 [ext_resource type="Texture2D" uid="uid://djl41usgvkywy" path="res://Art/Tilemap_trigger_enemy.png" id="7_ghvul"]
-[ext_resource type="PackedScene" uid="uid://bblpsy4fvi76f" path="res://Scenes/Interactables/Coin.tscn" id="8_7gphn"]
+[ext_resource type="PackedScene" uid="uid://5feffxp2v7c4" path="res://Scenes/plant.tscn" id="10_05nn6"]
 [ext_resource type="Script" path="res://Scripts/QuestGeneral/Quest.gd" id="13_clovc"]
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
@@ -319,12 +320,10 @@ position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
 position = Vector2(-85, -117)
+enemy_scene = ExtResource("7_c7mvt")
+flipped_horizontal = false
 
 [node name="NPCs" type="Node" parent="."]
-
-[node name="Enemy" parent="NPCs" instance=ExtResource("7_c7mvt")]
-position = Vector2(145, -128)
-drop = ExtResource("8_7gphn")
 
 [node name="Pickups" type="Node" parent="."]
 
@@ -332,11 +331,14 @@ drop = ExtResource("8_7gphn")
 
 [node name="Scene" type="Node" parent="."]
 
+[node name="FactoryRoad" parent="Scene" instance=ExtResource("3_10ytb")]
+position = Vector2(-30, -186)
+
 [node name="TileMap" type="TileMapLayer" parent="Scene"]
 z_index = -1
 texture_filter = 1
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD///3/AQABAAEAAAD9////AQABAAEAAAD9//7/AwABAAEAAAD+//3/AgABAAEAAAD///7/AQABAAEAAAD+////AQABAAEAAAD5//v/AQAAAAAAAAD5/wEAAQAAAAIAAAAEAAEAAQACAAIAAAAEAPv/AQACAAAAAAADAPv/AQABAAAAAAACAPv/AQABAAAAAAABAPv/AQABAAAAAAAAAPv/AQABAAAAAAD///v/AQABAAAAAAD+//v/AQABAAAAAAD9//v/AQABAAAAAAD8//v/AQABAAAAAAD7//v/AQABAAAAAAD6//v/AQABAAAAAAD5//z/AQAAAAEAAAD5//3/AQAAAAEAAAD5//7/AQAAAAEAAAD5////AQAAAAEAAAD5/wAAAQAAAAEAAAD6/wEAAQABAAIAAAD7/wEAAQABAAIAAAD8/wEAAQABAAIAAAD9/wEAAQABAAIAAAD+/wEAAQABAAIAAAD//wEAAQABAAIAAAAAAAEAAQABAAIAAAABAAEAAQABAAIAAAACAAEAAQABAAIAAAADAAEAAQABAAIAAAAEAPz/AQACAAEAAAAEAP3/AQACAAEAAAAEAP7/AQACAAEAAAAEAP//AQACAAEAAAAEAAAAAQACAAEAAAD6//z/AQABAAEAAAD6//3/AQABAAEAAAD6//7/AQABAAEAAAD6/wAAAQABAAEAAAD7//z/AQABAAEAAAD7//3/AQABAAEAAAD7/wAAAQABAAEAAAD8//z/AQABAAEAAAD8//3/AQABAAEAAAD8//7/AQABAAEAAAD8/wAAAQABAAEAAAD9//z/AQABAAEAAAD9/wAAAQABAAEAAAD+//z/AQABAAEAAAD+/wAAAQABAAEAAAD///z/AQABAAEAAAAAAPz/AQABAAEAAAAAAP3/AQABAAEAAAAAAP7/AQABAAEAAAABAPz/AQABAAEAAAABAP3/AQABAAEAAAABAP7/AQABAAEAAAABAP//AQABAAEAAAABAAAAAQABAAEAAAACAPz/AQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAADAPz/AQABAAEAAAADAP3/AQABAAEAAAADAP7/AQABAAEAAAADAP//AQABAAEAAAADAAAAAQABAAEAAAACAP7/AQABAAEAAAACAP3/AQABAAEAAAD9//3/AgABAAEAAAD+//7/AgABAAEAAAD//wAAAQABAAEAAAAAAP//AQABAAEAAAAAAAAAAQABAAEAAAD/////AQABAAEAAAD6////AQABAAEAAAD7////AQABAAEAAAD8////AQABAAEAAAD7//7/AQABAAEAAAA=")
+tile_map_data = PackedByteArray("AAD///3/AgABAAEAAAD9////AQABAAEAAAD9//7/AgABAAEAAAD+//3/AgABAAEAAAD///7/AgABAAEAAAD+////AQABAAEAAAD5//v/AQAAAAAAAAD5/wEAAQAAAAIAAAAEAAEAAQACAAIAAAAEAPv/AQACAAAAAAADAPv/AQABAAAAAAACAPv/AQABAAAAAAABAPv/AQABAAAAAAAAAPv/AQABAAAAAAD///v/AQABAAAAAAD+//v/AQABAAAAAAD9//v/AQABAAAAAAD8//v/AQABAAAAAAD7//v/AQABAAAAAAD6//v/AQABAAAAAAD5//z/AQAAAAEAAAD5//3/AQAAAAEAAAD5//7/AQAAAAEAAAD5////AQAAAAEAAAD5/wAAAQAAAAEAAAD6/wEAAQABAAIAAAD7/wEAAQABAAIAAAD8/wEAAQABAAIAAAD9/wEAAQABAAIAAAD+/wEAAQABAAIAAAD//wEAAQABAAIAAAAAAAEAAQABAAIAAAABAAEAAQABAAIAAAACAAEAAQABAAIAAAADAAEAAQABAAIAAAAEAPz/AQACAAEAAAAEAP3/AQACAAEAAAAEAP7/AQACAAEAAAAEAP//AQACAAEAAAAEAAAAAQACAAEAAAD6//z/AQAGAAQAAAD6//3/AQAGAAQAAAD6//7/AQABAAEAAAD6/wAAAQABAAEAAAD7//z/AQAGAAQAAAD7//3/AQAGAAQAAAD7/wAAAQABAAEAAAD8//z/AQAGAAQAAAD8//7/AQAGAAQAAAD8/wAAAQABAAEAAAD9//z/AQABAAEAAAD9/wAAAQABAAEAAAD+//z/AQABAAEAAAD+/wAAAQABAAEAAAD///z/AQABAAEAAAAAAPz/AQABAAEAAAAAAP3/AQABAAEAAAAAAP7/AQABAAEAAAABAPz/AQABAAEAAAABAP3/AQABAAEAAAABAP7/AQABAAEAAAABAP//AQABAAEAAAABAAAAAQABAAEAAAACAPz/AQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAADAPz/AQABAAEAAAADAP3/AQABAAEAAAADAP7/AQABAAEAAAADAP//AQABAAEAAAADAAAAAQABAAEAAAACAP7/AQABAAEAAAACAP3/AQABAAEAAAD9//3/AgABAAEAAAD+//7/AgABAAEAAAD//wAAAQABAAEAAAAAAP//AQABAAEAAAAAAAAAAQABAAEAAAD/////AQABAAEAAAD6////AQABAAEAAAD7////AQABAAEAAAD8////AQABAAEAAAD7//7/AQAGAAQAAAD8//3/AQAGAAQAAAA=")
 tile_set = SubResource("TileSet_hrehs")
 
 [node name="Quests" type="Node" parent="Scene"]
@@ -351,6 +353,9 @@ quest_objective = Array[String](["Expore the corridoors", "Find a way past the e
 stream = ExtResource("14_ph0ns")
 volume_db = -10.0
 autoplay = true
+
+[node name="Node2D" parent="Scene" instance=ExtResource("10_05nn6")]
+position = Vector2(-376, -215)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 

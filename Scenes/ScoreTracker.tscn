@@ -6,7 +6,7 @@
 [node name="Score_tracker_layer" type="CanvasLayer"]
 layer = 2
 
-[node name="GameUI" type="Control" parent="." node_paths=PackedStringArray("slime_label", "wood_label", "metal_label")]
+[node name="GameUI" type="Control" parent="." node_paths=PackedStringArray("slime_label", "wood_label", "metal_label", "road_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,7 @@ script = ExtResource("1_3k7kl")
 slime_label = NodePath("SlimeLabel")
 wood_label = NodePath("WoodLabel")
 metal_label = NodePath("MetalLabel")
+road_label = NodePath("RoadLabel")
 
 [node name="SlimeLabel" type="Label" parent="GameUI"]
 z_index = 1
@@ -41,4 +42,12 @@ offset_left = 533.0
 offset_top = 63.0
 offset_right = 573.0
 offset_bottom = 86.0
+label_settings = ExtResource("2_ygwdu")
+
+[node name="RoadLabel" type="Label" parent="GameUI"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 89.0
+offset_right = 573.0
+offset_bottom = 115.0
 label_settings = ExtResource("2_ygwdu")

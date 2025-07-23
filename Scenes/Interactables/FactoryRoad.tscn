@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwqrat3bud8ij"]
+
+[ext_resource type="Texture2D" uid="uid://b3umak7h21wu7" path="res://Art/factory_road.webp" id="1_e6xcn"]
+[ext_resource type="Script" path="res://Scripts/factory_road.gd" id="1_maivq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmc4h"]
+radius = 69.2604
+
+[node name="FactoryRoad" type="StaticBody2D"]
+script = ExtResource("1_maivq")
+
+[node name="FactoryRoad" type="Sprite2D" parent="."]
+texture = ExtResource("1_e6xcn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_fmc4h")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+y_sort_enabled = true
+polygon = PackedVector2Array(-26, -18, -14, -28, 25, -20, 26, 16, 9, 27, -27, 15)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

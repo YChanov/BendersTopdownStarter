@@ -1,8 +1,9 @@
 extends Node
 
-var slime = 0
-var wood = 0
-var metal = 0
+var slime = 5
+var wood = 5
+var metal = 5
+var road = 0
 
 func reset_metal():
 	metal = 0
@@ -21,6 +22,9 @@ func add_slime(addslime : int):
 
 func add_wood(addswood : int):
 	wood += addswood
+	
+func add_road(addroad : int):
+	road += addroad
 
 func load_next_level(next_scene : PackedScene):
 	get_tree().change_scene_to_packed(next_scene)

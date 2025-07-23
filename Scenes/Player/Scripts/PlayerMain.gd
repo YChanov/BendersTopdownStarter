@@ -8,20 +8,36 @@ class_name PlayerMain
 
 const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
 const BREATHABLE_SOURCE_ID = 2
+@onready var tile_overlay: Node2D = $TileOverlay
 
 var triggered_tiles := {}
-
+var toggleRoadPlacement : bool = false
+var last_direction : Vector2 = Vector2(1, 0)
 #All of our logic is either in the CharacterBase class
 #or spread out over our states in the finite-state-manager, this class is almost empty 
 
 func _process(delta: float) -> void:
 	super._process(delta)
-	PutTile()
+	var input_dir = Input.get_vector("MoveLeft", "MoveRight", "MoveUp", "MoveDown")
+	if input_dir != Vector2.ZERO && (abs(input_dir.x + input_dir.y) == 1) :
+		last_direction = input_dir
+		
+	RoadOverlay()
+	toggleRoadPlacement && PutRoad()
 	TileHandle(delta)
 	EnemySpawnHandle(delta)
 	
 const BREATH_INTERVAL = 0.5
 var breath_time: float = BREATH_INTERVAL
+
+func RoadOverlay() :
+	if Input.is_action_just_pressed("Restart") :
+		toggleRoadPlacement = !toggleRoadPlacement
+		
+	tile_overlay.visible = toggleRoadPlacement
+	if !toggleRoadPlacement :
+		return
+		
 func TileHandle(delta: float):
 	breath_time -= delta
 	if breath_time > 0:
@@ -30,20 +46,16 @@ func TileHandle(delta: float):
 	var current_position = tile_map.local_to_map(position)
 	var tile_source_id = tile_map.get_cell_source_id(current_position)
 		
-	  
 	if tile_source_id != 2:
 		self._take_damage(5)
 	else: 
 		self._take_damage(-5)
 	breath_time = BREATH_INTERVAL
 	
-	
-
-	
-func PutTile():
+func PutRoad():
 	if Input.is_action_just_pressed("Enter") :
-		var slime_amount = GameManager.slime
-		if !slime_amount:
+		var road_amount = GameManager.road
+		if !road_amount:
 			return
 			
 		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMap")
@@ -76,8 +88,6 @@ func _die():
 	fsm.force_change_state("Die")
 	var death_scene = DEATH_SCREEN.instantiate()
 	add_child(death_scene)
-	
-	
 	
 func EnemySpawnHandle(delta: float):
 	var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMap")
