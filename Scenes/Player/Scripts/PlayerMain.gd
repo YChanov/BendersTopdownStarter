@@ -33,7 +33,6 @@ func TileHandle(delta: float):
 	  
 	if tile_source_id != 2:
 		self._take_damage(5)
-		print('breathing')
 	else: 
 		self._take_damage(-5)
 	breath_time = BREATH_INTERVAL
