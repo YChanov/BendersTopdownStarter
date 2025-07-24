@@ -4,7 +4,14 @@ var slime = 5
 var wood = 5
 var metal = 5
 var road = 0
+var movement_speed = 1
 
+func set_movement_speed(setmovement_speed : int) :
+	movement_speed = setmovement_speed
+	
+func reset_movement_speed():
+	movement_speed = 1
+	
 func reset_metal():
 	metal = 0
 	

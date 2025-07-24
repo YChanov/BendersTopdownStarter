@@ -8,6 +8,8 @@ class_name PlayerMain
 
 const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
 const BREATHABLE_SOURCE_ID = 2
+const ROADS_SOURCE_ID = 4
+
 @onready var tile_overlay: Node2D = $TileOverlay
 
 var triggered_tiles := {}
@@ -29,22 +31,34 @@ func _process(delta: float) -> void:
 	
 const BREATH_INTERVAL = 0.5
 var breath_time: float = BREATH_INTERVAL
+var target_position : Vector2i = Vector2i.ZERO
 
 func RoadOverlay() :
+	if GameManager.road <= 0:
+		tile_overlay.visible = false
+		toggleRoadPlacement = false
+		return
+		
 	if Input.is_action_just_pressed("Restart") :
 		toggleRoadPlacement = !toggleRoadPlacement
 		
-	tile_overlay.visible = toggleRoadPlacement
 	if !toggleRoadPlacement :
+		tile_overlay.visible = false
 		return
-		
+	var tile_map = getParentTileMap()
+	var current_position = tile_map.local_to_map(position)
+	target_position = Vector2i(current_position.x + last_direction.x, current_position.y + last_direction.y)
+	var tile_source_id = tile_map.get_cell_source_id(target_position)
+	tile_overlay.visible = true if tile_source_id != -1 else false
+	var real_target_position = tile_map.map_to_local(target_position)
+	tile_overlay.global_position = real_target_position
+	
+	
 func TileHandle(delta: float):
 	breath_time -= delta
 	if breath_time > 0:
 		return
-	var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMap")
-	var current_position = tile_map.local_to_map(position)
-	var tile_source_id = tile_map.get_cell_source_id(current_position)
+	var tile_source_id = GetCurrentTileSourceId()
 		
 	if tile_source_id != 2:
 		self._take_damage(5)
@@ -52,22 +66,32 @@ func TileHandle(delta: float):
 		self._take_damage(-5)
 	breath_time = BREATH_INTERVAL
 	
+	if GetCurrentTileSourceId(true) == 4 :
+		GameManager.set_movement_speed(2)
+	else :
+		GameManager.reset_movement_speed()
+	
+func GetCurrentTileSourceId(is_road : bool = false):
+	var tile_map = getParentTileMap(is_road)
+	var current_position = tile_map.local_to_map(position)
+	var tile_source_id = tile_map.get_cell_source_id(current_position)
+	return tile_source_id
+
+func getParentTileMap(is_road : bool = false) -> TileMapLayer :
+	return get_parent().get_node("Scene/TileMap" if !is_road else "Scene/TileMapRoads")
+	
 func PutRoad():
 	if Input.is_action_just_pressed("Enter") :
 		var road_amount = GameManager.road
 		if !road_amount:
 			return
 			
-		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMap")
-		var current_position = tile_map.local_to_map(position)
-		if tile_map.get_cell_source_id(current_position) == BREATHABLE_SOURCE_ID:
+		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMapRoads")
+		if tile_map.get_cell_source_id(target_position) == ROADS_SOURCE_ID:
 			return
 			
-		if !NextToBreathable(tile_map, current_position) :
-			return
-		var tile_at_position = tile_map.get_cell_atlas_coords(current_position)
-		tile_map.set_cell(current_position, BREATHABLE_SOURCE_ID, tile_at_position)
-		GameManager.add_slime(-1)
+		tile_map.set_cell(target_position, ROADS_SOURCE_ID, Vector2i(0,0))
+		GameManager.add_road(-1)
 	return
 	
 func NextToBreathable(tile_map: TileMapLayer, current_position: Vector2i):

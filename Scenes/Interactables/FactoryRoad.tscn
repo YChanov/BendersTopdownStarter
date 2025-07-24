@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwqrat3bud8ij"]
+[gd_scene load_steps=6 format=3 uid="uid://dwqrat3bud8ij"]
 
 [ext_resource type="Texture2D" uid="uid://b3umak7h21wu7" path="res://Art/factory_road.webp" id="1_e6xcn"]
 [ext_resource type="Script" path="res://Scripts/factory_road.gd" id="1_maivq"]
+[ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_up0lg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fmc4h"]
 radius = 69.2604
+
+[sub_resource type="LabelSettings" id="LabelSettings_3mefe"]
+font = ExtResource("3_up0lg")
+font_size = 28
 
 [node name="FactoryRoad" type="StaticBody2D"]
 script = ExtResource("1_maivq")
@@ -20,6 +25,16 @@ shape = SubResource("CircleShape2D_fmc4h")
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 y_sort_enabled = true
 polygon = PackedVector2Array(-26, -18, -14, -28, 25, -20, 26, 16, 9, 27, -27, 15)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -48.0
+offset_top = -84.0
+offset_right = 58.0
+offset_bottom = -35.0
+text = "Press 'E' to 
+build Roads"
+label_settings = SubResource("LabelSettings_3mefe")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

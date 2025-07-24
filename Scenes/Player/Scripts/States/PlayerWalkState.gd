@@ -1,8 +1,8 @@
 extends State
 class_name PlayerWalking
 
-@export var movespeed := int(350)
-@export var dash_max := int(500)
+@export var movespeed := int(360)
+@export var dash_max := int(600)
 var dashspeed := float(100)
 var can_dash := bool(false)
 var dash_direction := Vector2(0,0)
@@ -31,7 +31,7 @@ func Move(input_dir : Vector2):
 		dash_direction = Vector2.ZERO
 		dashspeed = 0
 
-	player.velocity = input_dir * movespeed + dash_direction * dashspeed 
+	player.velocity = (input_dir * movespeed + dash_direction * dashspeed) * GameManager.movement_speed
 	player.move_and_slide()
 
 	if(input_dir.length() <= 0):
