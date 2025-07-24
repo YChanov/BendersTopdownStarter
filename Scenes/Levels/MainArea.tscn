@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=18 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
 [ext_resource type="Texture2D" uid="uid://c7ig1vvvpwrc" path="res://Art/Tilemap_walkable.png" id="4_24t5w"]
+[ext_resource type="PackedScene" uid="uid://cgxgtdpi38vj1" path="res://Scenes/Interactables/teleporter.tscn" id="4_d0f03"]
 [ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="5_tfohx"]
 [ext_resource type="Texture2D" uid="uid://dsiehw85wvcqv" path="res://Art/TileMap_breathable.png" id="6_626gg"]
 [ext_resource type="Texture2D" uid="uid://b840uuad61lof" path="res://Art/TileMap_roads.png" id="7_7dkb0"]
@@ -340,23 +341,35 @@ sources/3 = SubResource("TileSetAtlasSource_uqgck")
 sources/4 = SubResource("TileSetAtlasSource_x6wtt")
 
 [node name="Scene_Root" type="Node2D"]
+modulate = Color(0, 0, 0, 1)
+z_as_relative = false
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(-85, -117)
 
-[node name="NPCs" type="Node" parent="."]
+[node name="Interactables" type="Node" parent="."]
+
+[node name="Tree" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(-207, 1)
+
+[node name="FactoryRoad" parent="Interactables" instance=ExtResource("3_10ytb")]
+position = Vector2(-30, -186)
+
+[node name="Teleporter" parent="Interactables" instance=ExtResource("4_d0f03")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-389, -83)
 
 [node name="Pickups" type="Node" parent="."]
 
 [node name="SceneSettings" parent="." instance=ExtResource("5_tfohx")]
 
 [node name="Scene" type="Node" parent="."]
-
-[node name="FactoryRoad" parent="Scene" instance=ExtResource("3_10ytb")]
-position = Vector2(-30, -186)
 
 [node name="TileMap" type="TileMapLayer" parent="Scene"]
 z_index = -1
@@ -385,9 +398,6 @@ quest_objective = Array[String](["Expore the corridoors", "Find a way past the e
 stream = ExtResource("14_ph0ns")
 volume_db = -10.0
 autoplay = true
-
-[node name="Tree" parent="Scene" instance=ExtResource("10_jj3sk")]
-position = Vector2(-207, 1)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 

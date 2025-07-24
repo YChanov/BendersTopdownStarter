@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgxgtdpi38vj1"]
+
+[ext_resource type="Texture2D" uid="uid://d01snk1wtk05e" path="res://Art/teleporter_activated.png" id="1_2cdjx"]
+[ext_resource type="Script" path="res://Scripts/teleporter.gd" id="1_j3lae"]
+[ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_ngrej"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h1s7d"]
+radius = 38.6394
+
+[sub_resource type="LabelSettings" id="LabelSettings_i1bvo"]
+font = ExtResource("3_ngrej")
+font_size = 32
+
+[node name="Teleporter" type="Node2D"]
+script = ExtResource("1_j3lae")
+
+[node name="TeleporterActivated" type="Sprite2D" parent="."]
+scale = Vector2(0.253886, 0.253886)
+texture = ExtResource("1_2cdjx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_h1s7d")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -74.0
+offset_top = -78.0
+offset_right = 95.0
+offset_bottom = -39.0
+text = "Press 'E' to teleport"
+label_settings = SubResource("LabelSettings_i1bvo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

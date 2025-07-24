@@ -412,7 +412,7 @@ hit_particles = NodePath("hit_particle_blood")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_vax36")
-animation = &"Idle"
+animation = &"Attack"
 
 [node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("21_gooki")]
 position = Vector2(15, 5)

@@ -9,7 +9,7 @@ radius = 69.2604
 
 [sub_resource type="LabelSettings" id="LabelSettings_3mefe"]
 font = ExtResource("3_up0lg")
-font_size = 28
+font_size = 32
 
 [node name="FactoryRoad" type="StaticBody2D"]
 script = ExtResource("1_maivq")
@@ -27,10 +27,10 @@ y_sort_enabled = true
 polygon = PackedVector2Array(-26, -18, -14, -28, 25, -20, 26, 16, 9, 27, -27, 15)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -48.0
-offset_top = -84.0
-offset_right = 58.0
-offset_bottom = -35.0
+offset_left = -49.0
+offset_top = -89.0
+offset_right = 57.0
+offset_bottom = -34.0
 text = "Press 'E' to 
 build Roads"
 label_settings = SubResource("LabelSettings_3mefe")
