@@ -17,7 +17,12 @@ var toggleRoadPlacement : bool = false
 var last_direction : Vector2 = Vector2(1, 0)
 #All of our logic is either in the CharacterBase class
 #or spread out over our states in the finite-state-manager, this class is almost empty 
-
+func _ready() -> void:
+	super._ready()
+	if GameManager.t_group :
+		var tele = get_tree().get_first_node_in_group(GameManager.t_group)
+		position = tele.position if tele else position
+	
 func _process(delta: float) -> void:
 	super._process(delta)
 	var input_dir = Input.get_vector("MoveLeft", "MoveRight", "MoveUp", "MoveDown")

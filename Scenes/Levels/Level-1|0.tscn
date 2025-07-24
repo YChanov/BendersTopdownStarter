@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=4 uid="uid://dei3j88yw6omf"]
+
+[ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_jvxyw"]
+[ext_resource type="PackedScene" uid="uid://bvt7e871e6jeg" path="res://Scenes/NPC's/Enemy/Enemy.tscn" id="2_s6u5f"]
+[ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="3_jnlbo"]
+[ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="4_vcowo"]
+[ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="5_obe7n"]
+[ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="6_0ive6"]
+[ext_resource type="PackedScene" uid="uid://cgxgtdpi38vj1" path="res://Scenes/Interactables/teleporter.tscn" id="7_kiv27"]
+[ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="9_ig42x"]
+
+[node name="Scene_Root" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+texture_filter = 1
+
+[node name="Player" parent="." instance=ExtResource("1_jvxyw")]
+y_sort_enabled = true
+position = Vector2(-720, -106)
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Enemy" parent="NPCs" instance=ExtResource("2_s6u5f")]
+position = Vector2(67, 71)
+
+[node name="Enemy2" parent="NPCs" instance=ExtResource("2_s6u5f")]
+position = Vector2(-171, 71)
+
+[node name="Pickups" type="Node" parent="."]
+
+[node name="SceneSettings" parent="." instance=ExtResource("3_jnlbo")]
+
+[node name="Scene" type="Node" parent="."]
+
+[node name="Welcome Label" type="Label" parent="Scene"]
+texture_filter = 1
+offset_left = -59.0
+offset_top = -141.0
+offset_right = 209.0
+offset_bottom = -48.0
+text = "Welcome to the top-down project!
+WASD - Move
+SPACE - Dash
+
+LMB - Punch
+RMB - Spinning kick"
+label_settings = ExtResource("4_vcowo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Scene"]
+stream = ExtResource("5_obe7n")
+volume_db = -1.0
+autoplay = true
+
+[node name="TileMap" type="TileMapLayer" parent="Scene"]
+z_index = -1
+tile_map_data = PackedByteArray("AAD6//z/AQAAAAAAAAADAPz/AQACAAAAAAADAAMAAQACAAIAAAD6/wMAAQAAAAIAAAD6//3/AQAAAAEAAAD6//7/AQAAAAEAAAD6////AQAAAAEAAAD6/wAAAQAAAAEAAAD6/wEAAQAAAAEAAAD6/wIAAQAAAAEAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD+//z/AQABAAAAAAD///z/AQABAAAAAAAAAPz/AQABAAAAAAABAPz/AQABAAAAAAACAPz/AQABAAAAAAADAP3/AQACAAEAAAADAP7/AQACAAEAAAADAP//AQACAAEAAAADAAAAAQACAAEAAAADAAEAAQACAAEAAAADAAIAAQACAAEAAAD7/wMAAQABAAIAAAD8/wMAAQABAAIAAAD9/wMAAQABAAIAAAD+/wMAAQABAAIAAAD//wMAAQABAAIAAAAAAAMAAQABAAIAAAABAAMAAQABAAIAAAACAAMAAQABAAIAAAD7//3/AQAHAAEAAAD7//7/AQAHAAEAAAD7////AQAHAAEAAAD7/wAAAQAHAAEAAAD7/wEAAQAHAAEAAAD7/wIAAQAHAAEAAAD8//3/AQAHAAEAAAD8//7/AQAHAAEAAAD8////AQAHAAEAAAD8/wAAAQAHAAEAAAD8/wEAAQAHAAEAAAD8/wIAAQAHAAEAAAD9//3/AQAHAAEAAAD9//7/AQAHAAEAAAD9////AQAHAAEAAAD9/wAAAQAHAAEAAAD9/wEAAQAHAAEAAAD9/wIAAQAHAAEAAAD+//3/AQAHAAEAAAD+//7/AQAHAAEAAAD+////AQAHAAEAAAD+/wAAAQAHAAEAAAD+/wEAAQAHAAEAAAD+/wIAAQAHAAEAAAD///3/AQAHAAEAAAD///7/AQAHAAEAAAD/////AQAHAAEAAAD//wAAAQAHAAEAAAD//wEAAQAHAAEAAAD//wIAAQAHAAEAAAAAAP3/AQAHAAEAAAAAAP7/AQAHAAEAAAAAAP//AQAHAAEAAAAAAAAAAQAHAAEAAAAAAAEAAQAHAAEAAAAAAAIAAQAHAAEAAAABAP3/AQAHAAEAAAABAP7/AQAHAAEAAAABAP//AQAHAAEAAAABAAAAAQAHAAEAAAABAAEAAQAHAAEAAAABAAIAAQAHAAEAAAACAP3/AQAHAAEAAAACAP7/AQAHAAEAAAACAP//AQAHAAEAAAACAAAAAQAHAAEAAAACAAEAAQAHAAEAAAACAAIAAQAHAAEAAAA=")
+tile_set = ExtResource("6_0ive6")
+
+[node name="TileMapRoads" type="TileMapLayer" parent="Scene"]
+z_index = -1
+z_as_relative = false
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD6//z/AQAAAAAAAAADAPz/AQACAAAAAAADAAMAAQACAAIAAAD6/wMAAQAAAAIAAAD6//3/AQAAAAEAAAD6//7/AQAAAAEAAAD6////AQAAAAEAAAD6/wAAAQAAAAEAAAD6/wEAAQAAAAEAAAD6/wIAAQAAAAEAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD+//z/AQABAAAAAAD///z/AQABAAAAAAAAAPz/AQABAAAAAAABAPz/AQABAAAAAAACAPz/AQABAAAAAAADAP3/AQACAAEAAAADAP7/AQACAAEAAAADAP//AQACAAEAAAADAAAAAQACAAEAAAADAAEAAQACAAEAAAADAAIAAQACAAEAAAD7/wMAAQABAAIAAAD8/wMAAQABAAIAAAD9/wMAAQABAAIAAAD+/wMAAQABAAIAAAD//wMAAQABAAIAAAAAAAMAAQABAAIAAAABAAMAAQABAAIAAAACAAMAAQABAAIAAAD7//3/AQAHAAEAAAD7//7/AQAHAAEAAAD7////AQAHAAEAAAD7/wAAAQAHAAEAAAD7/wEAAQAHAAEAAAD7/wIAAQAHAAEAAAD8//3/AQAHAAEAAAD8//7/AQAHAAEAAAD8////AQAHAAEAAAD8/wAAAQAHAAEAAAD8/wEAAQAHAAEAAAD8/wIAAQAHAAEAAAD9//3/AQAHAAEAAAD9//7/AQAHAAEAAAD9////AQAHAAEAAAD9/wAAAQAHAAEAAAD9/wEAAQAHAAEAAAD9/wIAAQAHAAEAAAD+//3/AQAHAAEAAAD+//7/AQAHAAEAAAD+////AQAHAAEAAAD+/wAAAQAHAAEAAAD+/wEAAQAHAAEAAAD+/wIAAQAHAAEAAAD///3/AQAHAAEAAAD///7/AQAHAAEAAAD/////AQAHAAEAAAD//wAAAQAHAAEAAAD//wEAAQAHAAEAAAD//wIAAQAHAAEAAAAAAP3/AQAHAAEAAAAAAP7/AQAHAAEAAAAAAP//AQAHAAEAAAAAAAAAAQAHAAEAAAAAAAEAAQAHAAEAAAAAAAIAAQAHAAEAAAABAP3/AQAHAAEAAAABAP7/AQAHAAEAAAABAP//AQAHAAEAAAABAAAAAQAHAAEAAAABAAEAAQAHAAEAAAABAAIAAQAHAAEAAAACAP3/AQAHAAEAAAACAP7/AQAHAAEAAAACAP//AQAHAAEAAAACAAAAAQAHAAEAAAACAAEAAQAHAAEAAAACAAIAAQAHAAEAAAA=")
+tile_set = ExtResource("6_0ive6")
+
+[node name="Teleporter" parent="Scene" groups=["T1"] instance=ExtResource("7_kiv27")]
+z_index = -1
+position = Vector2(159, -170)
+target_level = "res://Scenes/Levels/MainArea.tscn"
+
+[node name="Score_UI" parent="." instance=ExtResource("9_ig42x")]
