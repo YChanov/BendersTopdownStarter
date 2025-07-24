@@ -27,7 +27,6 @@ y_sort_enabled = true
 polygon = PackedVector2Array(-26, -18, -14, -28, 25, -20, 26, 16, 9, 27, -27, 15)
 
 [node name="Label" type="Label" parent="."]
-visible = false
 offset_left = -48.0
 offset_top = -84.0
 offset_right = 58.0

@@ -29,6 +29,6 @@ func _on_hitbox_body_entered(body):
 		deal_damage(body)
 		AudioManager.play_sound(AudioManager.PLAYER_ATTACK_HIT, 0, 1)
 
-func deal_damage(enemy : EnemyMain):
+func deal_damage(enemy):
 	hit_particles.emitting = true
 	enemy._take_damage(current_attack.damage)

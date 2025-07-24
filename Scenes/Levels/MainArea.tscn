@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=17 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dsiehw85wvcqv" path="res://Art/TileMap_breathable.png" id="6_626gg"]
 [ext_resource type="Texture2D" uid="uid://b840uuad61lof" path="res://Art/TileMap_roads.png" id="7_7dkb0"]
 [ext_resource type="Texture2D" uid="uid://djl41usgvkywy" path="res://Art/Tilemap_trigger_enemy.png" id="7_ghvul"]
+[ext_resource type="PackedScene" uid="uid://bvo8oinf2kxiy" path="res://Scenes/Interactables/tree.tscn" id="10_jj3sk"]
 [ext_resource type="Script" path="res://Scripts/QuestGeneral/Quest.gd" id="13_clovc"]
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
@@ -384,6 +385,9 @@ quest_objective = Array[String](["Expore the corridoors", "Find a way past the e
 stream = ExtResource("14_ph0ns")
 volume_db = -10.0
 autoplay = true
+
+[node name="Tree" parent="Scene" instance=ExtResource("10_jj3sk")]
+position = Vector2(-207, 1)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 
