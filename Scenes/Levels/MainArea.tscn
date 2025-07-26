@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=18 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -12,10 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cjru7rre3bmkf" path="res://Scenes/Obstacles/BlueRockTall.tscn" id="12_5ueu3"]
 [ext_resource type="PackedScene" uid="uid://dgjsmqtohmt2n" path="res://Scenes/Obstacles/BlueRockCluster.tscn" id="13_mfuaq"]
 [ext_resource type="PackedScene" uid="uid://cppgyp05djber" path="res://Scenes/Obstacles/BlueRockHorizontal.tscn" id="14_3fesh"]
-[ext_resource type="PackedScene" uid="uid://bbn3s2yyod4ee" path="res://Scenes/Obstacles/BluePlantSmall.tscn" id="14_3t5tl"]
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
 [ext_resource type="Script" path="res://Scenes/Levels/tuto_label.gd" id="15_3g731"]
-[ext_resource type="PackedScene" uid="uid://c51vn6bqbdt8i" path="res://Scenes/Obstacles/BlueRockMedium.tscn" id="15_ghmks"]
 [ext_resource type="PackedScene" uid="uid://c7lfn5kjortg2" path="res://Scenes/Obstacles/BrownRockMedium.tscn" id="15_pd6of"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 
@@ -24,11 +22,13 @@ size = Vector2(201, 162)
 
 [node name="Scene_Root" type="Node2D"]
 modulate = Color(0, 0, 0, 1)
+z_as_relative = false
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
+z_index = 10
 y_sort_enabled = true
 position = Vector2(-85, -117)
 
@@ -37,9 +37,11 @@ position = Vector2(-85, -117)
 [node name="Interactables" type="Node" parent="."]
 
 [node name="Tree" parent="Interactables" instance=ExtResource("10_jj3sk")]
+y_sort_enabled = false
 position = Vector2(-63, 347)
 
 [node name="FactoryRoad" parent="Interactables" instance=ExtResource("3_10ytb")]
+y_sort_enabled = false
 position = Vector2(32, -228)
 
 [node name="Pickups" type="Node" parent="."]
@@ -49,7 +51,7 @@ position = Vector2(32, -228)
 [node name="Scene" type="Node" parent="."]
 
 [node name="TileMapBase" parent="Scene" instance=ExtResource("5_grttd")]
-y_sort_origin = -1
+position = Vector2(-136, -227)
 
 [node name="TileMap" type="TileMapLayer" parent="Scene"]
 z_index = -2
@@ -66,7 +68,6 @@ z_as_relative = false
 y_sort_enabled = true
 texture_filter = 1
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD9/wEAAQACAAAAAAAAAAEAAQAAAAAAAAABAAEAAQABAAAAAAACAAEAAQACAAAAAAACAAIAAQACAAEAAAACAAMAAQACAAEAAAACAAQAAQACAAEAAAACAAUAAQACAAEAAAACAAYAAQACAAEAAAACAAcAAQACAAEAAAACAAgAAQACAAIAAAABAAgAAQABAAIAAAAAAAgAAQABAAIAAAD//wgAAQABAAIAAAD+/wgAAQABAAIAAAD9/wgAAQABAAIAAAD8/wgAAQABAAIAAAD7/wgAAQAAAAIAAAD7/wcAAQAAAAEAAAD7/wYAAQAAAAEAAAD7/wUAAQAAAAEAAAD7/wQAAQAAAAEAAAD7/wMAAQAAAAEAAAD7/wIAAQAAAAEAAAD7/wEAAQAAAAAAAAD8/wEAAQABAAAAAAD9/wIAAQACAAIAAAD8/wIAAQAAAAMAAAD8/wMAAQACAAEAAAD8/wQAAQACAAEAAAD8/wUAAQACAAEAAAD8/wYAAQACAAEAAAD8/wcAAQAAAAUAAAD9/wcAAQABAAAAAAD+/wcAAQABAAAAAAD//wcAAQABAAAAAAAAAAcAAQABAAAAAAABAAYAAQAAAAEAAAABAAUAAQAAAAEAAAABAAQAAQACAAQAAAABAAMAAQAAAAEAAAAAAAIAAQAAAAIAAAABAAIAAQACAAMAAAABAAcAAQACAAUAAAA=")
 tile_set = ExtResource("5_qwesu")
 y_sort_origin = 1
 
@@ -92,12 +93,12 @@ label_settings = ExtResource("9_bn2i2")
 
 [node name="OneTimeSpawner" parent="Scene" node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_7rqc0")]
 z_as_relative = false
-y_sort_enabled = true
 position = Vector2(-504, 300)
 enemy_to_spawn = ExtResource("7_c7mvt")
 spawn_points = [NodePath("../../SpawnPoints/Spawn1"), NodePath("../../SpawnPoints/Spawn2"), NodePath("../../SpawnPoints/Spawn3")]
 
 [node name="OneTimeSpawner2" parent="Scene" instance=ExtResource("11_7rqc0")]
+y_sort_enabled = false
 position = Vector2(616, 331)
 enemy_to_spawn = ExtResource("7_c7mvt")
 one_time = false
@@ -116,12 +117,6 @@ position = Vector2(772, 401)
 
 [node name="BlueRockMedium" parent="Scene/Obstacles" instance=ExtResource("15_pd6of")]
 position = Vector2(402, -479)
-
-[node name="BluePlantSmall" parent="Scene/Obstacles" instance=ExtResource("14_3t5tl")]
-position = Vector2(211, -184)
-
-[node name="BlueRockMedium" parent="Scene" instance=ExtResource("15_ghmks")]
-position = Vector2(230, -310)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 

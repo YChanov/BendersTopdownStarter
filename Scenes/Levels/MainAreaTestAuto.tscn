@@ -88,7 +88,6 @@ label_settings = ExtResource("7_8lrqn")
 
 [node name="OneTimeSpawner" parent="Scene" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_78ci8")]
 z_as_relative = false
-y_sort_enabled = true
 position = Vector2(-504, 300)
 enemy_to_spawn = ExtResource("9_jirff")
 spawn_points = [NodePath("../../SpawnPoints/Spawn1"), NodePath("../../SpawnPoints/Spawn2"), NodePath("../../SpawnPoints/Spawn3")]
