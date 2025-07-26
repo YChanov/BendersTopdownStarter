@@ -62,7 +62,9 @@ z_as_relative = false
 y_sort_enabled = true
 texture_filter = 1
 use_parent_material = true
+tile_map_data = PackedByteArray("AAD9/wEAAQACAAAAAAD//wEAAQAAAAAAAAAAAAEAAQABAAAAAAABAAEAAQABAAAAAAACAAEAAQACAAAAAAACAAIAAQACAAEAAAACAAMAAQACAAEAAAACAAQAAQACAAEAAAACAAUAAQACAAEAAAACAAYAAQACAAEAAAACAAcAAQACAAEAAAACAAgAAQACAAIAAAABAAgAAQABAAIAAAAAAAgAAQABAAIAAAD//wgAAQABAAIAAAD+/wgAAQABAAIAAAD9/wgAAQABAAIAAAD8/wgAAQABAAIAAAD7/wgAAQAAAAIAAAD7/wcAAQAAAAEAAAD7/wYAAQAAAAEAAAD7/wUAAQAAAAEAAAD7/wQAAQAAAAEAAAD7/wMAAQAAAAEAAAD7/wIAAQAAAAEAAAD7/wEAAQAAAAAAAAD8/wEAAQABAAAAAAD9/wIAAQACAAIAAAD8/wIAAQABAAEAAAD8/wMAAQACAAEAAAD8/wQAAQACAAEAAAD8/wUAAQACAAEAAAD8/wYAAQACAAEAAAD8/wcAAQAAAAUAAAD9/wcAAQABAAAAAAD+/wcAAQABAAAAAAD//wcAAQABAAAAAAAAAAcAAQABAAAAAAABAAcAAQABAAAAAAABAAYAAQAAAAEAAAABAAUAAQAAAAEAAAABAAQAAQAAAAEAAAABAAMAAQAAAAEAAAABAAIAAQAAAAEAAAAAAAIAAQABAAIAAAD//wIAAQAAAAIAAAA=")
 tile_set = ExtResource("5_qwesu")
+y_sort_origin = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Scene"]
 stream = ExtResource("14_ph0ns")
@@ -100,16 +102,16 @@ spawn_range = 100
 [node name="Obstacles" type="Node2D" parent="Scene"]
 
 [node name="BlueRockTall" parent="Scene/Obstacles" instance=ExtResource("12_5ueu3")]
-position = Vector2(256, -98)
+position = Vector2(-910, -83)
 
 [node name="BlueRockCluster" parent="Scene/Obstacles" instance=ExtResource("13_mfuaq")]
-position = Vector2(392, -286)
+position = Vector2(695, -637)
 
 [node name="BlueRockSmall" parent="Scene/Obstacles" instance=ExtResource("14_3fesh")]
-position = Vector2(442, -102)
+position = Vector2(772, 401)
 
 [node name="BlueRockMedium" parent="Scene/Obstacles" instance=ExtResource("15_pd6of")]
-position = Vector2(360, -176)
+position = Vector2(402, -479)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 
