@@ -4,13 +4,16 @@ class_name CharacterBase
 @export var sprite : AnimatedSprite2D
 var health_max : int = 200
 @export var health : int
+@export var healthbar : ProgressBar
 @export var flipped_horizontal : bool
 @export var hit_particles : GPUParticles2D
 var invincible : bool = false
 var is_dead : bool = false
 
 func _ready():
-	pass
+	if healthbar :
+		healthbar.max_value = health
+		healthbar.value = health
 	
 func _process(_delta):
 	Turn()
@@ -52,6 +55,8 @@ func _take_damage(amount):
 		health = health_max
 		return
 	health -= amount
+	if healthbar :
+		healthbar.value = health
 	
 	if(health <= 0):
 		_die()
