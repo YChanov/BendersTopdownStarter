@@ -1,8 +1,8 @@
 extends State
 class_name PlayerWalking
 
-@export var movespeed := int(360)
-@export var dash_max := int(600)
+@export var movespeed := int(560)
+@export var dash_max := int(1000)
 var dashspeed := float(100)
 var can_dash := bool(false)
 var dash_direction := Vector2(0,0)
