@@ -3,18 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_2fd10"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_og7ag"]
-radius = 23.0
+radius = 15.0
 height = 166.0
 
 [node name="BlueRockHorizontal" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(1, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_og7ag")
 
 [node name="Rocks" type="Sprite2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(0, -7)
 texture = ExtResource("1_2fd10")
 region_enabled = true
 region_rect = Rect2(68, 66, 182, 57)

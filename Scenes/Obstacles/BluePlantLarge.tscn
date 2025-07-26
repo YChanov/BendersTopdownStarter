@@ -2,18 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_crxt8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hupnt"]
-radius = 27.0
-height = 132.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8huhj"]
+size = Vector2(28, 20)
 
 [node name="BluePlantLarge" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0)
-shape = SubResource("CapsuleShape2D_hupnt")
+shape = SubResource("RectangleShape2D_8huhj")
 
 [node name="StaticAssets" type="Sprite2D" parent="."]
-position = Vector2(1, 2)
+position = Vector2(-2, -51)
 texture = ExtResource("1_crxt8")
 region_enabled = true
 region_rect = Rect2(255, 1, 64, 127)

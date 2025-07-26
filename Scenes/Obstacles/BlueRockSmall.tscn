@@ -2,16 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_6kfmw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_it04h"]
-radius = 27.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v04xb"]
+size = Vector2(46, 20)
 
 [node name="BlueRockSmall" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_it04h")
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_v04xb")
 
 [node name="Rocks" type="Sprite2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(-2, -8)
 texture = ExtResource("1_6kfmw")
 region_enabled = true
 region_rect = Rect2(66, 7, 55, 55)

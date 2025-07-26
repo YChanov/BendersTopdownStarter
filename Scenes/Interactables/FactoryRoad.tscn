@@ -12,19 +12,23 @@ font = ExtResource("3_up0lg")
 font_size = 32
 
 [node name="FactoryRoad" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_maivq")
 
 [node name="FactoryRoad" type="Sprite2D" parent="."]
+position = Vector2(0, -13)
 texture = ExtResource("1_e6xcn")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -12)
 shape = SubResource("CircleShape2D_fmc4h")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 y_sort_enabled = true
-polygon = PackedVector2Array(-26, -18, -14, -28, 25, -20, 26, 16, 9, 27, -27, 15)
+position = Vector2(0, -7)
+polygon = PackedVector2Array(-26, -8, -7, -8, 26, -3, 26, 16, 9, 27, -27, 15)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -50.0

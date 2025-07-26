@@ -3,16 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://cwnydf212e3wh" path="res://Art/oasis_spring.png" id="1_fxf86"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6dg4d"]
-radius = 30.0
+radius = 28.0
 height = 196.0
 
 [node name="OasisSpring" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 41)
+position = Vector2(0, 17)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_6dg4d")
 
 [node name="OasisSpring" type="Sprite2D" parent="."]
-position = Vector2(-4, 16)
+position = Vector2(0, -11)
 texture = ExtResource("1_fxf86")

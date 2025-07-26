@@ -2,18 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_605jc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ekd0d"]
-radius = 21.0
-height = 42.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkgqu"]
+size = Vector2(38, 32)
 
 [node name="MushroomsSmall" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 3)
-shape = SubResource("CapsuleShape2D_ekd0d")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_mkgqu")
 
 [node name="StaticAssets" type="Sprite2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(-2, -12)
 texture = ExtResource("1_605jc")
 region_enabled = true
 region_rect = Rect2(197, 65, 55, 61)

@@ -2,16 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_qjgba"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_it04h"]
-radius = 36.0555
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llwiy"]
+size = Vector2(58, 26)
 
 [node name="ColoredRock" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_it04h")
+position = Vector2(2, -2)
+shape = SubResource("RectangleShape2D_llwiy")
 
 [node name="StaticAssets" type="Sprite2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -18)
 texture = ExtResource("1_qjgba")
 region_enabled = true
 region_rect = Rect2(126, 64, 66, 65)
