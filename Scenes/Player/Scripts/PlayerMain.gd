@@ -32,7 +32,6 @@ func _process(delta: float) -> void:
 	RoadOverlay()
 	toggleRoadPlacement && PutRoad()
 	TileHandle(delta)
-	EnemySpawnHandle(delta)
 	
 const BREATH_INTERVAL = 0.5
 var breath_time: float = BREATH_INTERVAL
@@ -117,36 +116,3 @@ func _die():
 	fsm.force_change_state("Die")
 	var death_scene = DEATH_SCREEN.instantiate()
 	add_child(death_scene)
-	
-func EnemySpawnHandle(delta: float):
-	var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMap")
-	var tile_position = tile_map.local_to_map(global_position)
-	
-	 # Only process if we haven't triggered this tile yet
-	if triggered_tiles.has(tile_position):
-		return
-	
-	var tile_data := tile_map.get_cell_tile_data(tile_position) 
-	
-	if(tile_data and tile_data.get_custom_data("spawns_enemy")):
-		triggered_tiles[tile_position] = true
-		SpawnEnemyAtRandomPoint()
-
-func SpawnEnemyAtRandomPoint():
-	var	points = null
-	
-	if(enemy_spawn_points):
-		points = enemy_spawn_points.get_children()
-	else:
-		return
- 
-	if points.is_empty():
-		return
-
-	var spawn_point = points[randi() % points.size()]
-	
-	var enemy = enemy_scene.instantiate()
-	enemy.global_position = spawn_point.global_position
-	print('enemy spawned at ' + str(spawn_point))
-	
-	get_tree().current_scene.add_child(enemy)
