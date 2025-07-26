@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=17 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -9,10 +9,12 @@
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="9_bn2i2"]
 [ext_resource type="PackedScene" uid="uid://bvo8oinf2kxiy" path="res://Scenes/Interactables/tree.tscn" id="10_jj3sk"]
 [ext_resource type="PackedScene" uid="uid://fbf74j6q1vxe" path="res://Scenes/Interactables/Spawner.tscn" id="11_7rqc0"]
-[ext_resource type="PackedScene" uid="uid://vfshad4x5poh" path="res://Scenes/Obstacles/ObstacleColoredRock.tscn" id="12_agt28"]
+[ext_resource type="PackedScene" uid="uid://cjru7rre3bmkf" path="res://Scenes/Obstacles/BlueRockTall.tscn" id="12_5ueu3"]
 [ext_resource type="Script" path="res://Scripts/QuestGeneral/Quest.gd" id="13_clovc"]
-[ext_resource type="PackedScene" uid="uid://ba0ssqluvsuw3" path="res://Scenes/Obstacles/ObstacleSmallBlueRock.tscn" id="13_g3fpw"]
+[ext_resource type="PackedScene" uid="uid://dgjsmqtohmt2n" path="res://Scenes/Obstacles/BlueRockCluster.tscn" id="13_mfuaq"]
+[ext_resource type="PackedScene" uid="uid://cppgyp05djber" path="res://Scenes/Obstacles/BlueRockHorizontal.tscn" id="14_3fesh"]
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
+[ext_resource type="PackedScene" uid="uid://c7lfn5kjortg2" path="res://Scenes/Obstacles/BrownRockMedium.tscn" id="15_pd6of"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 
 [node name="Scene_Root" type="Node2D"]
@@ -23,6 +25,7 @@ texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
+z_index = 10
 y_sort_enabled = true
 position = Vector2(-85, -117)
 
@@ -107,11 +110,19 @@ enemy_to_spawn = ExtResource("7_c7mvt")
 one_time = false
 spawn_range = 100
 
-[node name="Obstacle" parent="Scene" instance=ExtResource("12_agt28")]
-position = Vector2(287, -289)
+[node name="Obstacles" type="Node2D" parent="Scene"]
 
-[node name="Obstacle2" parent="Scene" instance=ExtResource("13_g3fpw")]
-position = Vector2(289, -157)
+[node name="BlueRockTall" parent="Scene/Obstacles" instance=ExtResource("12_5ueu3")]
+position = Vector2(256, -98)
+
+[node name="BlueRockCluster" parent="Scene/Obstacles" instance=ExtResource("13_mfuaq")]
+position = Vector2(392, -286)
+
+[node name="BlueRockSmall" parent="Scene/Obstacles" instance=ExtResource("14_3fesh")]
+position = Vector2(442, -102)
+
+[node name="BlueRockMedium" parent="Scene/Obstacles" instance=ExtResource("15_pd6of")]
+position = Vector2(360, -176)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbn3s2yyod4ee"]
+
+[ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_nnn45"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hupnt"]
+radius = 27.0
+height = 62.0
+
+[node name="BluePlantSmall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 7)
+shape = SubResource("CapsuleShape2D_hupnt")
+
+[node name="StaticAssets" type="Sprite2D" parent="."]
+texture = ExtResource("1_nnn45")
+region_enabled = true
+region_rect = Rect2(323, 64, 56, 64)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgjsmqtohmt2n"]
+
+[ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_rcpx0"]
+
+[sub_resource type="Gradient" id="Gradient_3vt2x"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1vfa2"]
+gradient = SubResource("Gradient_3vt2x")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[node name="BlueRockCluster" type="StaticBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+clip_children = 1
+position = Vector2(2.04494, -54.6667)
+scale = Vector2(0.871499, 1.16667)
+skew = -0.0575959
+texture = SubResource("GradientTexture2D_1vfa2")
+polygon = PackedVector2Array(-70.642, -7.15472, 11.9743, -7.15472, 68.6189, 2.28951, 67.2315, 64.9649, 24.1597, 102.742, -11.2789, 101.025, -9.4491, 62.3892, -14.8121, 42.6421, -73.332, 42.6421, -81.608, 16.0266)
+
+[node name="Rocks" type="Sprite2D" parent="Polygon2D"]
+position = Vector2(-5.96329, 46.935)
+scale = Vector2(1.14745, 0.861112)
+skew = 0.0769083
+texture = ExtResource("1_rcpx0")
+region_enabled = true
+region_rect = Rect2(197, 0, 123, 127)
+region_filter_clip_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-57, -6, -6, -7, 3, 26, -3, 58, 9, 65, 31, 64, 66, 13, 51, -5, 44, -55, 12, -61, -41, -61, -61, -32)

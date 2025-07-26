@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7lfn5kjortg2"]
+
+[ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_j3ktg"]
+
+[node name="BlueRockMedium" type="StaticBody2D"]
+
+[node name="Rocks" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_j3ktg")
+region_enabled = true
+region_rect = Rect2(128, 125, 66, 66)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.247597, -0.140491)
+scale = Vector2(0.995192, 1.00272)
+polygon = PackedVector2Array(-18, -21, -32, 21, -30, 31, 24, 28, 33, 15, 14, -38)

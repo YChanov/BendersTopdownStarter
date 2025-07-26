@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://ba0ssqluvsuw3"]
 
-[ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_mnqrr"]
+[ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_6kfmw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_it04h"]
 radius = 27.0
 
-[node name="Obstacle" type="StaticBody2D"]
+[node name="BlueRockSmall" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_it04h")
 
 [node name="Rocks" type="Sprite2D" parent="."]
 position = Vector2(0, -3)
-texture = ExtResource("1_mnqrr")
+texture = ExtResource("1_6kfmw")
 region_enabled = true
 region_rect = Rect2(66, 7, 55, 55)
