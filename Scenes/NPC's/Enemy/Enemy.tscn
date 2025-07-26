@@ -102,7 +102,7 @@ hit_particles = NodePath("HitParticles")
 sprite_frames = SubResource("SpriteFrames_toimg")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.987879
+frame_progress = 0.342338
 
 [node name="HitBox" type="Area2D" parent="AnimatedSprite2D"]
 

@@ -4,6 +4,7 @@ class_name PlayerMain
 @onready var fsm = $FSM as FiniteStateMachine
 @onready var enemy_spawn_points := $"../SpawnPoints"
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
+@onready var collision_shape_2d: CollisionShape2D = $AnimatedSprite2D/Hitboxes/Kick_Hitbox/CollisionShape2D
 
 
 const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
@@ -28,7 +29,6 @@ func _process(delta: float) -> void:
 	var input_dir = Input.get_vector("MoveLeft", "MoveRight", "MoveUp", "MoveDown")
 	if input_dir != Vector2.ZERO && (abs(input_dir.x + input_dir.y) == 1) :
 		last_direction = input_dir
-		
 	RoadOverlay()
 	toggleRoadPlacement && PutRoad()
 	TileHandle(delta)

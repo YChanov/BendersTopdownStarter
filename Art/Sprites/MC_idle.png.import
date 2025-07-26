@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djl41usgvkywy"
-path="res://.godot/imported/Tilemap_trigger_enemy.png-b1f5d440812df7b7151ee54ce24601a9.ctex"
+uid="uid://dege48efa7ot8"
+path="res://.godot/imported/MC_idle.png-03a2ba754e343204a761700fbf59a0ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Tilemap_trigger_enemy.png"
-dest_files=["res://.godot/imported/Tilemap_trigger_enemy.png-b1f5d440812df7b7151ee54ce24601a9.ctex"]
+source_file="res://Art/Sprites/MC_idle.png"
+dest_files=["res://.godot/imported/MC_idle.png-03a2ba754e343204a761700fbf59a0ce.ctex"]
 
 [params]
 

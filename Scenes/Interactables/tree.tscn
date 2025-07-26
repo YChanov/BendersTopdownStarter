@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://bvo8oinf2kxiy"]
 
 [ext_resource type="Script" path="res://Scripts/tree.gd" id="1_7ossx"]
-[ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_v6uye"]
-[ext_resource type="PackedScene" uid="uid://bblpsy4fvi76f" path="res://Scenes/Interactables/Coin.tscn" id="2_ajsex"]
+[ext_resource type="PackedScene" uid="uid://bblpsy4fvi76f" path="res://Scenes/Interactables/Wood.tscn" id="2_ajsex"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_rfnwl"]
+[ext_resource type="Texture2D" uid="uid://m73tqy1rqi2x" path="res://Art/tree.png" id="4_6u45u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw31t"]
 radius = 86.0523
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdbr"]
-size = Vector2(48, 23)
+size = Vector2(102, 45)
 
 [sub_resource type="LabelSettings" id="LabelSettings_k7heb"]
 font = ExtResource("3_rfnwl")
@@ -25,23 +25,21 @@ drop = ExtResource("2_ajsex")
 shape = SubResource("CircleShape2D_fw31t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 25.5)
+position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_cpdbr")
-
-[node name="StaticAssets" type="Sprite2D" parent="."]
-position = Vector2(-1, -23)
-texture = ExtResource("1_v6uye")
-region_enabled = true
-region_rect = Rect2(0, 0, 122, 132)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -75.0
 offset_top = -141.0
 offset_right = 105.0
 offset_bottom = -52.0
-text = "Hit the tree (click)
+text = "Hit the tree (LMB)
 to shop wood"
 label_settings = SubResource("LabelSettings_k7heb")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(0, -53)
+texture = ExtResource("4_6u45u")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

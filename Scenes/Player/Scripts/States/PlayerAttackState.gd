@@ -20,7 +20,7 @@ func DetermineAttack():
 	if(Input.is_action_just_pressed("Punch")):
 		current_attack = attacks[0]
 	elif(Input.is_action_just_pressed("Kick")):
-		current_attack = attacks[1]
+		current_attack = attacks[0]
 
 #Hitbox is turned on/off through the animationplayer, it an enemy is standing inside of it once that happens they take damage
 #Both hitboxes call back to this function through signals
