@@ -28,7 +28,6 @@ texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
-z_index = 10
 y_sort_enabled = true
 position = Vector2(-85, -117)
 

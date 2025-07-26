@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv2l4hhb1knso"]
+
+[ext_resource type="Texture2D" uid="uid://ckvk2j3xysg3h" path="res://Art/sprouts_trees.png" id="1_0qxq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rxsk"]
+size = Vector2(9.99996, 32)
+
+[node name="PurpleGrass" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8rxsk")
+
+[node name="SproutsTrees" type="Sprite2D" parent="."]
+position = Vector2(-2, -8)
+texture = ExtResource("1_0qxq4")
+region_enabled = true
+region_rect = Rect2(244, 65, 44, 38)
