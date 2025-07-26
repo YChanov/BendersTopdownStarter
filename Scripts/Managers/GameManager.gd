@@ -6,6 +6,10 @@ var metal = 5
 var road = 0
 var movement_speed = 1
 var t_group : String
+var health
+
+func set_health(sethealth):
+	health = sethealth
 
 func reset_money():
 	slime = 5

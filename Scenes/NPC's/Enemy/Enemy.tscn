@@ -88,13 +88,12 @@ gravity = Vector3(0, 98, 0)
 color = Color(0, 0, 0, 1)
 alpha_curve = SubResource("CurveTexture_dwv2q")
 
-[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("chase_node", "sprite", "healthbar", "hit_particles") groups=["Enemy"]]
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("chase_node", "sprite", "hit_particles") groups=["Enemy"]]
 texture_filter = 1
 scale = Vector2(2, 2)
 script = ExtResource("1_db41y")
 chase_node = NodePath("FSM/enemy_chase_state")
 sprite = NodePath("AnimatedSprite2D")
-healthbar = NodePath("ProgressBar")
 health = 1
 hit_particles = NodePath("HitParticles")
 

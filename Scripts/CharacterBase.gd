@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name CharacterBase
 
 @export var sprite : AnimatedSprite2D
-@export var healthbar : ProgressBar
+var health_max : int = 200
 @export var health : int
 @export var flipped_horizontal : bool
 @export var hit_particles : GPUParticles2D
@@ -10,15 +10,12 @@ var invincible : bool = false
 var is_dead : bool = false
 
 func _ready():
-	init_character()
+	pass
 	
 func _process(_delta):
 	Turn()
-
-#Add anything here that needs to be initialized on the character
-func init_character():
-	healthbar.max_value = health
-	healthbar.value = health
+	if is_in_group('Player') :
+		GameManager.set_health(health)
 
 #Flip charater sprites based on their current velocity
 func Turn():
@@ -51,12 +48,10 @@ func after_damage_iframes():
 	invincible = false
 	
 func _take_damage(amount):
-	if health >= healthbar.max_value && amount < 0 :
-		health = healthbar.max_value
+	if health >= health_max && amount < 0 :
+		health = health_max
 		return
 	health -= amount
-	healthbar.value = health;
-	#damage_effects()
 	
 	if(health <= 0):
 		_die()

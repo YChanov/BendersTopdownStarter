@@ -67,7 +67,7 @@ func TileHandle(delta: float):
 	if tile_source_id != 2:
 		self._take_damage(5)
 	else: 
-		self._take_damage(-5)
+		self._take_damage(-15)
 	breath_time = BREATH_INTERVAL
 	
 	if GetCurrentTileSourceId(true) == 4 :

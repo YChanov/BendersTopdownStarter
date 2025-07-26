@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://bvg5dny32iw0x"]
+[gd_scene load_steps=66 format=3 uid="uid://bvg5dny32iw0x"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PlayerMain.gd" id="1_y5oq4"]
 [ext_resource type="Texture2D" uid="uid://dotljha74t3mi" path="res://Art/Sprites/MC_attack.png" id="2_1sbc4"]
@@ -300,13 +300,7 @@ size = Vector2(59, 60)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bu0k"]
 radius = 24.0
-height = 128.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ub6e5"]
-bg_color = Color(0.0352941, 0.0156863, 0.00784314, 0.427451)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0guox"]
-bg_color = Color(0.391969, 0.478421, 0.97647, 1)
+height = 108.0
 
 [sub_resource type="Curve" id="Curve_h7vsg"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.71062, 0.0, 0, 0]
@@ -485,7 +479,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_wo7cn"]
 resource_name = "Walk"
-length = 1.00001
+length = 0.125013
 loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
@@ -539,20 +533,20 @@ _data = {
 "Walk": SubResource("Animation_wo7cn")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "healthbar", "hit_particles") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "hit_particles") groups=["Player"]]
 top_level = true
 texture_filter = 1
+scale = Vector2(0.5, 0.5)
 floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("1_y5oq4")
 sprite = NodePath("AnimatedSprite2D")
-healthbar = NodePath("Camera2D/ProgressBar")
 health = 200
 flipped_horizontal = true
 hit_particles = NodePath("hit_particle_blood")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_vax36")
 animation = &"Walk"
 autoplay = "Idle"
@@ -566,12 +560,12 @@ rotation = 0.0
 [node name="Punch_Hitbox" type="Area2D" parent="AnimatedSprite2D/Hitboxes"]
 
 [node name="hitboxShape" type="CollisionShape2D" parent="AnimatedSprite2D/Hitboxes/Punch_Hitbox"]
-position = Vector2(-24, -16)
+position = Vector2(-35.5556, -10.6667)
 shape = SubResource("RectangleShape2D_wk4mn")
 disabled = true
 
 [node name="BodyCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(6, -12)
 shape = SubResource("CapsuleShape2D_7bu0k")
 
 [node name="FSM" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -603,30 +597,8 @@ animator = NodePath("../../AnimationPlayer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
+zoom = Vector2(1.2, 1.2)
 position_smoothing_speed = 15.0
-
-[node name="ProgressBar" type="ProgressBar" parent="Camera2D"]
-light_mask = 2
-visibility_layer = 2
-offset_left = -151.5
-offset_top = 82.5
-offset_right = -145.5
-offset_bottom = 146.5
-rotation = -1.57079
-theme_override_styles/background = SubResource("StyleBoxFlat_ub6e5")
-theme_override_styles/fill = SubResource("StyleBoxFlat_0guox")
-step = 1.0
-value = 25.0
-fill_mode = 2
-show_percentage = false
-
-[node name="Label" type="Label" parent="Camera2D"]
-offset_left = -151.5
-offset_top = 63.5
-offset_right = -105.5
-offset_bottom = 76.5
-text = "Breath"
-label_settings = ExtResource("28_5mc6f")
 
 [node name="hit_particle_blood" type="GPUParticles2D" parent="."]
 position = Vector2(0, -12)

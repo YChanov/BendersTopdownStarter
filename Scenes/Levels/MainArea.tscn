@@ -84,10 +84,10 @@ autoplay = true
 
 [node name="Welcome Label" type="Label" parent="Scene"]
 texture_filter = 1
-offset_left = -221.0
-offset_top = -238.0
-offset_right = 47.0
-offset_bottom = -129.0
+offset_left = 7.0
+offset_top = -111.0
+offset_right = 275.0
+offset_bottom = 89.0
 text = "Welcome to Only One Breath
 WASD - Move
 SPACE - Dash

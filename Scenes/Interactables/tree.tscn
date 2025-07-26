@@ -29,10 +29,10 @@ position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_cpdbr")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -75.0
-offset_top = -141.0
-offset_right = 105.0
-offset_bottom = -52.0
+offset_left = -79.0
+offset_top = -199.0
+offset_right = 101.0
+offset_bottom = -110.0
 text = "Hit the tree (LMB)
 to shop wood"
 label_settings = SubResource("LabelSettings_k7heb")
