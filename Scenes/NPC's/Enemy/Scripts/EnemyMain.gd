@@ -47,7 +47,6 @@ func _die():
 	get_parent().get_parent().add_child(new_drop)
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
-	print(body)
 	if body.is_in_group("Player"):
 		enemy_in_range = true
 		attack_in_cooldown = true

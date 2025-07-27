@@ -24,17 +24,15 @@ extends Node
 var obstacles: Array[Dictionary] = [
 	{ "scene": "res://Scenes/Obstacles/PurpleGrass.tscn", "weight": 2, "chance": 0.025 },
 	{ "scene": "res://Scenes/Obstacles/PurpleGrassLarge1.tscn", "weight": 1, "chance": 0.015 },
-	{ "scene": "res://Scenes/Obstacles/PurpleGrassLarge2.tscn", "weight": 1, "chance": 0.010 },
+	{ "scene": "res://Scenes/Obstacles/PurpleGrassLarge2.tscn", "weight": 1, "chance": 0.01 },
 	{ "scene": "res://Scenes/Obstacles/PurpleGrassLarge3.tscn", "weight": 1, "chance": 0.008 },
 ]
-@export var obstacle_container_path := "../Scene/Obstacles"  # Path to obstacle container node
-
 const TILE_SET_SOURCE_ID = 1
+const WATER_TILE_SET_SOURCE_ID = 5
 
 @export var tile_area_size := Vector2i(100, 100)
-@onready var tilemap: TileMapLayer = $"../Scene/TileMap"
-@onready var obstacle_container: Node2D = $"../Scene/Obstacles"
-@onready var obstacles_node: Node2D = $"../Scene/Obstacles"
+@onready var generated_container: Node = $"../Generated"
+@onready var tilemap: TileMapLayer = $"../Generated/TileMap"
 
 var weighted_tile_pool: Array[Vector2i] = []
 var weighted_obstacle_pool: Array[String] = []
@@ -45,17 +43,16 @@ func _ready():
 		_build_weighted_obstacle_pool()
 		generate_random_environment()
 		
+		var new_scene_tile_map := PackedScene.new()
+		new_scene_tile_map.pack(tilemap)
 		var new_scene := PackedScene.new()
-		new_scene.pack(tilemap)
-		var new_scene_obst := PackedScene.new()
-		new_scene_obst.pack(obstacles_node)
-		ResourceSaver.save(new_scene, "res://generated_level_tilemap.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
-		ResourceSaver.save(new_scene_obst, "res://generated_level_obstacles.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+		new_scene.pack(generated_container)
+		ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+		ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
 	else:
 		push_error("TileMapLayer not found!")
 
 func _build_weighted_tile_pool():
-	weighted_tile_pool.clear()
 	for tile_info in tile_config:
 		var weight = tile_info.get("weight", 1)
 		var coords = tile_info.get("coords", Vector2i.ZERO)
@@ -88,10 +85,14 @@ func generate_random_environment():
 			var pos := Vector2i(x, y)
 			var atlas_coords := _get_random_tile_coords()
 			tilemap.set_cell(pos, TILE_SET_SOURCE_ID, atlas_coords)
-			place_obstacle_by_chance(x,y,tile_size)
+			place_obstacle_by_chance(x, y, tile_size)
 	tilemap.update_internals()
 	
 func place_obstacle_by_chance(x,y,tile_size):
+	if abs(x) < 4 && abs(y) < 4:
+		print('not generating in: ',x,' ',y)
+		return
+		
 	for obstacle_info in obstacles:
 		var chance = obstacle_info.get("chance", 0.0)
 		if randf() <= chance:
@@ -105,9 +106,9 @@ func _place_obstacle_at_position(tile_pos: Vector2i, scene_path: String, tile_si
 	if obstacle_scene:
 		var obstacle_instance = obstacle_scene.instantiate()
 		var world_pos = tilemap.map_to_local(tile_pos)
-		obstacle_instance.position = world_pos
+		obstacle_instance.position = world_pos + Vector2(randi_range(-20,20), randi_range(-20,20))
 		obstacle_instance.scale.x = -1 if randi_range(0,1) == 1 else 1
-		obstacle_container.add_child(obstacle_instance)
-		obstacle_instance.set_owner(obstacles_node)
+		generated_container.add_child(obstacle_instance)
+		obstacle_instance.set_owner(generated_container)
 	else:
 		push_error("Failed to load obstacle scene: " + scene_path)

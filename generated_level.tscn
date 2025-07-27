@@ -1,3 +1,2636 @@
-[gd_scene format=3]
+[gd_scene load_steps=5 format=3]
 
-[node name="Scene" type="Node"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrassLarge2.tscn" id="1_y20l1"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrassLarge1.tscn" id="2_n0xll"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="3_4srhi"]
+[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrassLarge3.tscn" id="4_n6wqy"]
+
+[node name="Generated" type="Node"]
+
+[node name="PurpleGrassLarge2" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-3156, -1431)
+scale = Vector2(-1, 1)
+
+[node name="PurpleGrassLarge1" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-3156, -140)
+
+[node name="PurpleGrass" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3155, -97)
+
+[node name="@StaticBody2D@5" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-3158, 529)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@6" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-3177, 1125)
+scale = Vector2(-1, 1)
+
+[node name="PurpleGrassLarge3" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-3097, -1835)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@7" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3113, -1076)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@8" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3106, 927)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@9" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3113, 2197)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@10" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-3124, 2664)
+
+[node name="@StaticBody2D@11" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-3037, -2195)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@12" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-3029, -2142)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@13" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3022, -1941)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@14" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-3043, -1841)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@15" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3046, -1576)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@16" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3034, -1300)
+
+[node name="@StaticBody2D@17" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3027, 672)
+
+[node name="@StaticBody2D@18" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3020, 787)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@19" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3031, 1488)
+
+[node name="@StaticBody2D@20" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3045, 2770)
+
+[node name="@StaticBody2D@21" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-3054, 2964)
+
+[node name="@StaticBody2D@22" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-3051, 3115)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@23" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2982, -1699)
+
+[node name="@StaticBody2D@24" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2992, 556)
+
+[node name="@StaticBody2D@25" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2992, 799)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@26" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-2918, -1615)
+
+[node name="@StaticBody2D@27" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2918, -1366)
+
+[node name="@StaticBody2D@28" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2921, -939)
+
+[node name="@StaticBody2D@29" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2899, 2729)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@30" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2857, -2830)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@31" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2854, -2601)
+
+[node name="@StaticBody2D@32" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-2830, -1519)
+
+[node name="@StaticBody2D@33" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2831, -926)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@34" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2842, -674)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@35" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2844, -26)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@36" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2854, 1697)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@37" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2856, 2036)
+
+[node name="@StaticBody2D@38" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2786, -269)
+
+[node name="@StaticBody2D@39" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2767, 241)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@40" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2795, 1777)
+
+[node name="@StaticBody2D@41" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2780, 2008)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@42" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2786, 2063)
+
+[node name="@StaticBody2D@43" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2719, -2916)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@44" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2702, 345)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@45" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2643, -1635)
+
+[node name="@StaticBody2D@46" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2675, -666)
+
+[node name="@StaticBody2D@47" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2664, 398)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@48" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2669, 1067)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@49" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-2653, 1170)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@50" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2655, 2285)
+
+[node name="@StaticBody2D@51" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2660, 2930)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@52" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2574, -2851)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@53" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2582, 1740)
+
+[node name="@StaticBody2D@54" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2590, 1817)
+
+[node name="@StaticBody2D@55" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2572, 2099)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@56" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2536, -2710)
+
+[node name="@StaticBody2D@57" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2516, -2611)
+
+[node name="@StaticBody2D@58" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2516, -2290)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@59" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2533, -985)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@60" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2524, -797)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@61" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2529, -342)
+
+[node name="@StaticBody2D@62" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2514, -230)
+
+[node name="@StaticBody2D@63" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2526, 3179)
+
+[node name="@StaticBody2D@64" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2447, -930)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@65" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2470, 2414)
+
+[node name="@StaticBody2D@66" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2479, 2960)
+
+[node name="@StaticBody2D@67" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-2406, -1427)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@68" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2417, -977)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@69" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2411, 372)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@70" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2406, 547)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@71" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2419, 1292)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@72" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2411, 1882)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@73" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2408, 2853)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@74" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2347, -287)
+
+[node name="@StaticBody2D@75" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2322, 1551)
+
+[node name="@StaticBody2D@76" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2344, 2253)
+
+[node name="@StaticBody2D@77" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2282, -2794)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@78" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2257, -151)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@79" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2273, 1037)
+
+[node name="@StaticBody2D@80" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-2202, -1765)
+
+[node name="@StaticBody2D@81" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2225, -1375)
+
+[node name="@StaticBody2D@82" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2202, -20)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@83" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2223, 2601)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@84" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-2200, 3060)
+
+[node name="@StaticBody2D@85" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2134, -2584)
+
+[node name="@StaticBody2D@86" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2153, 2140)
+
+[node name="@StaticBody2D@87" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2150, 2402)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@88" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2098, -1328)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@89" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2071, -611)
+
+[node name="@StaticBody2D@90" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2097, 1329)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@91" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2006, -1684)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@92" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2013, -1112)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@93" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-2002, 526)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@94" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-2018, 2463)
+
+[node name="@StaticBody2D@95" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1998, 2931)
+
+[node name="@StaticBody2D@96" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1966, -2850)
+
+[node name="@StaticBody2D@97" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1934, -2674)
+
+[node name="@StaticBody2D@98" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1972, 39)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@99" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1947, 163)
+
+[node name="@StaticBody2D@100" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1965, 346)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@101" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1952, 1012)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@102" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1960, 1999)
+
+[node name="@StaticBody2D@103" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1885, -1631)
+
+[node name="@StaticBody2D@104" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1877, -1247)
+
+[node name="@StaticBody2D@105" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1888, -550)
+
+[node name="@StaticBody2D@106" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1893, 52)
+
+[node name="@StaticBody2D@107" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1870, 76)
+
+[node name="@StaticBody2D@108" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1883, 171)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@109" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1870, 485)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@110" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1904, 2533)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@111" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1894, 3095)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@112" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1838, -1635)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@113" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1838, -1044)
+
+[node name="@StaticBody2D@114" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1830, -288)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@115" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1822, 288)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@116" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1837, 1176)
+
+[node name="@StaticBody2D@117" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1758, -2894)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@118" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1779, -2654)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@119" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1778, -1645)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@120" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1751, -872)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@121" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1778, -607)
+
+[node name="@StaticBody2D@122" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1770, 1449)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@123" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1751, 2128)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@124" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1702, -2795)
+
+[node name="@StaticBody2D@125" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1713, -2583)
+
+[node name="@StaticBody2D@126" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1706, -2010)
+
+[node name="@StaticBody2D@127" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1702, -880)
+
+[node name="@StaticBody2D@128" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1684, -493)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@129" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1679, 547)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@130" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1686, 590)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@131" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1710, 2588)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@132" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1693, 2926)
+
+[node name="@StaticBody2D@133" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1628, -2336)
+
+[node name="@StaticBody2D@134" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1616, -1072)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@135" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1626, -756)
+
+[node name="@StaticBody2D@136" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1631, 225)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@137" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1642, 984)
+
+[node name="@StaticBody2D@138" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1615, 2591)
+
+[node name="@StaticBody2D@139" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1647, 2782)
+
+[node name="@StaticBody2D@140" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1577, -2288)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@141" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1574, -1486)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@142" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1581, -937)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@143" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1553, 913)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@144" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1553, 1437)
+
+[node name="@StaticBody2D@145" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1576, 1997)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@146" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1560, 2214)
+
+[node name="@StaticBody2D@147" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1497, -3026)
+
+[node name="@StaticBody2D@148" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1497, -1747)
+
+[node name="@StaticBody2D@149" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1517, -614)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@150" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1521, 2993)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@151" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1420, -2255)
+
+[node name="@StaticBody2D@152" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1451, -2075)
+
+[node name="@StaticBody2D@153" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1447, 366)
+
+[node name="@StaticBody2D@154" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1459, 607)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@155" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1426, 737)
+
+[node name="@StaticBody2D@156" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1440, 858)
+
+[node name="@StaticBody2D@157" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1421, 1954)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@158" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1424, 2722)
+
+[node name="@StaticBody2D@159" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1436, 2906)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@160" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1388, 145)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@161" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1357, 345)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@162" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1363, 1951)
+
+[node name="@StaticBody2D@163" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1393, 2228)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@164" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1320, -2972)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@165" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1320, -2781)
+
+[node name="@StaticBody2D@166" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1303, -2670)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@167" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1299, -1387)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@168" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1325, -1310)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@169" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1301, -152)
+
+[node name="@StaticBody2D@170" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1304, 110)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@171" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1298, 1569)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@172" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1301, 2473)
+
+[node name="@StaticBody2D@173" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1304, 2956)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@174" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1331, 3048)
+
+[node name="@StaticBody2D@175" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1236, -2608)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@176" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1231, -2321)
+
+[node name="@StaticBody2D@177" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1234, -1756)
+
+[node name="@StaticBody2D@178" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1267, 627)
+
+[node name="@StaticBody2D@179" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1239, 1393)
+
+[node name="@StaticBody2D@180" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1248, 1425)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@181" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1239, 1956)
+
+[node name="@StaticBody2D@182" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1259, 2795)
+
+[node name="@StaticBody2D@183" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1251, 3088)
+
+[node name="@StaticBody2D@184" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1182, -3121)
+
+[node name="@StaticBody2D@185" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1166, -2714)
+
+[node name="@StaticBody2D@186" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1188, -1937)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@187" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1182, -870)
+
+[node name="@StaticBody2D@188" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1199, -736)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@189" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1199, 91)
+
+[node name="@StaticBody2D@190" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1167, 598)
+
+[node name="@StaticBody2D@191" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1192, 984)
+
+[node name="@StaticBody2D@192" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1195, 2451)
+
+[node name="@StaticBody2D@193" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1186, 3098)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@194" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1192, 3166)
+
+[node name="@StaticBody2D@195" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1137, -2071)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@196" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1114, -987)
+
+[node name="@StaticBody2D@197" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1119, -809)
+
+[node name="@StaticBody2D@198" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1112, -547)
+
+[node name="@StaticBody2D@199" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1125, 1761)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@200" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1069, -3089)
+
+[node name="@StaticBody2D@201" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-1047, -2735)
+
+[node name="@StaticBody2D@202" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1039, -2409)
+
+[node name="@StaticBody2D@203" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-1050, -2129)
+
+[node name="@StaticBody2D@204" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1038, -1487)
+
+[node name="@StaticBody2D@205" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1053, 363)
+
+[node name="@StaticBody2D@206" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1057, 687)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@207" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1072, 1110)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@208" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1075, 2160)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@209" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1070, 2328)
+
+[node name="@StaticBody2D@210" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-1055, 2804)
+
+[node name="@StaticBody2D@211" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-993, -2928)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@212" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-976, -2609)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@213" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-996, -717)
+
+[node name="@StaticBody2D@214" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1002, -284)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@215" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-993, 468)
+
+[node name="@StaticBody2D@216" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-988, 740)
+
+[node name="@StaticBody2D@217" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-1003, 2463)
+
+[node name="@StaticBody2D@218" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-925, -2257)
+
+[node name="@StaticBody2D@219" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-924, 1256)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@220" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-922, 2409)
+
+[node name="@StaticBody2D@221" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-866, -3097)
+
+[node name="@StaticBody2D@222" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-865, -2520)
+
+[node name="@StaticBody2D@223" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-869, -1568)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@224" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-883, 1313)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@225" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-860, 1577)
+
+[node name="@StaticBody2D@226" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-858, 1768)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@227" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-866, 2483)
+
+[node name="@StaticBody2D@228" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-794, -2837)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@229" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-796, -2646)
+
+[node name="@StaticBody2D@230" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-803, -2381)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@231" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-798, -1073)
+
+[node name="@StaticBody2D@232" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-812, -603)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@233" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-783, 2457)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@234" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-719, -2575)
+
+[node name="@StaticBody2D@235" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-741, -1748)
+
+[node name="@StaticBody2D@236" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-738, -1384)
+
+[node name="@StaticBody2D@237" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-720, -1114)
+
+[node name="@StaticBody2D@238" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-733, 417)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@239" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-756, 617)
+
+[node name="@StaticBody2D@240" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-736, 3121)
+
+[node name="@StaticBody2D@241" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-684, -2189)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@242" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-669, -1762)
+
+[node name="@StaticBody2D@243" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-664, -1617)
+
+[node name="@StaticBody2D@244" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-664, -1070)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@245" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-677, -23)
+
+[node name="@StaticBody2D@246" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-685, 526)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@247" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-672, 1575)
+
+[node name="@StaticBody2D@248" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-683, 2728)
+
+[node name="@StaticBody2D@249" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-591, -852)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@250" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-590, 1042)
+
+[node name="@StaticBody2D@251" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-602, 3174)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@252" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-549, -2530)
+
+[node name="@StaticBody2D@253" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-556, -2202)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@254" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-564, -1312)
+
+[node name="@StaticBody2D@255" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-543, -740)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@256" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-524, -684)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@257" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-559, -237)
+
+[node name="@StaticBody2D@258" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-527, 1756)
+
+[node name="@StaticBody2D@259" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-465, -2472)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@260" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-467, -532)
+
+[node name="@StaticBody2D@261" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-479, 1330)
+
+[node name="@StaticBody2D@262" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-405, -1642)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@263" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-398, -1174)
+
+[node name="@StaticBody2D@264" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-434, -144)
+
+[node name="@StaticBody2D@265" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-428, 304)
+
+[node name="@StaticBody2D@266" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-398, 1459)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@267" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-427, 1553)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@268" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-410, 2073)
+
+[node name="@StaticBody2D@269" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-411, 2548)
+
+[node name="@StaticBody2D@270" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-406, 2795)
+
+[node name="@StaticBody2D@271" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-419, 2915)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@272" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-340, -3052)
+
+[node name="@StaticBody2D@273" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-352, -2006)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@274" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-360, -1575)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@275" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-369, -846)
+
+[node name="@StaticBody2D@276" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-368, -15)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@277" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-350, 300)
+
+[node name="@StaticBody2D@278" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-367, 1827)
+
+[node name="@StaticBody2D@279" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-352, 2657)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@280" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-274, -1164)
+
+[node name="@StaticBody2D@281" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-272, -721)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@282" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-287, 2016)
+
+[node name="@StaticBody2D@283" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-273, 2482)
+
+[node name="@StaticBody2D@284" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-286, 3033)
+
+[node name="@StaticBody2D@285" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-216, -2141)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@286" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-208, -1455)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@287" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-236, -531)
+
+[node name="@StaticBody2D@288" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-230, 28)
+
+[node name="@StaticBody2D@289" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-213, 1103)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@290" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-149, -1820)
+
+[node name="@StaticBody2D@291" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-172, -1329)
+
+[node name="@StaticBody2D@292" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-149, 372)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@293" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-159, 1934)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@294" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(-145, 2979)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@295" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-86, -3182)
+
+[node name="@StaticBody2D@296" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-86, -2847)
+
+[node name="@StaticBody2D@297" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-78, -2024)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@298" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-107, -1751)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@299" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-88, 524)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@300" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-108, 860)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@301" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-81, 1063)
+
+[node name="@StaticBody2D@302" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-110, 3156)
+
+[node name="@StaticBody2D@303" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-18, -270)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@304" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-20, 794)
+
+[node name="@StaticBody2D@305" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(-22, 974)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@306" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(-33, 1493)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@307" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-22, 2528)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@308" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(-36, 2671)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@309" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(15, -3041)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@310" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(23, -1938)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@311" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(50, -848)
+
+[node name="@StaticBody2D@312" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(35, -527)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@313" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(48, -431)
+
+[node name="@StaticBody2D@314" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(43, 659)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@315" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(89, -2995)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@316" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(101, -370)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@317" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(105, 1169)
+
+[node name="@StaticBody2D@318" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(109, 1518)
+
+[node name="@StaticBody2D@319" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(78, 1548)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@320" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(82, 2085)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@321" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(180, 931)
+
+[node name="@StaticBody2D@322" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(170, 1170)
+
+[node name="@StaticBody2D@323" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(150, 1459)
+
+[node name="@StaticBody2D@324" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(162, 2029)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@325" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(175, 2146)
+
+[node name="@StaticBody2D@326" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(163, 2802)
+
+[node name="@StaticBody2D@327" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(154, 3186)
+
+[node name="@StaticBody2D@328" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(242, -524)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@329" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(211, 525)
+
+[node name="@StaticBody2D@330" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(214, 2448)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@331" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(218, 3041)
+
+[node name="@StaticBody2D@332" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(300, -1647)
+
+[node name="@StaticBody2D@333" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(274, 113)
+
+[node name="@StaticBody2D@334" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(286, 728)
+
+[node name="@StaticBody2D@335" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(308, 1636)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@336" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(337, -2923)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@337" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(339, -2803)
+
+[node name="@StaticBody2D@338" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(372, -1870)
+
+[node name="@StaticBody2D@339" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(359, -1486)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@340" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(333, -1364)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@341" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(345, -1119)
+
+[node name="@StaticBody2D@342" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(350, 147)
+
+[node name="@StaticBody2D@343" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(353, 418)
+
+[node name="@StaticBody2D@344" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(351, 739)
+
+[node name="@StaticBody2D@345" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(354, 2969)
+
+[node name="@StaticBody2D@346" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(349, 3031)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@347" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(410, -1691)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@348" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(424, 2222)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@349" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(485, -3179)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@350" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(469, -1495)
+
+[node name="@StaticBody2D@351" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(469, -851)
+
+[node name="@StaticBody2D@352" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(498, 366)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@353" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(486, 409)
+
+[node name="@StaticBody2D@354" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(470, 2702)
+
+[node name="@StaticBody2D@355" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(552, -790)
+
+[node name="@StaticBody2D@356" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(546, 1714)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@357" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(627, -1804)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@358" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(625, -400)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@359" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(602, -205)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@360" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(599, 343)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@361" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(607, 403)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@362" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(588, 681)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@363" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(612, 927)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@364" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(600, 1295)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@365" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(612, 1635)
+
+[node name="@StaticBody2D@366" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(679, -3175)
+
+[node name="@StaticBody2D@367" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(653, -2398)
+
+[node name="@StaticBody2D@368" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(677, -1752)
+
+[node name="@StaticBody2D@369" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(657, -988)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@370" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(675, -95)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@371" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(689, 787)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@372" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(674, 925)
+
+[node name="@StaticBody2D@373" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(688, 1358)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@374" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(679, 2462)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@375" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(679, 2990)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@376" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(756, -2389)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@377" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(732, -343)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@378" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(737, 756)
+
+[node name="@StaticBody2D@379" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(807, -2327)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@380" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(804, -358)
+
+[node name="@StaticBody2D@381" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(802, 77)
+
+[node name="@StaticBody2D@382" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(790, 1692)
+
+[node name="@StaticBody2D@383" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(883, -1511)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@384" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(850, -1126)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@385" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(862, 336)
+
+[node name="@StaticBody2D@386" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(853, 1256)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@387" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(855, 1378)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@388" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(926, -2994)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@389" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(946, -1634)
+
+[node name="@StaticBody2D@390" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(935, 93)
+
+[node name="@StaticBody2D@391" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(946, 677)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@392" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(923, 1228)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@393" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(917, 2418)
+
+[node name="@StaticBody2D@394" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(997, -2977)
+
+[node name="@StaticBody2D@395" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(987, -2475)
+
+[node name="@StaticBody2D@396" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1002, -1869)
+
+[node name="@StaticBody2D@397" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(990, 1572)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@398" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(988, 1759)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@399" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(984, 2208)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@400" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(993, 2280)
+
+[node name="@StaticBody2D@401" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(983, 2790)
+
+[node name="@StaticBody2D@402" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1000, 3084)
+
+[node name="@StaticBody2D@403" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1062, -3050)
+
+[node name="@StaticBody2D@404" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1039, -2531)
+
+[node name="@StaticBody2D@405" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1050, -1562)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@406" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1042, -1057)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@407" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1134, -2460)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@408" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1119, -749)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@409" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1107, 2324)
+
+[node name="@StaticBody2D@410" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1176, -2676)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@411" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1195, 110)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@412" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1170, 1907)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@413" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1194, 2799)
+
+[node name="@StaticBody2D@414" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1231, -863)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@415" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1262, -598)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@416" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1262, 1118)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@417" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1229, 2192)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@418" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1305, -2718)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@419" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1330, -2509)
+
+[node name="@StaticBody2D@420" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1319, -1554)
+
+[node name="@StaticBody2D@421" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1305, -1442)
+
+[node name="@StaticBody2D@422" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1325, -1186)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@423" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1328, 552)
+
+[node name="@StaticBody2D@424" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1331, 1498)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@425" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1304, 2854)
+
+[node name="@StaticBody2D@426" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1309, 2978)
+
+[node name="@StaticBody2D@427" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1292, 3153)
+
+[node name="@StaticBody2D@428" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(1357, -2034)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@429" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1361, 2927)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@430" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1426, -2927)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@431" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1432, -2665)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@432" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1453, -2591)
+
+[node name="@StaticBody2D@433" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1456, -1679)
+
+[node name="@StaticBody2D@434" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(1442, -1135)
+
+[node name="@StaticBody2D@435" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1424, -408)
+
+[node name="@StaticBody2D@436" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1437, 2353)
+
+[node name="@StaticBody2D@437" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1420, 2721)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@438" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1449, 3059)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@439" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1521, 430)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@440" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1515, 996)
+
+[node name="@StaticBody2D@441" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1558, -2380)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@442" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1588, 800)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@443" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1572, 2518)
+
+[node name="@StaticBody2D@444" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1552, 2995)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@445" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1649, -793)
+
+[node name="@StaticBody2D@446" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1635, 16)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@447" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1621, 590)
+
+[node name="@StaticBody2D@448" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1708, -2081)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@449" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1698, 157)
+
+[node name="@StaticBody2D@450" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1692, 1115)
+
+[node name="@StaticBody2D@451" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1676, 1775)
+
+[node name="@StaticBody2D@452" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1700, 2839)
+
+[node name="@StaticBody2D@453" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1774, -3059)
+
+[node name="@StaticBody2D@454" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1780, -692)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@455" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(1744, 738)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@456" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1779, 1310)
+
+[node name="@StaticBody2D@457" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1778, 1811)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@458" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1775, 2528)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@459" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1804, -2851)
+
+[node name="@StaticBody2D@460" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1833, -1936)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@461" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1828, -994)
+
+[node name="@StaticBody2D@462" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1815, 1648)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@463" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1834, 1688)
+
+[node name="@StaticBody2D@464" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(1816, 1767)
+
+[node name="@StaticBody2D@465" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1895, -3051)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@466" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1868, -2457)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@467" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1871, 539)
+
+[node name="@StaticBody2D@468" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(1876, 721)
+
+[node name="@StaticBody2D@469" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1889, 1111)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@470" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1892, 1615)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@471" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1960, -2000)
+
+[node name="@StaticBody2D@472" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1946, -499)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@473" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(1940, -156)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@474" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1946, 1369)
+
+[node name="@StaticBody2D@475" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1952, 1451)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@476" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(1971, 2866)
+
+[node name="@StaticBody2D@477" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(1998, -1198)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@478" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2030, -942)
+
+[node name="@StaticBody2D@479" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2018, -542)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@480" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2026, 1904)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@481" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2004, 1997)
+
+[node name="@StaticBody2D@482" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2067, -1561)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@483" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2083, -1306)
+
+[node name="@StaticBody2D@484" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2077, 469)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@485" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2063, 998)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@486" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2091, 1578)
+
+[node name="@StaticBody2D@487" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2083, 1996)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@488" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2100, 2158)
+
+[node name="@StaticBody2D@489" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2082, 2903)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@490" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2163, -2540)
+
+[node name="@StaticBody2D@491" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2161, 338)
+
+[node name="@StaticBody2D@492" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2124, 2892)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@493" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2223, -547)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@494" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2217, -207)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@495" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2206, -170)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@496" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2211, 744)
+
+[node name="@StaticBody2D@497" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2200, 1685)
+
+[node name="@StaticBody2D@498" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2217, 1840)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@499" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2272, -1241)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@500" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2269, -801)
+
+[node name="@StaticBody2D@501" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2254, -548)
+
+[node name="@StaticBody2D@502" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2273, -106)
+
+[node name="@StaticBody2D@503" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2265, 76)
+
+[node name="@StaticBody2D@504" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2260, 359)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@505" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2261, 661)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@506" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2348, -1643)
+
+[node name="@StaticBody2D@507" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2340, -855)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@508" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2347, 172)
+
+[node name="@StaticBody2D@509" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2354, 484)
+
+[node name="@StaticBody2D@510" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2339, 2796)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@511" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2392, -2072)
+
+[node name="@StaticBody2D@512" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2388, -1498)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@513" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2412, -910)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@514" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2389, -177)
+
+[node name="@StaticBody2D@515" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2419, 204)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@516" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2405, 486)
+
+[node name="@StaticBody2D@517" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2467, 553)
+
+[node name="@StaticBody2D@518" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2484, 1012)
+
+[node name="@StaticBody2D@519" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2462, 1947)
+
+[node name="@StaticBody2D@520" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2466, 3046)
+
+[node name="@StaticBody2D@521" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2536, -2914)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@522" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2536, -2665)
+
+[node name="@StaticBody2D@523" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2532, -1310)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@524" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2537, -985)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@525" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2546, -403)
+
+[node name="@StaticBody2D@526" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2511, 1075)
+
+[node name="@StaticBody2D@527" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2531, 1106)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@528" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2545, 1950)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@529" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2608, -3095)
+
+[node name="@StaticBody2D@530" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2610, -2197)
+
+[node name="@StaticBody2D@531" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2588, -1747)
+
+[node name="@StaticBody2D@532" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2594, 1701)
+
+[node name="@StaticBody2D@533" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2575, 2006)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@534" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2669, -3184)
+
+[node name="@StaticBody2D@535" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2673, -1842)
+
+[node name="@StaticBody2D@536" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2642, -370)
+
+[node name="@StaticBody2D@537" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2675, 1331)
+
+[node name="@StaticBody2D@538" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2672, 2781)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@539" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2644, 2829)
+
+[node name="@StaticBody2D@540" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2660, 3166)
+
+[node name="@StaticBody2D@541" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2734, -2593)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@542" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2730, -2384)
+
+[node name="@StaticBody2D@543" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2720, 603)
+
+[node name="@StaticBody2D@544" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2705, 1748)
+
+[node name="@StaticBody2D@545" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2720, 2146)
+
+[node name="@StaticBody2D@546" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2799, -2774)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@547" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2792, -1964)
+
+[node name="@StaticBody2D@548" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2785, -1492)
+
+[node name="@StaticBody2D@549" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2802, -1313)
+
+[node name="@StaticBody2D@550" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2772, 2519)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@551" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2842, -1903)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@552" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2840, -849)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@553" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2866, 1001)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@554" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2859, 1884)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@555" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2830, 2344)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@556" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2916, -2078)
+
+[node name="@StaticBody2D@557" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2929, -845)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@558" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2932, -431)
+
+[node name="@StaticBody2D@559" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2899, 492)
+
+[node name="@StaticBody2D@560" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(2908, 596)
+
+[node name="@StaticBody2D@561" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2904, 740)
+
+[node name="@StaticBody2D@562" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2931, 1680)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@563" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2899, 2036)
+
+[node name="@StaticBody2D@564" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2922, 2640)
+
+[node name="@StaticBody2D@565" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2981, -2794)
+
+[node name="@StaticBody2D@566" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2996, -2482)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@567" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(2978, 479)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@568" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(2983, 2260)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@569" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(2989, 3167)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@570" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(3053, -2080)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@571" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(3058, -613)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@572" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(3059, 497)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@573" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(3060, 1113)
+
+[node name="@StaticBody2D@574" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(3053, 2908)
+
+[node name="@StaticBody2D@575" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(3044, 3037)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@576" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(3123, -2136)
+
+[node name="@StaticBody2D@577" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(3115, -1776)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@578" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(3099, 228)
+
+[node name="@StaticBody2D@579" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(3112, 527)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@580" type="StaticBody2D" parent="." instance=ExtResource("1_y20l1")]
+y_sort_enabled = true
+position = Vector2(3086, 1140)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@581" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(3114, 2580)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@582" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(3102, 3048)
+
+[node name="@StaticBody2D@583" type="StaticBody2D" parent="." instance=ExtResource("3_4srhi")]
+y_sort_enabled = true
+position = Vector2(3164, -2989)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@584" type="StaticBody2D" parent="." instance=ExtResource("4_n6wqy")]
+y_sort_enabled = true
+position = Vector2(3159, -562)
+scale = Vector2(-1, 1)
+
+[node name="@StaticBody2D@585" type="StaticBody2D" parent="." instance=ExtResource("2_n0xll")]
+y_sort_enabled = true
+position = Vector2(3177, 1947)

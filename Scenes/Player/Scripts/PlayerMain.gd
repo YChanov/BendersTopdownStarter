@@ -82,7 +82,10 @@ func GetCurrentTileSourceId(is_road : bool = false):
 	return tile_source_id
 
 func getParentTileMap(is_road : bool = false) -> TileMapLayer :
-	return get_parent().get_node("Scene/TileMap" if !is_road else "Scene/TileMapRoads")
+	var basic_tile_map = get_parent().get_node("Scene/TileMap")
+	if !basic_tile_map :
+		basic_tile_map = get_parent().get_node("Generated/TileMap")
+	return basic_tile_map if !is_road else get_parent().get_node("Scene/TileMapRoads")
 	
 func PutRoad():
 	if Input.is_action_just_pressed("Enter") :
