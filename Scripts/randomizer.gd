@@ -64,13 +64,6 @@ func generate_level():
 	_build_weighted_obstacle_pool()
 	generate_random_environment()
 	
-	var new_scene_tile_map := PackedScene.new()
-	new_scene_tile_map.pack(tilemap)
-	var new_scene := PackedScene.new()
-	new_scene.pack(generated_container)
-	ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
-	ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
-
 func _build_weighted_tile_pool():
 	for tile_info in tile_config:
 		var weight = tile_info.get("weight", 1)

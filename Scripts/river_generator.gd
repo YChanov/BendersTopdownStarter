@@ -7,6 +7,7 @@ extends Node
 @export var river_width := 2  # Width of the river
 @export var river_fork_chance := 0.1  # Chance of creating a fork
 @export var river_direction_change_chance := 0.2  # Chance of changing direction
+@onready var generated_container: Node = $"../Generated"
 const TILE_SET_SOURCE_ID = 5
 
 # Called when the node enters the scene tree for the first time.
@@ -17,6 +18,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('Restart') :
 		generate_river()
+		
+	var new_scene_tile_map := PackedScene.new()
+	new_scene_tile_map.pack(tilemap)
+	var new_scene := PackedScene.new()
+	new_scene.pack(generated_container)
+	ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+	ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+
 
 func generate_river():
 	var area_half := tile_area_size / 2
