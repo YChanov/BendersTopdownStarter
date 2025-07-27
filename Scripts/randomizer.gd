@@ -44,6 +44,7 @@ func _ready():
 		_build_weighted_tile_pool()
 		_build_weighted_obstacle_pool()
 		generate_random_environment()
+		
 		var new_scene := PackedScene.new()
 		new_scene.pack(tilemap)
 		var new_scene_obst := PackedScene.new()
@@ -107,5 +108,6 @@ func _place_obstacle_at_position(tile_pos: Vector2i, scene_path: String, tile_si
 		obstacle_instance.position = world_pos
 		obstacle_instance.scale.x = -1 if randi_range(0,1) == 1 else 1
 		obstacle_container.add_child(obstacle_instance)
+		obstacle_instance.set_owner(obstacles_node)
 	else:
 		push_error("Failed to load obstacle scene: " + scene_path)
