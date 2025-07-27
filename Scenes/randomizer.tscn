@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxubskouklqqf"]
+
+[ext_resource type="Script" path="res://Scripts/randomizer.gd" id="1_1vgdr"]
+
+[node name="Randomizer" type="Node"]
+script = ExtResource("1_1vgdr")

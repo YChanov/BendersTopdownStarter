@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4jagpju7rrjm"]
+[gd_scene load_steps=4 format=3 uid="uid://f00nnn7vrsi6"]
 
 [ext_resource type="Texture2D" uid="uid://ckvk2j3xysg3h" path="res://Art/sprouts_trees.png" id="1_assku"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_kklbs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rxsk"]
 size = Vector2(14, 64)
 
 [node name="PurpleGrassLarge1" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_kklbs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

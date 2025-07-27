@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dubdjb5dpyroh"]
+[gd_scene load_steps=4 format=3 uid="uid://dubdjb5dpyroh"]
 
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_605jc"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_bfvxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkgqu"]
 size = Vector2(38, 32)
 
 [node name="MushroomsSmall" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_bfvxu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

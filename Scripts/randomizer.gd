@@ -63,7 +63,6 @@ func generate_level():
 	_build_weighted_tile_pool()
 	_build_weighted_obstacle_pool()
 	generate_random_environment()
-	generate_rivers()
 	
 	var new_scene_tile_map := PackedScene.new()
 	new_scene_tile_map.pack(tilemap)
@@ -71,10 +70,6 @@ func generate_level():
 	new_scene.pack(generated_container)
 	ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
 	ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
-
-func generate_rivers():
-	
-	pass
 
 func _build_weighted_tile_pool():
 	for tile_info in tile_config:
@@ -114,7 +109,6 @@ func generate_random_environment():
 	
 func place_obstacle_by_chance(x,y,tile_size):
 	if abs(x) < 5 && abs(y) < 5:
-		print('not generating in: ',x,' ',y)
 		return
 		
 	for obstacle_info in obstacles:
@@ -128,8 +122,10 @@ func place_obstacle_by_chance(x,y,tile_size):
 func _place_obstacle_at_position(tile_pos: Vector2i, scene_path: String, tile_size: Vector2i):
 	var obstacle_scene = load(scene_path)
 	if obstacle_scene:
-		var obstacle_instance = obstacle_scene.instantiate()
 		var world_pos = tilemap.map_to_local(tile_pos)
+		if tilemap.get_cell_tile_data(tile_pos).get_custom_data('is_water') :
+			print('yep')
+		var obstacle_instance = obstacle_scene.instantiate()
 		obstacle_instance.position = world_pos + Vector2(randi_range(-20,20), randi_range(-20,20))
 		obstacle_instance.scale.x = -1 if randi_range(0,1) == 1 else 1
 		generated_container.add_child(obstacle_instance)

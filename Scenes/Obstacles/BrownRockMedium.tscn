@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7lfn5kjortg2"]
+[gd_scene load_steps=4 format=3 uid="uid://c7lfn5kjortg2"]
 
 [ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_j3ktg"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_qpqte"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4ccf"]
 size = Vector2(60, 26)
 
 [node name="BlueRockMedium" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_qpqte")
 
 [node name="Rocks" type="Sprite2D" parent="."]
 position = Vector2(1, -21)

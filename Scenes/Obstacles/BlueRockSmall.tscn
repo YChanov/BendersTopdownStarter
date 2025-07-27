@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ba0ssqluvsuw3"]
+[gd_scene load_steps=4 format=3 uid="uid://ba0ssqluvsuw3"]
 
 [ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_6kfmw"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_8cckc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v04xb"]
 size = Vector2(46, 20)
 
 [node name="BlueRockSmall" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_8cckc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)

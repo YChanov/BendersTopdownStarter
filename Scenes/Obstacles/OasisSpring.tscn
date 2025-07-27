@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6xcjbyu4h2me"]
+[gd_scene load_steps=4 format=3 uid="uid://b6xcjbyu4h2me"]
 
 [ext_resource type="Texture2D" uid="uid://cwnydf212e3wh" path="res://Art/oasis_spring.png" id="1_fxf86"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_hr46x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6dg4d"]
 radius = 28.0
@@ -8,6 +9,7 @@ height = 196.0
 
 [node name="OasisSpring" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_hr46x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)

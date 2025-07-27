@@ -30,7 +30,6 @@ func Move(input_dir : Vector2):
 	if(dash_direction != Vector2.ZERO and dash_direction != input_dir):
 		dash_direction = Vector2.ZERO
 		dashspeed = 0
-	print((input_dir * movespeed + dash_direction * dashspeed))
 	player.velocity = (input_dir * movespeed + dash_direction * dashspeed) * GameManager.movement_speed
 	player.move_and_slide()
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjru7rre3bmkf"]
+[gd_scene load_steps=4 format=3 uid="uid://cjru7rre3bmkf"]
 
 [ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_ikmow"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_jstub"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_my0jv"]
 radius = 26.0
@@ -8,6 +9,7 @@ height = 86.0
 
 [node name="BlueRockTall" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_jstub")
 
 [node name="Rocks" type="Sprite2D" parent="."]
 position = Vector2(-2, -41)

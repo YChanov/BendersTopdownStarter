@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cppgyp05djber"]
+[gd_scene load_steps=4 format=3 uid="uid://cppgyp05djber"]
 
 [ext_resource type="Texture2D" uid="uid://cy10twgwmgi08" path="res://Art/rocks.png" id="1_2fd10"]
+[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_sukwc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_og7ag"]
 radius = 15.0
@@ -8,6 +9,7 @@ height = 166.0
 
 [node name="BlueRockHorizontal" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_sukwc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
