@@ -98,7 +98,9 @@ func PutRoad():
 			return
 			
 		var data : TileData = tile_map_base.get_cell_tile_data(target_position)
-		data.set_collision_polygon_points(0, 0, [])
+		var is_water = data.get_custom_data('is_water')
+		if is_water :
+			data.set_collision_polygon_points(0, 0, [])
 		tile_map.set_cell(target_position, ROADS_SOURCE_ID, Vector2i(0,0))
 		GameManager.add_road(-1)
 	return
