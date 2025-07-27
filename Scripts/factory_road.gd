@@ -10,6 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	await get_tree().create_timer(0.1).timeout
 	if !playerInside :
 		label.visible = false
 		return
@@ -20,7 +21,7 @@ func _process(delta: float) -> void:
 	else :
 		label.text = "Press 'E' to\nbuild Roads"
 	
-	if Input.is_action_just_pressed("Enter") && hasEnough() :
+	if Input.is_action_pressed("Enter") && hasEnough() :
 		GameManager.add_road(1)
 		GameManager.add_slime(-1)
 		GameManager.add_wood(-1)

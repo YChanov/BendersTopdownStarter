@@ -87,7 +87,7 @@ func getParentTileMap(is_road : bool = false) -> TileMapLayer :
 	return basic_tile_map if !is_road else get_parent().get_node("Scene/TileMapRoads")
 	
 func PutRoad():
-	if Input.is_action_just_pressed("Enter") :
+	if Input.is_action_pressed("Enter") :
 		var road_amount = GameManager.road
 		if !road_amount:
 			return

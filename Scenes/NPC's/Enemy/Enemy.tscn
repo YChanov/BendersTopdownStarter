@@ -60,7 +60,7 @@ radius = 18.0
 height = 54.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_imcar"]
-radius = 115.01
+radius = 208.015
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6b3o"]
 bg_color = Color(0.0352941, 0.0156863, 0.00784314, 0.427451)
@@ -134,6 +134,7 @@ script = ExtResource("21_mks5l")
 script = ExtResource("24_pg8mu")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
 offset_left = -14.0
 offset_top = -9.5
 offset_right = -11.0

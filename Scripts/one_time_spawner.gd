@@ -54,10 +54,8 @@ func spawnEnemy() -> void :
 	
 	spawnInPosition(enemy_instance, target_position)
 	
-	if one_time : 
-		queue_free()
-	else :
-		can_spawn = false
+	can_spawn = false
+	if !one_time:
 		timer.start()
 	
 func spawnInPosition(instance: Node, position : Vector2):
