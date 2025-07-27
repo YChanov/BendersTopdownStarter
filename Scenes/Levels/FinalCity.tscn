@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bhdl1i6aci6dm"]
+[gd_scene load_steps=12 format=4 uid="uid://bhdl1i6aci6dm"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_a7xb6"]
 [ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="2_nip2i"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="6_vbc0p"]
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="7_j6hpc"]
 [ext_resource type="PackedScene" uid="uid://b5bqbjojwuvuc" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="8_qh2mv"]
+[ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="10_2ixi2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1s51q"]
+font = ExtResource("10_2ixi2")
+font_size = 36
 
 [node name="Scene_Root" type="Node2D"]
 z_as_relative = false
@@ -82,3 +87,11 @@ position = Vector2(409, -107)
 position = Vector2(-342, 52)
 
 [node name="Score_UI" parent="." instance=ExtResource("6_vbc0p")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 106.0
+offset_top = -112.0
+offset_right = 302.0
+offset_bottom = 28.0
+text = "You won yay!!"
+label_settings = SubResource("LabelSettings_1s51q")
