@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://bvt7e871e6jeg"]
+[gd_scene load_steps=23 format=3 uid="uid://bvt7e871e6jeg"]
 
 [ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/EnemyMain.gd" id="1_db41y"]
 [ext_resource type="Texture2D" uid="uid://bnn86qcci71k" path="res://Art/Sprites/Slime.png" id="2_xgn82"]
+[ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="2_xjh4d"]
 [ext_resource type="PackedScene" uid="uid://b82yimbxiflml" path="res://Art/Particles/hit_particles.tscn" id="21_d5isq"]
 [ext_resource type="Script" path="res://Scripts/FSM/FiniteStateMachine.gd" id="21_mb2dn"]
 [ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/States/EnemyIdleState.gd" id="21_mks5l"]
@@ -96,6 +97,8 @@ sprite = NodePath("AnimatedSprite2D")
 health = 1
 healthbar = NodePath("ProgressBar")
 hit_particles = NodePath("HitParticles")
+
+[node name="PointLight2D" parent="." instance=ExtResource("2_xjh4d")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_toimg")

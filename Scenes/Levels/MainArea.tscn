@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" path="res://generated_level.tscn" id="5_grttd"]
 [ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="5_qwesu"]
 [ext_resource type="PackedScene" path="res://generated_level_tile_map.tscn" id="5_t7ius"]
-[ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="5_tfohx"]
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="9_bn2i2"]
 [ext_resource type="PackedScene" uid="uid://bvo8oinf2kxiy" path="res://Scenes/Interactables/tree.tscn" id="10_jj3sk"]
 [ext_resource type="PackedScene" uid="uid://fbf74j6q1vxe" path="res://Scenes/Interactables/Spawner.tscn" id="11_7rqc0"]
@@ -19,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c7lfn5kjortg2" path="res://Scenes/Obstacles/BrownRockMedium.tscn" id="15_pd6of"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="17_l1jp1"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxl76"]
 size = Vector2(201, 162)
@@ -69,7 +69,25 @@ spawn_range = 100
 
 [node name="Pickups" type="Node" parent="."]
 
-[node name="SceneSettings" parent="." instance=ExtResource("5_tfohx")]
+[node name="Obstacles" type="Node2D" parent="."]
+position = Vector2(-0.269287, 2.66302)
+
+[node name="Generated" parent="Obstacles" instance=ExtResource("5_grttd")]
+
+[node name="PurpleGrassLarge1" parent="Obstacles" instance=ExtResource("11_tlfyx")]
+position = Vector2(-881, 501)
+
+[node name="BlueRockTall" parent="Obstacles" instance=ExtResource("12_5ueu3")]
+position = Vector2(-910, -83)
+
+[node name="BlueRockCluster" parent="Obstacles" instance=ExtResource("13_mfuaq")]
+position = Vector2(695, -637)
+
+[node name="BlueRockSmall" parent="Obstacles" instance=ExtResource("14_3fesh")]
+position = Vector2(772, 401)
+
+[node name="BlueRockMedium" parent="Obstacles" instance=ExtResource("15_pd6of")]
+position = Vector2(402, -479)
 
 [node name="Scene" type="Node" parent="."]
 
@@ -114,24 +132,8 @@ E - Interact
 R - Toggle road overlay"
 label_settings = ExtResource("9_bn2i2")
 
-[node name="Obstacles" type="Node2D" parent="Scene"]
-
-[node name="Generated" parent="Scene/Obstacles" instance=ExtResource("5_grttd")]
-
-[node name="PurpleGrassLarge1" parent="Scene/Obstacles" instance=ExtResource("11_tlfyx")]
-position = Vector2(-881, 501)
-
-[node name="BlueRockTall" parent="Scene/Obstacles" instance=ExtResource("12_5ueu3")]
-position = Vector2(-910, -83)
-
-[node name="BlueRockCluster" parent="Scene/Obstacles" instance=ExtResource("13_mfuaq")]
-position = Vector2(695, -637)
-
-[node name="BlueRockSmall" parent="Scene/Obstacles" instance=ExtResource("14_3fesh")]
-position = Vector2(772, 401)
-
-[node name="BlueRockMedium" parent="Scene/Obstacles" instance=ExtResource("15_pd6of")]
-position = Vector2(402, -479)
+[node name="PointLight2D" parent="Scene/Welcome Label" instance=ExtResource("19_gnlt0")]
+position = Vector2(107, 97)
 
 [node name="OasisSpring" parent="Scene" instance=ExtResource("17_l1jp1")]
 position = Vector2(-1618, 148)

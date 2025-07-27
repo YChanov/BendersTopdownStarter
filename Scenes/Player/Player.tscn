@@ -1,10 +1,12 @@
-[gd_scene load_steps=65 format=3 uid="uid://bvg5dny32iw0x"]
+[gd_scene load_steps=67 format=3 uid="uid://bvg5dny32iw0x"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PlayerMain.gd" id="1_y5oq4"]
 [ext_resource type="Texture2D" uid="uid://dotljha74t3mi" path="res://Art/Sprites/MC_attack.png" id="2_1sbc4"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="2_lffr6"]
 [ext_resource type="Texture2D" uid="uid://b7ktdmlpcsle5" path="res://Art/Sprites/MC_death.png" id="3_nrgsn"]
 [ext_resource type="Texture2D" uid="uid://dege48efa7ot8" path="res://Art/Sprites/MC_idle.png" id="4_w8qrc"]
 [ext_resource type="Texture2D" uid="uid://73s7ih8tyw42" path="res://Art/Sprites/MC_running.png" id="5_l8u4i"]
+[ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="15_bi65p"]
 [ext_resource type="Script" path="res://Scripts/FSM/FiniteStateMachine.gd" id="21_54cjv"]
 [ext_resource type="PackedScene" uid="uid://b82yimbxiflml" path="res://Art/Particles/hit_particles.tscn" id="21_gooki"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/States/PlayerIdleState.gd" id="26_28u22"]
@@ -474,6 +476,9 @@ tracks/1/keys = {
 "values": [0, 1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_exa0s"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_wo7cn"]
 resource_name = "Walk"
 length = 0.125013
@@ -491,9 +496,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"Walk", &"Walk"]
 }
-
-[sub_resource type="Animation" id="Animation_exa0s"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gtuut"]
 _data = {
@@ -524,11 +526,15 @@ healthbar = NodePath("ProgressBar")
 flipped_horizontal = true
 hit_particles = NodePath("hit_particle_blood")
 
+[node name="PointLight2D" parent="." instance=ExtResource("2_lffr6")]
+position = Vector2(-2, -45)
+color = Color(1, 1, 1, 0.843137)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -47)
 sprite_frames = SubResource("SpriteFrames_vax36")
-animation = &"Attack"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("21_gooki")]
@@ -600,7 +606,10 @@ position = Vector2(-10, -11)
 scale = Vector2(21.8148, 21.8148)
 texture = ExtResource("34_s2w06")
 
+[node name="SceneSettings" parent="." instance=ExtResource("15_bi65p")]
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
 light_mask = 2
 visibility_layer = 2
 anchors_preset = 2

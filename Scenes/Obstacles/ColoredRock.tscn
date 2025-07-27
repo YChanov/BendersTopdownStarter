@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://vfshad4x5poh"]
+[gd_scene load_steps=5 format=3 uid="uid://vfshad4x5poh"]
 
 [ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_i8rfv"]
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_qjgba"]
+[ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="3_uw52j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llwiy"]
 size = Vector2(58, 26)
@@ -19,3 +20,5 @@ position = Vector2(0, -18)
 texture = ExtResource("1_qjgba")
 region_enabled = true
 region_rect = Rect2(126, 64, 66, 65)
+
+[node name="PointLight2D" parent="." instance=ExtResource("3_uw52j")]

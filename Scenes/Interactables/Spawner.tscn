@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://fbf74j6q1vxe"]
+[gd_scene load_steps=5 format=3 uid="uid://fbf74j6q1vxe"]
 
 [ext_resource type="Script" path="res://Scripts/one_time_spawner.gd" id="1_jxx34"]
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="2_2elgq"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="3_hdxh6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvq58"]
 radius = 589.191
@@ -29,6 +30,9 @@ position = Vector2(0, -65)
 texture = ExtResource("2_2elgq")
 region_enabled = true
 region_rect = Rect2(251, 0, 76, 128)
+
+[node name="PointLight2D" parent="." instance=ExtResource("3_hdxh6")]
+position = Vector2(-3, -42)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

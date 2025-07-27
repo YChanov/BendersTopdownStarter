@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	label.visible = true
 	
 	if !hasEnough() :
-		label.text = "You need 1 slime and 1 wood\nto build roads!"
+		label.text = "You need 1 slime\nand 1 wood\nto build roads!"
 	else :
 		label.text = "Press 'E' to\nbuild Roads"
 	

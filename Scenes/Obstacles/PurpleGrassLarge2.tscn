@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cguq3cdyxv8qe"]
+[gd_scene load_steps=4 format=3 uid="uid://cguq3cdyxv8qe"]
 
 [ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_4adov"]
 [ext_resource type="Texture2D" uid="uid://ckvk2j3xysg3h" path="res://Art/sprouts_trees.png" id="1_lwiir"]
+[ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="3_nntll"]
 
 [node name="PurpleGrassLarge2" type="Node2D"]
 y_sort_enabled = true
@@ -12,3 +13,5 @@ position = Vector2(-1, -17)
 texture = ExtResource("1_lwiir")
 region_enabled = true
 region_rect = Rect2(90, 40, 65, 67)
+
+[node name="PointLight2D" parent="." instance=ExtResource("3_nntll")]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwqrat3bud8ij"]
+[gd_scene load_steps=7 format=3 uid="uid://dwqrat3bud8ij"]
 
 [ext_resource type="Texture2D" uid="uid://b3umak7h21wu7" path="res://Art/factory_road.webp" id="1_e6xcn"]
 [ext_resource type="Script" path="res://Scripts/factory_road.gd" id="1_maivq"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_up0lg"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="4_koteh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fmc4h"]
 radius = 69.2604
@@ -38,6 +39,8 @@ offset_bottom = -27.0
 text = "Press 'E' to 
 build Roads"
 label_settings = SubResource("LabelSettings_3mefe")
+
+[node name="PointLight2D" parent="." instance=ExtResource("4_koteh")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
