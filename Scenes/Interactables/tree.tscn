@@ -9,7 +9,7 @@
 radius = 125.036
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdbr"]
-size = Vector2(120, 150)
+size = Vector2(118, 108)
 
 [sub_resource type="LabelSettings" id="LabelSettings_k7heb"]
 font = ExtResource("3_rfnwl")
@@ -27,7 +27,7 @@ position = Vector2(-1, -26)
 shape = SubResource("CircleShape2D_fw31t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13)
+position = Vector2(-1, -8)
 shape = SubResource("RectangleShape2D_cpdbr")
 
 [node name="Label" type="Label" parent="."]
