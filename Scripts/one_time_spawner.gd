@@ -40,6 +40,9 @@ func spawnEnemy() -> void :
 		return
 		
 	if $"../../Enemies".get_child_count() >= enemies_limit :
+		can_spawn = false
+		if !one_time:
+			timer.start()
 		return
 	
 	if !enemy_to_spawn :
