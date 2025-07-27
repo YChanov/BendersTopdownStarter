@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=23 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -18,7 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://c7lfn5kjortg2" path="res://Scenes/Obstacles/BrownRockMedium.tscn" id="15_pd6of"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="17_l1jp1"]
+[ext_resource type="PackedScene" uid="uid://7rrcvcoqnt60" path="res://Scenes/Obstacles/PurpleTree1.tscn" id="18_eqgu3"]
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
+[ext_resource type="PackedScene" uid="uid://bjhgts0f1550q" path="res://Scenes/Obstacles/PurpleTree2.tscn" id="19_hu4xp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxl76"]
 size = Vector2(201, 162)
@@ -165,6 +167,78 @@ one_time = false
 
 [node name="OneTimeSpawner5" parent="Scene" instance=ExtResource("11_7rqc0")]
 position = Vector2(-1233, 169)
+
+[node name="PurpleTree1" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(1312, -1083)
+
+[node name="PurpleTree2" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(-734, -1635)
+
+[node name="PurpleTree3" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(-2799, -242)
+
+[node name="PurpleTree4" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(-2530, 733)
+
+[node name="PurpleTree5" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(1574, 424)
+
+[node name="PurpleTree6" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(2502, -484)
+
+[node name="PurpleTree7" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(188, 135)
+
+[node name="PurpleTree8" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(296, 599)
+
+[node name="PurpleTree9" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(679, 962)
+
+[node name="PurpleTree10" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(975, 1050)
+
+[node name="PurpleTree11" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(1123, 1487)
+
+[node name="PurpleTree12" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(1379, 1830)
+
+[node name="PurpleTree13" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(1567, 1985)
+
+[node name="PurpleTree14" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(1937, 2180)
+
+[node name="PurpleTree15" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(2294, 2220)
+
+[node name="PurpleTree16" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(2563, 2355)
+
+[node name="PurpleTree17" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(2825, 2530)
+
+[node name="PurpleTree18" parent="Scene" instance=ExtResource("19_hu4xp")]
+position = Vector2(2940, 2772)
+
+[node name="PurpleTree19" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(-2288, 1783)
+
+[node name="PurpleTree20" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(2267, 922)
+
+[node name="PurpleTree21" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(2482, 693)
+
+[node name="PurpleTree22" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(2428, -81)
+
+[node name="PurpleTree23" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(1756, -451)
+
+[node name="PurpleTree24" parent="Scene" instance=ExtResource("18_eqgu3")]
+position = Vector2(2818, 202)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 

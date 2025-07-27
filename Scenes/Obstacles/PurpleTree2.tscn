@@ -23,3 +23,4 @@ region_enabled = true
 region_rect = Rect2(168, 117, 131, 140)
 
 [node name="PointLight2D" parent="." instance=ExtResource("3_1kc8y")]
+color = Color(1, 0.27451, 1, 0.443137)

@@ -61,7 +61,7 @@ radius = 18.0
 height = 54.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_imcar"]
-radius = 208.015
+radius = 352.172
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6b3o"]
 bg_color = Color(0.0352941, 0.0156863, 0.00784314, 0.427451)
@@ -99,6 +99,7 @@ healthbar = NodePath("ProgressBar")
 hit_particles = NodePath("HitParticles")
 
 [node name="PointLight2D" parent="." instance=ExtResource("2_xjh4d")]
+color = Color(1, 0.27451, 1, 0.443137)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_toimg")

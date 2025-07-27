@@ -16,3 +16,4 @@ region_rect = Rect2(255, 1, 64, 127)
 
 [node name="PointLight2D" parent="." instance=ExtResource("3_d35ju")]
 position = Vector2(-3, -48)
+color = Color(0.473804, 0.619745, 0.923517, 0.443137)
