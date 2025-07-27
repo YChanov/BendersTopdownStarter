@@ -25,7 +25,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		label.visible = playerInside
 
 var chance_of_ouch = 0.1
-func _take_damage(damage : int):
+func _take_damage(_damage : int):
 	if randf() < chance_of_ouch:
 		label.text = "OUCH! That hurts you prick!"
 	else:

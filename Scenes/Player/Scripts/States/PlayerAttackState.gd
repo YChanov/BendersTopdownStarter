@@ -17,8 +17,7 @@ func Enter():
 
 #Read which attack to use from our two attack nodes
 func DetermineAttack():
-	if(Input.is_action_just_pressed("Punch") or Input.is_action_just_pressed("Kick") or Input.is_action_just_pressed("Dash")):
-		current_attack = attacks[0]
+	current_attack = attacks[0]
 
 #Hitbox is turned on/off through the animationplayer, it an enemy is standing inside of it once that happens they take damage
 #Both hitboxes call back to this function through signals
@@ -28,5 +27,4 @@ func _on_hitbox_body_entered(body):
 		AudioManager.play_sound(AudioManager.PLAYER_ATTACK_HIT, 0, 1)
 
 func deal_damage(enemy):
-	hit_particles.emitting = true
 	enemy._take_damage(attacks[0].damage)

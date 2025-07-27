@@ -293,7 +293,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk4mn"]
-size = Vector2(59, 60)
+size = Vector2(66.9444, 82.3333)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bu0k"]
 radius = 24.0
@@ -366,7 +366,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("AnimatedSprite2D/Hitboxes/Punch_Hitbox/hitboxShape:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -474,45 +474,6 @@ tracks/1/keys = {
 "values": [0, 1, 2]
 }
 
-[sub_resource type="Animation" id="Animation_3bc6m"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Walk"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D/Hitboxes/Punch_Hitbox/hitboxShape:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="Animation" id="Animation_wo7cn"]
 resource_name = "Walk"
 length = 0.125013
@@ -531,6 +492,9 @@ tracks/0/keys = {
 "values": [&"Walk", &"Walk"]
 }
 
+[sub_resource type="Animation" id="Animation_exa0s"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gtuut"]
 _data = {
 "Attack": SubResource("Animation_jtcnw"),
@@ -538,7 +502,7 @@ _data = {
 "Death": SubResource("Animation_fkgk5"),
 "Idle": SubResource("Animation_1i780"),
 "MoonKick": SubResource("Animation_7c1ec"),
-"RESET": SubResource("Animation_3bc6m"),
+"RESET": SubResource("Animation_exa0s"),
 "Walk": SubResource("Animation_wo7cn")
 }
 
@@ -564,7 +528,7 @@ hit_particles = NodePath("hit_particle_blood")
 y_sort_enabled = true
 position = Vector2(0, -47)
 sprite_frames = SubResource("SpriteFrames_vax36")
-animation = &"Walk"
+animation = &"Attack"
 autoplay = "Idle"
 
 [node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("21_gooki")]
@@ -576,7 +540,7 @@ rotation = 0.0
 [node name="Punch_Hitbox" type="Area2D" parent="AnimatedSprite2D/Hitboxes"]
 
 [node name="hitboxShape" type="CollisionShape2D" parent="AnimatedSprite2D/Hitboxes/Punch_Hitbox"]
-position = Vector2(-35.5556, -10.6667)
+position = Vector2(-40, -4)
 shape = SubResource("RectangleShape2D_wk4mn")
 disabled = true
 
@@ -612,7 +576,6 @@ animator = NodePath("../../AnimationPlayer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
-zoom = Vector2(1.2, 1.2)
 position_smoothing_speed = 15.0
 
 [node name="hit_particle_blood" type="GPUParticles2D" parent="."]
