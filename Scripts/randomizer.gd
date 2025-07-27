@@ -27,6 +27,14 @@ var obstacles: Array[Dictionary] = [
 	{ "scene": "res://Scenes/Obstacles/PurpleGrassLarge2.tscn", "weight": 1, "chance": 0.01 },
 	{ "scene": "res://Scenes/Obstacles/PurpleGrassLarge3.tscn", "weight": 1, "chance": 0.008 },
 ]
+
+var river_tiles:= [
+	Vector2i(0, 1),
+	Vector2i(1, 1),
+	Vector2i(0, 2),
+	Vector2i(1, 2),
+]
+
 const TILE_SET_SOURCE_ID = 1
 const WATER_TILE_SET_SOURCE_ID = 5
 
@@ -38,19 +46,35 @@ var weighted_tile_pool: Array[Vector2i] = []
 var weighted_obstacle_pool: Array[String] = []
 
 func _ready():
-	if tilemap:
-		_build_weighted_tile_pool()
-		_build_weighted_obstacle_pool()
-		generate_random_environment()
+	generate_level()
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed('Restart') :
+		generate_level()
 		
-		var new_scene_tile_map := PackedScene.new()
-		new_scene_tile_map.pack(tilemap)
-		var new_scene := PackedScene.new()
-		new_scene.pack(generated_container)
-		ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
-		ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
-	else:
-		push_error("TileMapLayer not found!")
+func generate_level():
+	for child in generated_container.get_children():
+		if child is StaticBody2D:
+			child.queue_free()
+		
+	weighted_tile_pool.clear()
+	weighted_obstacle_pool.clear()
+	tilemap.clear()
+	_build_weighted_tile_pool()
+	_build_weighted_obstacle_pool()
+	generate_random_environment()
+	generate_rivers()
+	
+	var new_scene_tile_map := PackedScene.new()
+	new_scene_tile_map.pack(tilemap)
+	var new_scene := PackedScene.new()
+	new_scene.pack(generated_container)
+	ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+	ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+
+func generate_rivers():
+	
+	pass
 
 func _build_weighted_tile_pool():
 	for tile_info in tile_config:
@@ -89,7 +113,7 @@ func generate_random_environment():
 	tilemap.update_internals()
 	
 func place_obstacle_by_chance(x,y,tile_size):
-	if abs(x) < 4 && abs(y) < 4:
+	if abs(x) < 5 && abs(y) < 5:
 		print('not generating in: ',x,' ',y)
 		return
 		
