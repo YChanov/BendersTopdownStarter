@@ -48,8 +48,8 @@ position = Vector2(-63, 347)
 y_sort_enabled = false
 position = Vector2(26, -199)
 
-[node name="Teleporter" parent="Interactables" instance=ExtResource("4_hri5c")]
-position = Vector2(3142, 2821)
+[node name="Teleporter" parent="Interactables" groups=["T1"] instance=ExtResource("4_hri5c")]
+position = Vector2(3123, 2802)
 target_level = "res://Scenes/Levels/FinalCity.tscn"
 
 [node name="Pickups" type="Node" parent="."]
