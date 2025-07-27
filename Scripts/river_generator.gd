@@ -5,8 +5,8 @@ extends Node
 
 @export var river_tile_coords := [Vector2i(0, 1)]  # River tile coordinates in tileset
 @export var river_width := 2  # Width of the river
-@export var river_fork_chance := 0.15  # Chance of creating a fork
-@export var river_direction_change_chance := 0.1  # Chance of changing direction
+@export var river_fork_chance := 0.1  # Chance of creating a fork
+@export var river_direction_change_chance := 0.2  # Chance of changing direction
 const TILE_SET_SOURCE_ID = 5
 
 # Called when the node enters the scene tree for the first time.
@@ -26,9 +26,9 @@ func generate_river():
 	#var start_y = randi_range(-area_half.y + 10, area_half.y - 10)
 	#print(-area_half.x + 1,' ',start_y)
 	rivers.append({
-		"x": -area_half.x + 10,
-		"y": area_half.y - 10,
-		"direction": Vector2i(1, -1),  # Moving right up
+		"x": -area_half.x,
+		"y": area_half.y - 2,
+		"direction": Vector2i(1, 0),  # Moving right up
 		"active": true
 	})
 	
@@ -50,7 +50,10 @@ func generate_river():
 			if river.x >= area_half.x or river.x <= -area_half.x or river.y >= area_half.y or river.y <= -area_half.y:
 				river.active = false
 				continue
-			
+				
+			if abs(river.x) <= 6 and abs(river.y) <= 6:
+				river.active = false
+				continue
 			# Chance to change direction slightly (mostly straight)
 			if randf() < river_direction_change_chance:
 				var direction_change = randi_range(-1, 1)
