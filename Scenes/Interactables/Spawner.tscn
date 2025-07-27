@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="2_2elgq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvq58"]
-radius = 168.69
+radius = 589.191
 
 [node name="OneTimeSpawner" type="Node2D"]
 y_sort_enabled = true
