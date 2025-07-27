@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt7qe85lr8lqj"]
+[gd_scene load_steps=5 format=3 uid="uid://bt7qe85lr8lqj"]
 
 [ext_resource type="Texture2D" uid="uid://bvvnjl0pmt0e3" path="res://Art/slime_resource.png" id="1_3yq4k"]
 [ext_resource type="Script" path="res://Scripts/SlimePickup.gd" id="2_mfdvv"]
+[ext_resource type="Texture2D" uid="uid://dyb5iqfj3tmwj" path="res://Art/Sprites/light.png" id="3_iwutt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ea2ve"]
 radius = 36.8824
@@ -17,5 +18,11 @@ script = ExtResource("2_mfdvv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ea2ve")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+rotation = 0.778886
+scale = Vector2(1.54167, 1.54167)
+energy = 0.3
+texture = ExtResource("3_iwutt")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
