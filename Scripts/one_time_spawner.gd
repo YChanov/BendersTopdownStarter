@@ -1,4 +1,5 @@
-extends Node2D
+extends ObstacleBase
+class_name Spawner
 
 @export var enemy_to_spawn : PackedScene
 @export var spawn_points : Array[Marker2D]
@@ -40,7 +41,10 @@ func spawnEnemy() -> void :
 		
 	if $"../../Enemies".get_child_count() >= enemies_limit :
 		return
-		
+	
+	if !enemy_to_spawn :
+		enemy_to_spawn = load("res://Scenes/NPC's/Enemy/Enemy.tscn")
+	
 	var enemy_instance = enemy_to_spawn.instantiate()
 	var target_position = global_position
 	if spawn_points.size() :

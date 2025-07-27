@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cxubskouklqqf" path="res://Scenes/randomizer.tscn" id="9_7xp34"]
 [ext_resource type="Script" path="res://Scripts/river_generator.gd" id="10_cn0fj"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="14_d7pmx"]
-[ext_resource type="Script" path="res://Scenes/Levels/tuto_label.gd" id="15_jleal"]
+[ext_resource type="Script" path="res://Scripts/tuto_label.gd" id="15_jleal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxl76"]
 size = Vector2(201, 162)
@@ -24,14 +24,14 @@ position = Vector2(0.269287, -2.66302)
 [node name="Player" parent="." instance=ExtResource("1_7jkl4")]
 z_index = 10
 y_sort_enabled = true
-position = Vector2(-85, -117)
+position = Vector2(-2, -2)
 
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Interactables" type="Node" parent="."]
 
 [node name="FactoryRoad" parent="Interactables" instance=ExtResource("3_sau6k")]
-position = Vector2(32, -228)
+position = Vector2(130, -39)
 
 [node name="Pickups" type="Node" parent="."]
 
@@ -65,10 +65,10 @@ autoplay = true
 
 [node name="Welcome Label" type="Label" parent="Scene"]
 texture_filter = 1
-offset_left = -395.0
-offset_top = -261.0
-offset_right = -127.0
-offset_bottom = -61.0
+offset_left = -320.0
+offset_top = -197.0
+offset_right = -52.0
+offset_bottom = 3.0
 text = "Welcome to Only One Breath
 WASD - Move
 SPACE - Dash
@@ -86,7 +86,6 @@ label_settings = ExtResource("7_8lrqn")
 script = ExtResource("15_jleal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-86.7693, -114.337)
 shape = SubResource("RectangleShape2D_lxl76")
 
 [node name="Randomizer" parent="." instance=ExtResource("9_7xp34")]

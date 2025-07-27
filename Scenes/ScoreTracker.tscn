@@ -83,29 +83,31 @@ text = "Road:"
 label_settings = ExtResource("2_ygwdu")
 
 [node name="Label" type="Label" parent="GameUI"]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -72.0
-offset_right = 72.0
-offset_bottom = -46.0
+offset_left = 20.0
+offset_top = -63.0
+offset_right = 68.0
+offset_bottom = -37.0
 grow_vertical = 0
 text = "Breath"
 label_settings = ExtResource("3_fw1jh")
 
 [node name="ProgressBar" type="ProgressBar" parent="GameUI"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -24.0
-offset_right = 40.0
-offset_bottom = 74.0
+offset_left = 20.0
+offset_top = -15.0
+offset_right = 36.0
+offset_bottom = 83.0
 grow_vertical = 0
 rotation = -1.57079
 theme_override_styles/background = SubResource("StyleBoxFlat_0wshq")

@@ -13,12 +13,7 @@ const TILE_SET_SOURCE_ID = 5
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	generate_river()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed('Restart') :
-		generate_river()
-		
+	await get_tree().create_timer(2).timeout
 	var new_scene_tile_map := PackedScene.new()
 	new_scene_tile_map.pack(tilemap)
 	var new_scene := PackedScene.new()
@@ -26,7 +21,11 @@ func _process(delta: float) -> void:
 	ResourceSaver.save(new_scene_tile_map, "res://generated_level_tile_map.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
 	ResourceSaver.save(new_scene, "res://generated_level.tscn", ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
 
-
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed('Restart') :
+		generate_river()
+		
 func generate_river():
 	var area_half := tile_area_size / 2
 	var rivers: Array[Dictionary] = []
@@ -58,10 +57,12 @@ func generate_river():
 			# Check if river is out of bounds
 			if river.x >= area_half.x or river.x <= -area_half.x or river.y >= area_half.y or river.y <= -area_half.y:
 				river.active = false
+				rivers.remove_at(i)
 				continue
 				
 			if abs(river.x) <= 6 and abs(river.y) <= 6:
 				river.active = false
+				rivers.remove_at(i)
 				continue
 			# Chance to change direction slightly (mostly straight)
 			if randf() < river_direction_change_chance:

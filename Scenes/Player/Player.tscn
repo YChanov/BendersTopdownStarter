@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bvg5dny32iw0x"]
+[gd_scene load_steps=68 format=3 uid="uid://bvg5dny32iw0x"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PlayerMain.gd" id="1_y5oq4"]
 [ext_resource type="Texture2D" uid="uid://dotljha74t3mi" path="res://Art/Sprites/MC_attack.png" id="2_1sbc4"]
@@ -545,7 +545,13 @@ _data = {
 "Walk": SubResource("Animation_wo7cn")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "hit_particles") groups=["Player"]]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1usm"]
+bg_color = Color(0.0352941, 0.0156863, 0.00784314, 0.427451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5pan"]
+bg_color = Color(0.391969, 0.478421, 0.97647, 1)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "healthbar", "hit_particles") groups=["Player"]]
 top_level = true
 texture_filter = 1
 floor_stop_on_slope = false
@@ -553,6 +559,7 @@ floor_block_on_wall = false
 script = ExtResource("1_y5oq4")
 sprite = NodePath("AnimatedSprite2D")
 health = 200
+healthbar = NodePath("ProgressBar")
 flipped_horizontal = true
 hit_particles = NodePath("hit_particle_blood")
 
@@ -658,5 +665,24 @@ modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(-10, -11)
 scale = Vector2(21.8148, 21.8148)
 texture = ExtResource("34_s2w06")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+light_mask = 2
+visibility_layer = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -108.0
+offset_right = -38.0
+offset_bottom = -10.0
+grow_vertical = 0
+rotation = -1.57079
+theme_override_styles/background = SubResource("StyleBoxFlat_r1usm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s5pan")
+step = 1.0
+value = 25.0
+fill_mode = 2
+show_percentage = false
 
 [connection signal="body_entered" from="AnimatedSprite2D/Hitboxes/Punch_Hitbox" to="FSM/Attacking" method="_on_hitbox_body_entered"]

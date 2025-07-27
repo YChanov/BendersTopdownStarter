@@ -1,15 +1,6 @@
 extends Node
 
-@export var tile_config: Array[Dictionary] = [
-	{ "coords": Vector2i(6, 3), "weight": 10 },
-	{ "coords": Vector2i(7, 3), "weight": 1 },
-	{ "coords": Vector2i(8, 3), "weight": 10 },
-	{ "coords": Vector2i(6, 4), "weight": 10 },
-	{ "coords": Vector2i(7, 4), "weight": 1 },
-	{ "coords": Vector2i(8, 4), "weight": 1 },
-	{ "coords": Vector2i(6, 5), "weight": 10 },
-	{ "coords": Vector2i(7, 5), "weight": 1 },
-	{ "coords": Vector2i(8, 5), "weight": 10 },
+var tile_config: Array[Dictionary] = [
 	{ "coords": Vector2i(15, 3), "weight": 10 },
 	{ "coords": Vector2i(16, 3), "weight": 10 },
 	{ "coords": Vector2i(17, 3), "weight": 10 },
@@ -41,12 +32,23 @@ const WATER_TILE_SET_SOURCE_ID = 5
 @export var tile_area_size := Vector2i(100, 100)
 @onready var generated_container: Node = $"../Generated"
 @onready var tilemap: TileMapLayer = $"../Generated/TileMap"
+const SPAWNER = preload("res://Scenes/Interactables/Spawner.tscn")
+const SPAWNER_CHANCE = 0.01
+
+const TREE = preload("res://Scenes/Interactables/Spawner.tscn")
+const TREE_CHANCE = 0.01
 
 var weighted_tile_pool: Array[Vector2i] = []
 var weighted_obstacle_pool: Array[String] = []
 
 func _ready():
 	generate_level()
+
+func generate_initial_grass():
+	const range_grass = 3
+	for x in range(-range_grass,range_grass) :
+		for y in range(-range_grass,range_grass):
+			tilemap.set_cell(Vector2(x,y), 2, Vector2i(randi_range(6,8), randi_range(3,5)))
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('Restart') :
@@ -54,7 +56,7 @@ func _process(delta: float) -> void:
 		
 func generate_level():
 	for child in generated_container.get_children():
-		if child is StaticBody2D:
+		if child is ObstacleBase or child is Spawner:
 			child.queue_free()
 		
 	weighted_tile_pool.clear()
@@ -63,6 +65,22 @@ func generate_level():
 	_build_weighted_tile_pool()
 	_build_weighted_obstacle_pool()
 	generate_random_environment()
+	generate_initial_grass()
+	
+func generate_spawner(x, y):
+	if abs(x) < 5 && abs(y) < 5 or randf() > SPAWNER_CHANCE:
+		return
+	
+	var is_permanent = abs(x) > 25 and abs(y) > 25
+	
+	print('bip ',x,' ',y, ' permanent' if is_permanent else ' non-permanent')
+	place_spawner(Vector2i(x,y), is_permanent)
+	
+func place_spawner(position, is_permanent):
+	var spawner_instace = SPAWNER.instantiate()
+	spawner_instace.one_time = !is_permanent
+	spawner_instace.position = tilemap.map_to_local(position)
+	generated_container.add_child(spawner_instace)
 	
 func _build_weighted_tile_pool():
 	for tile_info in tile_config:
@@ -98,6 +116,7 @@ func generate_random_environment():
 			var atlas_coords := _get_random_tile_coords()
 			tilemap.set_cell(pos, TILE_SET_SOURCE_ID, atlas_coords)
 			place_obstacle_by_chance(x, y, tile_size)
+			generate_spawner(x, y)
 	tilemap.update_internals()
 	
 func place_obstacle_by_chance(x,y,tile_size):

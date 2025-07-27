@@ -6,7 +6,6 @@ class_name PlayerMain
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 @onready var collision_shape_2d: CollisionShape2D = $AnimatedSprite2D/Hitboxes/Kick_Hitbox/CollisionShape2D
 
-
 const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
@@ -53,7 +52,7 @@ func RoadOverlay() :
 	var current_position = tile_map.local_to_map(position)
 	target_position = Vector2i(current_position.x + last_direction.x, current_position.y + last_direction.y)
 	var tile_source_id = tile_map.get_cell_source_id(target_position)
-	tile_overlay.visible = true if tile_source_id != -1 else false
+	tile_overlay.visible = true if tile_source_id != 4 else false
 	var real_target_position = tile_map.map_to_local(target_position)
 	tile_overlay.global_position = real_target_position
 	
@@ -93,10 +92,13 @@ func PutRoad():
 		if !road_amount:
 			return
 			
+		var tile_map_base : TileMapLayer = get_parent().get_node("Scene/TileMapBase")
 		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMapRoads")
 		if tile_map.get_cell_source_id(target_position) == ROADS_SOURCE_ID:
 			return
 			
+		var data : TileData = tile_map_base.get_cell_tile_data(target_position)
+		data.set_collision_polygon_points(0, 0, [])
 		tile_map.set_cell(target_position, ROADS_SOURCE_ID, Vector2i(0,0))
 		GameManager.add_road(-1)
 	return

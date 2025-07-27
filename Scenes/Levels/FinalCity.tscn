@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=4 uid="uid://bhdl1i6aci6dm"]
+
+[ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_a7xb6"]
+[ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="2_nip2i"]
+[ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="3_uf83u"]
+[ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="4_fk1nt"]
+[ext_resource type="PackedScene" uid="uid://cgxgtdpi38vj1" path="res://Scenes/Interactables/teleporter.tscn" id="5_m3ltv"]
+[ext_resource type="PackedScene" uid="uid://bbn3s2yyod4ee" path="res://Scenes/Obstacles/BluePlantSmall.tscn" id="6_72thu"]
+[ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="6_vbc0p"]
+[ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="7_j6hpc"]
+[ext_resource type="PackedScene" uid="uid://b5bqbjojwuvuc" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="8_qh2mv"]
+
+[node name="Scene_Root" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+texture_filter = 1
+
+[node name="Player" parent="." instance=ExtResource("1_a7xb6")]
+y_sort_enabled = true
+position = Vector2(-60, -130)
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Pickups" type="Node" parent="."]
+
+[node name="SceneSettings" parent="." instance=ExtResource("2_nip2i")]
+
+[node name="Scene" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Scene"]
+stream = ExtResource("3_uf83u")
+volume_db = -1.0
+autoplay = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Scene"]
+z_index = -1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD6//z/AQAJAAAAAAD6//3/AQAJAAEAAAD6//7/AQAJAAEAAAD6////AQAJAAEAAAD6/wAAAQAJAAEAAAD6/wEAAQAJAAEAAAD6/wIAAQAJAAIAAAD7/wIAAQAKAAIAAAD8/wIAAQAKAAIAAAD9/wIAAQAKAAIAAAD+/wIAAQAKAAIAAAD//wIAAQAKAAIAAAAAAAIAAQAKAAIAAAABAAIAAQAKAAIAAAACAAIAAQAKAAIAAAADAAIAAQAKAAIAAAAEAAIAAQAKAAIAAAAFAAIAAQAKAAIAAAAGAAIAAQALAAIAAAAGAAEAAQALAAEAAAAGAAAAAQALAAEAAAAGAP//AQALAAEAAAAGAP7/AQALAAEAAAAGAP3/AQALAAEAAAAGAPz/AQALAAAAAAAFAPz/AQAKAAAAAAAEAPz/AQAKAAAAAAADAPz/AQAKAAAAAAACAPz/AQAKAAAAAAABAPz/AQAKAAAAAAAAAPz/AQAKAAAAAAD///z/AQAKAAAAAAD+//z/AQAKAAAAAAD9//z/AQAKAAAAAAD8//z/AQAKAAAAAAD7//z/AQAKAAAAAAA=")
+tile_set = ExtResource("4_fk1nt")
+
+[node name="TileMap" type="TileMapLayer" parent="Scene"]
+z_index = -1
+tile_map_data = PackedByteArray("AAD6//z/AgAAAAAAAAAGAPz/AgACAAAAAAAGAAIAAgACAAIAAAD6/wIAAgAAAAIAAAD6//3/AgAAAAEAAAD6//7/AgAAAAEAAAD6////AgAAAAEAAAD6/wAAAgAAAAEAAAD6/wEAAgAAAAEAAAD7/wIAAgABAAIAAAD8/wIAAgABAAIAAAD9/wIAAgABAAIAAAD+/wIAAgABAAIAAAD//wIAAgABAAIAAAAAAAIAAgABAAIAAAABAAIAAgABAAIAAAACAAIAAgABAAIAAAADAAIAAgABAAIAAAAEAAIAAgABAAIAAAAFAAIAAgABAAIAAAAGAAEAAgACAAEAAAAGAAAAAgACAAEAAAAGAP//AgACAAEAAAAGAP7/AgACAAEAAAAGAP3/AgACAAEAAAAFAPz/AgABAAAAAAAEAPz/AgABAAAAAAADAPz/AgABAAAAAAACAPz/AgABAAAAAAABAPz/AgABAAAAAAAAAPz/AgABAAAAAAD///z/AgABAAAAAAD+//z/AgABAAAAAAD9//z/AgABAAAAAAD8//z/AgABAAAAAAD7//z/AgABAAAAAAD7//3/AgABAAEAAAD7//7/AgABAAEAAAD7////AgABAAEAAAD7/wAAAgABAAEAAAD7/wEAAgABAAEAAAD8//3/AgABAAEAAAD8//7/AgABAAEAAAD8////AgAGAAUAAAD8/wAAAgAGAAUAAAD8/wEAAgAGAAUAAAD9//3/AgABAAEAAAD9//7/AgABAAEAAAD9////AgAGAAUAAAD9/wAAAgAGAAUAAAD9/wEAAgAGAAUAAAD+//3/AgABAAEAAAD+//7/AgABAAEAAAD+////AgABAAEAAAD+/wAAAgABAAEAAAD+/wEAAgABAAEAAAD///3/AgABAAEAAAD///7/AgABAAEAAAD/////AgABAAEAAAD//wAAAgABAAEAAAD//wEAAgABAAEAAAAAAP3/AgAHAAUAAAAAAP7/AgAHAAUAAAAAAP//AgAIAAQAAAAAAAAAAgAIAAQAAAAAAAEAAgABAAEAAAABAP3/AgAHAAUAAAABAP7/AgAHAAUAAAABAP//AgAIAAQAAAABAAAAAgAIAAQAAAABAAEAAgABAAEAAAACAP3/AgABAAEAAAACAP7/AgAIAAQAAAACAP//AgAIAAQAAAACAAAAAgAIAAQAAAACAAEAAgABAAEAAAADAP3/AgABAAEAAAADAP7/AgABAAEAAAADAP//AgABAAEAAAADAAAAAgABAAEAAAADAAEAAgABAAEAAAAEAP3/AgABAAEAAAAEAP7/AgABAAEAAAAEAP//AgABAAEAAAAEAAAAAgABAAEAAAAEAAEAAgABAAEAAAAFAP3/AgABAAEAAAAFAP7/AgABAAEAAAAFAP//AgABAAEAAAAFAAAAAgABAAEAAAAFAAEAAgABAAEAAAA=")
+tile_set = ExtResource("4_fk1nt")
+
+[node name="TileMapRoads" type="TileMapLayer" parent="Scene"]
+z_index = -1
+z_as_relative = false
+y_sort_enabled = true
+tile_set = ExtResource("4_fk1nt")
+
+[node name="Teleporter" parent="Scene" groups=["T1"] instance=ExtResource("5_m3ltv")]
+z_index = -1
+position = Vector2(159, -170)
+target_level = "res://Scenes/Levels/MainArea.tscn"
+
+[node name="BluePlantSmall" parent="Scene" instance=ExtResource("6_72thu")]
+position = Vector2(-327, 154)
+
+[node name="BluePlantSmall2" parent="Scene" instance=ExtResource("6_72thu")]
+position = Vector2(412, 160)
+
+[node name="BluePlantSmall3" parent="Scene" instance=ExtResource("6_72thu")]
+position = Vector2(412, -201)
+
+[node name="BluePlantSmall4" parent="Scene" instance=ExtResource("6_72thu")]
+position = Vector2(-358, -198)
+
+[node name="OasisSpring" parent="Scene" instance=ExtResource("7_j6hpc")]
+position = Vector2(1, -11)
+
+[node name="PurpleGrass" parent="Scene" instance=ExtResource("8_qh2mv")]
+position = Vector2(-94, 15)
+
+[node name="PurpleGrass2" parent="Scene" instance=ExtResource("8_qh2mv")]
+position = Vector2(109, 16)
+
+[node name="PurpleGrass3" parent="Scene" instance=ExtResource("8_qh2mv")]
+position = Vector2(409, -107)
+
+[node name="PurpleGrass4" parent="Scene" instance=ExtResource("8_qh2mv")]
+position = Vector2(-342, 52)
+
+[node name="Score_UI" parent="." instance=ExtResource("6_vbc0p")]

@@ -1,18 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbn3s2yyod4ee"]
+[gd_scene load_steps=3 format=3 uid="uid://bbn3s2yyod4ee"]
 
 [ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_8g0sl"]
 [ext_resource type="Texture2D" uid="uid://e71fmhrg56pq" path="res://Art/static_assets.png" id="1_nnn45"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjdad"]
-size = Vector2(16, 48)
-
-[node name="BluePlantSmall" type="StaticBody2D"]
+[node name="BluePlantSmall" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_8g0sl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_tjdad")
 
 [node name="StaticAssets" type="Sprite2D" parent="."]
 position = Vector2(0, -22)
