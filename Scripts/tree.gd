@@ -27,10 +27,11 @@ func _take_damage(damage : int):
 		return
 	var new_drop = drop.instantiate()
 	new_drop.initial_position = position;
-	var rand_drop_position_x = randi_range(15,50) * randi_range(-1,1)
-	var rand_drop_position_y = randi_range(15,50) * randi_range(-1,1)
+	var rand_drop_position_x = randi_range(0, 64) * randi_range(-1,1)
+	var rand_drop_position_y = randi_range(0, 64) * randi_range(-1,1)
 	var relative_y = position.y - rand_drop_position_y
-	if relative_y > 20 && relative_y < 60 :
-		rand_drop_position_y = rand_drop_position_y + 20
+	print(relative_y)
+	if relative_y > 300 && relative_y < 400 :
+		rand_drop_position_y = rand_drop_position_y + 64
 	new_drop.position = position + Vector2(rand_drop_position_x, rand_drop_position_y);
 	get_parent().get_parent().add_child(new_drop)

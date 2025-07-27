@@ -1,9 +1,9 @@
 extends Node
 
-var slime = 5
-var wood = 5
-var metal = 5
-var road = 0
+var slime = 0
+var wood = 0
+var metal = 0
+var road = 10
 var movement_speed = 1
 var t_group : String
 var health
