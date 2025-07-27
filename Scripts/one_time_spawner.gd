@@ -10,6 +10,7 @@ class_name Spawner
 @onready var timer: Timer = $Timer
 @onready var not_spawning: Sprite2D = $NotSpawning
 @onready var spawning: Sprite2D = $Spawning
+@onready var enemies: Node = $Enemies
 
 var can_spawn = true
 
@@ -38,8 +39,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func spawnEnemy() -> void :
 	if !can_spawn :
 		return
-		
-	if $"../../Enemies".get_child_count() >= enemies_limit :
+	
+	if enemies.get_child_count() >= enemies_limit :
 		can_spawn = false
 		if !one_time:
 			timer.start()
@@ -62,12 +63,8 @@ func spawnEnemy() -> void :
 		timer.start()
 	
 func spawnInPosition(instance: Node, position : Vector2):
-	var enemies_node = $"../../Enemies"
-	enemies_node.get_child_count()
-	if !enemies_node :
-		return
 	instance.global_position = position
-	enemies_node.add_child(instance)
+	enemies.add_child(instance)
 
 
 func _on_timer_timeout() -> void:
