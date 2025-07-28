@@ -6,11 +6,6 @@ class_name PlayerMain
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 @onready var collision_shape_2d: CollisionShape2D = $AnimatedSprite2D/Hitboxes/Kick_Hitbox/CollisionShape2D
 
-#const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
-#const DEATH_SCREEN = preload("res://Scenes/Misc/game_screens.tscn")
-@onready var game_screens = $"../GameScreens"
-#@onready var game_screens = preload("res://Scenes/Misc/game_screens.tscn")
-
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
 
@@ -23,12 +18,9 @@ var last_direction : Vector2 = Vector2(1, 0)
 #or spread out over our states in the finite-state-manager, this class is almost empty 
 func _ready() -> void:
 	super._ready()
-	
 	if GameManager.t_group :
 		var tele = get_tree().get_first_node_in_group(GameManager.t_group)
 		position = tele.position if tele else position
-		
-	
 	
 func _process(delta: float) -> void:
 	
@@ -131,7 +123,5 @@ func _die():
 	super() #calls _die() on base-class CharacterBase
 	
 	fsm.force_change_state("Die")
-	game_screens.on_game_over()
-	
-	
+	GameManager.load_next_level(load("res://Scenes/Misc/end_game_screen.tscn"))
 	#add_child(death_scene)

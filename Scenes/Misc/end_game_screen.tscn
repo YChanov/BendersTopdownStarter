@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://8mty3j8ab1tl"]
+
+[ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="1_86ye7"]
+[ext_resource type="Script" path="res://Scripts/end_game_screen.gd" id="1_hyowj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsuwm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhdo7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ofdo"]
+font = ExtResource("1_86ye7")
+font_size = 32
+
+[node name="EndGameScreen" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hyowj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -160.0
+offset_right = 180.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+modulate = Color(0.749085, 0.242246, 0.272609, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -113.5
+offset_right = 210.0
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fsuwm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.465625
+anchor_right = 0.5
+anchor_bottom = 0.465625
+offset_left = -185.5
+offset_top = -63.5
+offset_right = 185.5
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+text = " Oh no! 
+you held your breath too long and you fainted
+Luckily,  you can crawl back to your safe place!
+Try your best again to reach the safe city
+ and get the medicine!"
+label_settings = SubResource("LabelSettings_bhdo7")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -52.0
+offset_right = 52.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.768627, 0.501961, 0.215686, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Try again"
+label_settings = SubResource("LabelSettings_8ofdo")
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/Control/ColorRect"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -10.0
+offset_right = 39.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Control/ColorRect/RestartButton" to="." method="_on_restart_button_pressed"]

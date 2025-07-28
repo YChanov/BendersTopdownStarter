@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=23 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -19,9 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="17_l1jp1"]
 [ext_resource type="PackedScene" uid="uid://7rrcvcoqnt60" path="res://Scenes/Obstacles/PurpleTree1.tscn" id="18_eqgu3"]
-[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="PackedScene" uid="uid://bjhgts0f1550q" path="res://Scenes/Obstacles/PurpleTree2.tscn" id="19_hu4xp"]
-[ext_resource type="PackedScene" uid="uid://cobpgy1m7dprw" path="res://Scenes/Misc/game_screens.tscn" id="22_46nkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxl76"]
 size = Vector2(201, 162)
@@ -249,7 +248,5 @@ script = ExtResource("15_3g731")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-86.7693, -114.337)
 shape = SubResource("RectangleShape2D_lxl76")
-
-[node name="GameScreens" parent="." instance=ExtResource("22_46nkh")]
 
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
