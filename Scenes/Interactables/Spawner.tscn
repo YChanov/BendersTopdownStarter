@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="3_hdxh6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvq58"]
-radius = 589.191
+radius = 469.001
 
 [node name="OneTimeSpawner" type="Node2D"]
 y_sort_enabled = true

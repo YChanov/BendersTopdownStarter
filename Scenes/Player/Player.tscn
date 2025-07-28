@@ -295,7 +295,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk4mn"]
-size = Vector2(66.9444, 82.3333)
+size = Vector2(66.9444, 126)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7bu0k"]
 radius = 24.0
@@ -546,7 +546,7 @@ rotation = 0.0
 [node name="Punch_Hitbox" type="Area2D" parent="AnimatedSprite2D/Hitboxes"]
 
 [node name="hitboxShape" type="CollisionShape2D" parent="AnimatedSprite2D/Hitboxes/Punch_Hitbox"]
-position = Vector2(-40, -4)
+position = Vector2(-40, -2)
 shape = SubResource("RectangleShape2D_wk4mn")
 disabled = true
 

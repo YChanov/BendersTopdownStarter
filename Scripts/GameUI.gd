@@ -10,9 +10,8 @@ extends Control
 
 
 func _ready() -> void:
-	
-	healthbar.max_value = 200
-	healthbar.value = 200
+	healthbar.max_value = 100
+	healthbar.value = 100
 	
 func _process(_delta):
 	

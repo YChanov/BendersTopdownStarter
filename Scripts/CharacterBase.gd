@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name CharacterBase
 
 @export var sprite : AnimatedSprite2D
-var health_max : int = 200
+var health_max : int = 100
 @export var health : int
 @export var healthbar : ProgressBar
 @export var flipped_horizontal : bool

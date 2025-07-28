@@ -7,7 +7,7 @@ var player_in_range = false
 
 @export var chase_node : Node
 @export var drop : PackedScene
-@export var damage := 25
+@export var damage := 50
 
 var enemy_in_range = false
 var attack_in_cooldown = true
@@ -51,8 +51,6 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		enemy_in_range = true
 		attack_in_cooldown = true
-		#if fsm.current_state.name == "enemy_chase_state": 
-			#fsm.change_state(chase_node, "enemy_idle_state")
 		timer.start()
 
 func _on_hit_box_body_exited(body: Node2D) -> void:
