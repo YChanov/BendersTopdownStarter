@@ -17,7 +17,8 @@ func _on_hit_box_body_entered(body):
 #Connect and deal damage to the player
 func deal_damage_to_player(player : PlayerMain):
 	hit_particles.emitting = true
-	player._take_damage(attack.damage)
+	if player.health > 0:
+		player._take_damage(attack.damage)
 	
 func play_hitground_sound():
 	AudioManager.play_sound(AudioManager.ENEMY_HIT, 0, -10)

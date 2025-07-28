@@ -16,7 +16,8 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	if enemy_in_range and !attack_in_cooldown :
 		var player = get_tree().get_first_node_in_group("Player") as CharacterBody2D
-		player._take_damage(damage)
+		if player.health > 0:
+			player._take_damage(damage)
 		attack_in_cooldown = true
 		timer.start()
 	

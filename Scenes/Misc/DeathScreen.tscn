@@ -1,25 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://h61y6jpdtysp"]
+[gd_scene load_steps=4 format=3 uid="uid://h61y6jpdtysp"]
 
 [ext_resource type="Script" path="res://Scripts/Reset.gd" id="1_y2wu1"]
 [ext_resource type="LabelSettings" uid="uid://1cnb4418rr7" path="res://Art/Fonts/pixelized_label_large.tres" id="2_k8myw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3tr5"]
 
 [node name="DeathScreen" type="CanvasLayer"]
 layer = 2
 script = ExtResource("1_y2wu1")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PanelContainer" type="PanelContainer" parent="."]
+modulate = Color(0.952941, 0.329412, 0.313726, 0.54902)
+offset_left = 57.0
+offset_top = 6.0
+offset_right = 585.0
+offset_bottom = 298.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_r3tr5")
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Control" type="Control" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "You died!

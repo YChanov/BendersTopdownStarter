@@ -6,7 +6,11 @@ class_name PlayerMain
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 @onready var collision_shape_2d: CollisionShape2D = $AnimatedSprite2D/Hitboxes/Kick_Hitbox/CollisionShape2D
 
-const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
+#const DEATH_SCREEN = preload("res://Scenes/Misc/DeathScreen.tscn")
+#const DEATH_SCREEN = preload("res://Scenes/Misc/game_screens.tscn")
+@onready var game_screens = $"../GameScreens"
+#@onready var game_screens = preload("res://Scenes/Misc/game_screens.tscn")
+
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
 
@@ -19,11 +23,15 @@ var last_direction : Vector2 = Vector2(1, 0)
 #or spread out over our states in the finite-state-manager, this class is almost empty 
 func _ready() -> void:
 	super._ready()
+	
 	if GameManager.t_group :
 		var tele = get_tree().get_first_node_in_group(GameManager.t_group)
 		position = tele.position if tele else position
+		
+	
 	
 func _process(delta: float) -> void:
+	
 	super._process(delta)
 	var input_dir = Input.get_vector("MoveLeft", "MoveRight", "MoveUp", "MoveDown")
 	if input_dir != Vector2.ZERO && (abs(input_dir.x + input_dir.y) == 1) :
@@ -64,9 +72,11 @@ func TileHandle(delta: float):
 	var tile_source_id = GetCurrentTileSourceId()
 		
 	if tile_source_id != 2:
-		self._take_damage(5)
+		if self.health > 0:		
+			self._take_damage(5)
 	else: 
-		self._take_damage(-15)
+		if self.health > 0:	
+			self._take_damage(-15)
 	breath_time = BREATH_INTERVAL
 	
 	if GetCurrentTileSourceId(true) == 4 :
@@ -121,5 +131,7 @@ func _die():
 	super() #calls _die() on base-class CharacterBase
 	
 	fsm.force_change_state("Die")
-	var death_scene = DEATH_SCREEN.instantiate()
-	add_child(death_scene)
+	game_screens.on_game_over()
+	
+	
+	#add_child(death_scene)

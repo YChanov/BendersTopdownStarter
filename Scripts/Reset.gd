@@ -13,5 +13,6 @@ func _process(_delta):
 
 #When the player dies and wishes to reset, remove all of their money and reload the level
 func restart():
+	print('restart')
 	GameManager.reset_money()
 	GameManager.load_same_level()
