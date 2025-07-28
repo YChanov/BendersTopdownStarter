@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=26 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -21,9 +21,16 @@
 [ext_resource type="PackedScene" uid="uid://7rrcvcoqnt60" path="res://Scenes/Obstacles/PurpleTree1.tscn" id="18_eqgu3"]
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="PackedScene" uid="uid://bjhgts0f1550q" path="res://Scenes/Obstacles/PurpleTree2.tscn" id="19_hu4xp"]
+[ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
+[ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eqc1o"]
+font = ExtResource("22_xjdqx")
+font_size = 36
+outline_size = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxl76"]
-size = Vector2(201, 162)
+size = Vector2(88, 33.337)
 
 [node name="Scene_Root" type="Node2D"]
 modulate = Color(0, 0, 0, 1)
@@ -243,10 +250,24 @@ position = Vector2(2818, 202)
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(3.73071, -53.337)
 script = ExtResource("15_3g731")
 
+[node name="Label" type="Label" parent="Area2D"]
+offset_left = -187.0
+offset_top = -196.0
+offset_right = -117.0
+offset_bottom = -167.0
+text = "Controls"
+label_settings = SubResource("LabelSettings_eqc1o")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-86.7693, -114.337)
+position = Vector2(-151, -178.668)
 shape = SubResource("RectangleShape2D_lxl76")
 
+[node name="PointLight2D" parent="Area2D" instance=ExtResource("23_m1haj")]
+position = Vector2(-166, -174)
+scale = Vector2(0.503908, 0.494619)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

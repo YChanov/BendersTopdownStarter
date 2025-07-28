@@ -51,8 +51,8 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		enemy_in_range = true
 		attack_in_cooldown = true
-		if fsm.current_state.name == "enemy_chase_state": 
-			fsm.change_state(chase_node, "enemy_idle_state")
+		#if fsm.current_state.name == "enemy_chase_state": 
+			#fsm.change_state(chase_node, "enemy_idle_state")
 		timer.start()
 
 func _on_hit_box_body_exited(body: Node2D) -> void:
