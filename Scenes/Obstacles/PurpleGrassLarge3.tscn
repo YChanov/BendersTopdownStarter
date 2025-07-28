@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="3_ingag"]
 
 [node name="PurpleGrassLarge3" type="Node2D"]
-y_sort_enabled = true
+z_index = -1
 script = ExtResource("1_8182m")
 
 [node name="SproutsTrees" type="Sprite2D" parent="."]
@@ -15,4 +15,5 @@ region_enabled = true
 region_rect = Rect2(11, 36, 65, 68)
 
 [node name="PointLight2D" parent="." instance=ExtResource("3_ingag")]
+z_index = -1
 color = Color(1, 0.27451, 1, 0.443137)

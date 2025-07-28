@@ -1,3300 +1,2251 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dc2dix8onc2fc"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrassLarge1.tscn" id="1_fryey"]
-[ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="2_xsfox"]
-[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="3_0rxvv"]
-[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrassLarge2.tscn" id="4_787nv"]
-[ext_resource type="PackedScene" path="res://Scenes/Obstacles/PurpleGrassLarge3.tscn" id="5_rh22f"]
+[ext_resource type="PackedScene" uid="uid://f00nnn7vrsi6" path="res://Scenes/Obstacles/PurpleGrassLarge1.tscn" id="1_fryey"]
+[ext_resource type="PackedScene" uid="uid://b5bqbjojwuvuc" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="3_0rxvv"]
+[ext_resource type="PackedScene" uid="uid://cguq3cdyxv8qe" path="res://Scenes/Obstacles/PurpleGrassLarge2.tscn" id="4_787nv"]
+[ext_resource type="PackedScene" uid="uid://h20k1yukbi7m" path="res://Scenes/Obstacles/PurpleGrassLarge3.tscn" id="5_rh22f"]
 
 [node name="Generated" type="Node"]
 
-[node name="PurpleGrassLarge1" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="PurpleGrassLarge1" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-3162, 161)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@5" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@5" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-3099, -2804)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@6" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@6" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-3097, -862)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="PurpleGrass" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="PurpleGrass" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-3095, -800)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@7" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@7" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-3096, 527)
-script = ExtResource("2_xsfox")
 
-[node name="PurpleGrassLarge2" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="PurpleGrassLarge2" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-3097, 717)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@8" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@8" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-3120, 2221)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@9" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@9" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-3050, -276)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@11" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@11" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-3042, 1374)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@12" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@12" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-3059, 2920)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="PurpleGrassLarge3" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="PurpleGrassLarge3" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2995, -2963)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@14" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@14" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2986, -2668)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@15" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@15" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2971, -2510)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@16" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@16" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2994, -2098)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@18" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@18" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2966, -1315)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@19" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@19" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2987, -1195)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@20" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@20" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2961, 236)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@21" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@21" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2982, 278)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@22" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@22" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2990, 936)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@23" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@23" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2984, 1893)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@24" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@24" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2899, -1501)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@25" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@25" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2916, 802)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@26" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@26" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2927, 922)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@27" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@27" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2929, 1569)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@28" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@28" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2919, 2839)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@29" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@29" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2844, 93)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@30" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@30" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2836, 144)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@31" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@31" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2838, 498)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@32" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@32" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2842, 1011)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@33" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@33" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2848, 2264)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@34" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@34" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2781, -1828)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@37" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@37" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2796, 2349)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@38" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@38" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2717, -3028)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@39" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@39" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2726, -2705)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@40" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@40" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2706, -2521)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@41" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@41" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2727, -2445)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@43" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@43" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2712, -1614)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@45" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@45" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2701, -621)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@47" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@47" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2663, -2905)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@49" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@49" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2667, 146)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@50" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@50" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2638, 976)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@51" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@51" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2665, 1637)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@52" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@52" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2650, 1740)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@54" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@54" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2573, -526)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@55" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@55" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2579, -470)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@56" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@56" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2589, 1120)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@57" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@57" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2590, 1313)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@58" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@58" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2602, 1587)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@59" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@59" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2600, 2546)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@61" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@61" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2533, -2317)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@62" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@62" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2532, -419)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@63" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@63" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2530, 1126)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@64" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@64" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2449, -3021)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@65" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@65" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2480, -2862)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@66" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@66" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2451, -2162)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@68" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@68" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2463, 550)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@69" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@69" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2462, 2092)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@70" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@70" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2475, 2332)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@71" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@71" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2475, 2804)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@73" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@73" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2381, -1043)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@74" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@74" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2413, -146)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@76" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@76" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2322, -2993)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@77" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@77" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2334, -2260)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@78" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@78" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2325, -1772)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@79" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@79" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2342, -357)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@80" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@80" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2349, 1133)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@81" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@81" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2320, 2021)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@82" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@82" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2287, -783)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@83" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@83" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2284, 538)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@84" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@84" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2262, 2416)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@87" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@87" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2222, 112)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@88" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@88" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2221, 794)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@89" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@89" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2200, 1173)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@90" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@90" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2225, 1511)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@91" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@91" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2218, 2538)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@92" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@92" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2148, -3187)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@93" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@93" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2164, -1359)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@94" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@94" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2127, 1330)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@95" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@95" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2148, 2473)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@96" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@96" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-2151, 2983)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@97" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@97" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2070, -2143)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@98" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@98" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2078, -1550)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@99" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@99" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2075, -240)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@100" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@100" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2067, 2672)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@101" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@101" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2002, -3158)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@102" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@102" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2016, -1694)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@103" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@103" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1999, -1329)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@104" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@104" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-2007, -1259)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@105" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@105" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-2035, -913)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@106" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@106" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2022, -656)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@107" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@107" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-2011, 297)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@109" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@109" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1963, -3060)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@110" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@110" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1971, -2535)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@112" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@112" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1969, -1970)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@113" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@113" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1943, -745)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@115" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@115" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1932, 1496)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@117" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@117" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1869, -865)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@118" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@118" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1870, 273)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@119" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@119" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1887, 496)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@120" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@120" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1907, 1368)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@121" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@121" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1886, 1570)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@122" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@122" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1876, 1948)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@123" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@123" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1806, -2993)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@124" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@124" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1824, -1868)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@125" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@125" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1831, -1617)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@127" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@127" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1806, -357)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@128" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@128" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1807, 303)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@129" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@129" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1826, 432)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@130" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@130" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1826, 1628)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@131" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@131" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1804, 2341)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@132" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@132" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1837, 2448)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@133" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@133" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1808, 2975)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@134" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@134" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1764, -2720)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@135" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@135" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1774, -1307)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@136" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@136" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1761, -1181)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@137" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@137" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1764, -974)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@138" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@138" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1771, -727)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@139" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@139" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1747, -652)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@140" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@140" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1764, 360)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@141" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@141" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1748, 1701)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@142" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@142" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1752, 2351)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@143" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@143" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1771, 2962)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@144" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@144" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1688, -2333)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@145" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@145" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1712, -2015)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@146" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@146" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1692, -1691)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@147" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@147" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1703, -554)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@148" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@148" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1690, -432)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@149" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@149" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1699, 1901)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@150" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@150" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1699, 2956)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@151" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@151" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1687, 3087)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@152" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@152" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1622, -3044)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@153" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@153" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1642, -2927)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@154" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@154" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1619, -1363)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@156" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@156" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1633, -610)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@157" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@157" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1618, 911)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@158" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@158" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1640, 1360)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@159" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@159" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1642, 1957)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@160" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@160" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1640, 2287)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@161" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@161" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1552, -2529)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@162" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@162" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1571, -2136)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@163" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@163" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1588, -1367)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@164" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@164" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1571, -725)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@165" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@165" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1576, -544)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@166" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@166" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1562, 1818)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@167" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@167" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1579, 2027)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@169" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@169" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1583, 2779)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@170" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@170" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1485, -3046)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@171" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@171" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1512, -2450)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@172" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@172" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1520, -2211)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@173" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@173" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1492, -165)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@174" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@174" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1497, 179)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@175" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@175" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1514, 609)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@176" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@176" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1504, 2034)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@177" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@177" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1451, -2152)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@178" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@178" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1459, -1712)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@179" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@179" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1424, -1587)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@180" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@180" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1448, 1241)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@181" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@181" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1434, 1744)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@182" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@182" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1448, 2206)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@184" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@184" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1359, 743)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@185" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@185" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1395, 811)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@186" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@186" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1362, 1296)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@187" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@187" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1380, 1377)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@188" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@188" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1302, -2930)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@189" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@189" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1318, -1574)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@190" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@190" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1329, -1193)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@191" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@191" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1298, -1047)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@192" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@192" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1319, -353)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@193" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@193" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1311, 784)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@195" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@195" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1307, 1651)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@196" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@196" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1247, -2673)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@197" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@197" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1231, -2013)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@198" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@198" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1254, -611)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@199" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@199" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1268, -38)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@200" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@200" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1240, 2269)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@202" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@202" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1184, -3098)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@203" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@203" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1204, -2863)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@205" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@205" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1172, 3175)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@206" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@206" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1107, -2708)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@207" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@207" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1133, -2599)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@208" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@208" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1110, -1691)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@209" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@209" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1125, -993)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@210" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@210" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1123, -613)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@212" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@212" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1135, -414)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@213" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@213" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1123, -79)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@214" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@214" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1101, 561)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@215" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@215" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1138, 593)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@216" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@216" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1127, 1812)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@217" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@217" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1059, -2290)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@218" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@218" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1041, -412)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@219" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@219" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-1055, 434)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@220" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@220" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-1068, 486)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@221" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@221" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1055, 540)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@222" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@222" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1043, 2406)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@224" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@224" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1059, 2590)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@226" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@226" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-987, -1938)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@227" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@227" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-983, -1386)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@228" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@228" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-981, -1167)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@229" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@229" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-984, -916)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@230" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@230" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-1005, 27)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@231" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@231" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-981, 461)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@232" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@232" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-976, 1248)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@233" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@233" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-1000, 3028)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@234" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@234" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-974, 3123)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@235" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@235" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-934, -2775)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@236" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@236" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-922, -1497)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@237" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@237" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-936, -273)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@238" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@238" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-936, 978)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@239" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@239" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-917, 1305)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@241" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@241" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-915, 1777)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@242" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@242" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-911, 2274)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@243" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@243" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-865, -2783)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@244" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@244" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-850, -2410)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@245" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@245" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-875, -614)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@246" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@246" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-881, 23)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@247" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@247" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-876, 737)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@248" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@248" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-853, 2343)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@249" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@249" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-780, -2767)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@252" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@252" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-803, -1130)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@253" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@253" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-818, -591)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@254" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@254" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-811, 229)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@255" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@255" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-791, 1054)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@256" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@256" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-801, 1196)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@258" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@258" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-753, -3103)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@259" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@259" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-730, -2977)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@260" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@260" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-740, -1198)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@261" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@261" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-753, 291)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@263" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@263" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-719, 1497)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@264" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@264" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-752, 2035)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@265" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@265" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-755, 2737)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@266" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@266" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-687, -1870)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@267" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@267" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-677, 45)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@269" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@269" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-673, 732)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@270" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@270" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-672, 854)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@271" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@271" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-668, 1313)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@272" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@272" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-688, 1807)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@274" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@274" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-590, -3020)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@275" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@275" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-623, -2994)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@276" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@276" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-596, -2858)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@278" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@278" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-607, -1050)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@279" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@279" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-594, 149)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@280" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@280" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-590, 2221)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@281" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@281" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-603, 2853)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@282" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@282" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-608, 2963)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@283" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@283" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-533, -2329)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@284" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@284" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-544, -2020)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@285" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@285" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-532, -1742)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@286" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@286" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-554, -239)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@287" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@287" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-560, 1254)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@288" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@288" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-530, 1371)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@289" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@289" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-530, 2646)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@290" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@290" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-492, -3124)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@291" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@291" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-473, -2659)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@292" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@292" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-486, -2317)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@293" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@293" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-486, -1319)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@294" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@294" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-469, -866)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@295" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@295" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-480, 159)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@296" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@296" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-489, 1134)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@297" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@297" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-489, 1266)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@298" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@298" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-487, 1498)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@299" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@299" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-485, 2010)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@300" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@300" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-430, -2289)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@301" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@301" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-422, 243)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@302" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@302" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-413, 2189)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@303" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@303" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-416, 2344)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@304" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@304" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-356, -2589)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@305" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@305" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-337, -1180)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@306" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@306" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-362, 342)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@307" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@307" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-359, 2530)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@308" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@308" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-370, 2669)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@309" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@309" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-367, 3105)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@310" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@310" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-306, -3094)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@311" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@311" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-297, -2201)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@313" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@313" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-276, -854)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@315" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@315" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-287, 2381)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@316" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@316" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-297, 2536)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@318" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@318" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-208, -2990)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@319" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@319" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-238, -2511)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@320" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@320" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-217, -820)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@321" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@321" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-220, -557)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@322" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@322" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-223, 2196)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@323" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@323" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-228, 2546)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@325" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@325" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-156, -2023)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@326" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@326" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-176, -1254)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@327" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@327" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-143, -723)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@328" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@328" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-144, -338)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@329" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@329" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-165, 1262)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@331" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@331" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-150, 2291)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@332" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@332" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-97, -1517)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@333" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@333" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-100, -1315)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@334" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@334" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-111, -371)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@335" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@335" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-112, 595)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@336" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@336" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-100, 1260)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@337" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@337" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-80, 2382)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@338" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@338" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-76, 2982)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@339" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@339" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(-13, -2515)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@340" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@340" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-23, -2286)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@341" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@341" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-42, -1970)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@342" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@342" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(-41, -1421)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@344" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@344" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(-22, 1442)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@346" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@346" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(-26, 1932)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@347" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@347" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(34, -2843)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@348" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@348" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(29, -1762)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@349" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@349" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(49, -1052)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@351" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@351" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(16, -997)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@352" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@352" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(37, 750)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@353" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@353" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(24, 2073)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@356" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@356" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(97, -1871)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@357" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@357" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(84, -1749)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@358" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@358" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(98, 941)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@359" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@359" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(80, 2610)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@360" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@360" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(107, 2650)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@361" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@361" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(177, -2598)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@362" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@362" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(152, -2130)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@363" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@363" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(152, -1804)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@364" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@364" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(156, -1432)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@365" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@365" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(169, -688)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@366" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@366" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(172, 557)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@367" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@367" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(176, 864)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@369" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@369" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(229, -2769)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@372" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@372" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(209, 980)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@374" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@374" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(237, 1903)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@375" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@375" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(237, 1936)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@376" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@376" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(210, 2019)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@377" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@377" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(208, 2985)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@378" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@378" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(206, 3105)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@379" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@379" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(296, -1816)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@380" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@380" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(285, -1428)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@381" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@381" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(275, -1356)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@382" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@382" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(289, -1328)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@383" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@383" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(271, -921)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@386" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@386" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(269, 1686)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@387" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@387" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(358, -2775)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@388" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@388" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(343, -2321)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@389" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@389" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(333, 492)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@390" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@390" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(346, 928)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@391" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@391" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(355, 1356)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@392" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@392" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(363, 2022)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@393" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@393" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(352, 3120)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@394" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@394" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(406, -3160)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@395" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@395" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(420, -2708)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@396" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@396" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(421, -984)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@397" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@397" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(417, 343)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@398" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@398" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(435, 1067)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@399" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@399" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(408, 2522)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@400" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@400" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(403, 3041)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@401" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@401" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(399, 3102)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@402" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@402" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(479, -2960)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@403" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@403" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(492, -2783)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@404" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@404" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(493, -2096)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@405" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@405" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(498, -752)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@406" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@406" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(479, -336)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@407" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@407" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(465, 236)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@408" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@408" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(489, 339)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@409" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@409" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(490, 854)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@410" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@410" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(495, 1041)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@411" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@411" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(471, 1569)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@412" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@412" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(560, -2841)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@413" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@413" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(561, -2164)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@414" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@414" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(556, 1168)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@415" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@415" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(527, 1815)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@416" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@416" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(543, 2729)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@418" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@418" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(628, -1452)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@419" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@419" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(590, -36)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@420" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@420" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(604, 469)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@421" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@421" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(604, 1317)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@422" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@422" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(617, 1680)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@423" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@423" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(620, 1886)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@424" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@424" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(603, 2657)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@426" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@426" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(666, -2387)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@427" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@427" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(664, -2157)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@428" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@428" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(688, -2026)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@429" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@429" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(659, -1491)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@430" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@430" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(691, 1879)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@432" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@432" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(738, -2256)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@433" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@433" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(723, -1392)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@434" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@434" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(740, 2582)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@435" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@435" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(726, 2706)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@439" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@439" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(783, -2856)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@440" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@440" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(805, -2268)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@441" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@441" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(805, -1716)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@442" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@442" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(801, 1821)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@443" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@443" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(783, 2094)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@444" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@444" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(783, 2152)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@446" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@446" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(793, 2976)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@447" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@447" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(869, -820)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@448" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@448" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(844, -726)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@449" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@449" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(850, 2593)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@450" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@450" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(938, 856)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@451" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@451" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(932, 2866)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@452" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@452" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(999, -2927)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@453" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@453" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(992, 484)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@454" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@454" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1009, 652)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@455" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@455" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(986, 982)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@457" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@457" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1003, 2658)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@458" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@458" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1068, -2612)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@459" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@459" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1069, -1239)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@460" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@460" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1072, -850)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@462" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@462" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1058, -500)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@463" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@463" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1070, 157)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@464" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@464" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1040, 1425)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@465" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@465" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1065, 2402)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@466" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@466" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1037, 2995)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@467" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@467" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1134, -1557)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@468" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@468" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1109, -691)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@469" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@469" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1122, 404)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@470" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@470" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1118, 2898)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@471" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@471" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1165, -2803)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@472" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@472" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1199, -1703)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@473" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@473" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1191, 2128)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@474" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@474" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1233, -2983)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@475" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@475" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1237, -2918)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@476" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@476" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1235, -2736)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@477" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@477" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1261, -2451)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@478" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@478" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1240, -2387)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@479" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@479" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1250, -1643)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@480" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@480" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1233, -1521)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@481" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@481" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1242, -160)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@482" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@482" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1237, 941)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@483" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@483" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1230, 1449)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@484" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@484" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1313, -3180)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@485" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@485" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1292, -2645)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@487" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@487" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1304, 2069)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@488" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@488" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1310, 2657)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@489" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@489" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1357, -2738)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@490" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@490" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1371, -2162)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@491" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@491" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1383, 2610)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@492" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@492" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1420, -3084)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@493" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@493" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1422, -2074)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@494" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@494" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1437, 660)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@495" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@495" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1428, 1516)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@496" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@496" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1458, 2464)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@497" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@497" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1421, 3035)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@500" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@500" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1511, -279)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@501" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@501" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1495, 1177)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@502" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@502" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1498, 2464)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@503" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@503" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1550, -1933)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@504" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@504" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1578, -1261)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@505" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@505" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1553, 335)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@506" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@506" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1569, 1320)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@507" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@507" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1561, 1365)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@508" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@508" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1557, 1490)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@509" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@509" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1557, 1652)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@510" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@510" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1558, 2268)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@511" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@511" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1567, 2581)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@512" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@512" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1615, -1502)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@513" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@513" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1636, -730)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@515" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@515" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1644, -163)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@516" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@516" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1646, 870)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@517" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@517" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1623, 1127)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@518" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@518" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1646, 2476)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@519" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@519" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1691, -2967)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@520" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@520" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1687, -1328)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@521" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@521" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1678, 2097)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@522" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@522" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1702, 3121)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@523" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@523" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(1746, -2964)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@524" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@524" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1760, -2510)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@525" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@525" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1744, -2388)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@527" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@527" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1780, -798)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@528" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@528" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1742, 101)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@529" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@529" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1753, 2060)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@530" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@530" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1763, 3060)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@531" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@531" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1819, -2470)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@532" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@532" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1820, -2407)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@533" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@533" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1834, -1701)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@537" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@537" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1819, 341)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@538" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@538" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1806, 472)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@539" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@539" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1825, 1374)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@540" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@540" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1838, 1873)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@541" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@541" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1839, 2411)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@542" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@542" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1878, -3048)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@543" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@543" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1883, -2984)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@544" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@544" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1875, 21)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@545" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@545" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1906, 284)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@548" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@548" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1881, 2415)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@549" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@549" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1957, -2793)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@551" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@551" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1933, -1363)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@552" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@552" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1971, -1317)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@553" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@553" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1956, 81)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@554" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@554" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(1942, 2902)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@555" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@555" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(1961, 2965)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@556" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@556" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(1999, -2260)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@557" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@557" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2001, -2000)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@558" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@558" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2032, 1872)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@560" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@560" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2027, 2864)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@561" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@561" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2076, -2649)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@562" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@562" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2064, -996)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@563" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@563" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2062, 1329)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@564" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@564" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2098, 2211)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@565" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@565" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2066, 2343)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@566" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@566" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2082, 2738)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@567" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@567" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2069, 3175)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@569" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@569" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2133, -2667)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@570" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@570" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2164, -2391)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@572" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@572" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2151, -1303)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@573" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@573" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2124, -355)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@574" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@574" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2161, 1249)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@575" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@575" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2124, 1696)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@576" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@576" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2156, 2255)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@577" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@577" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2220, -2930)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@578" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@578" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2219, -2387)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@579" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@579" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2197, -1254)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@580" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@580" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2219, -369)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@581" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@581" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2199, 364)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@582" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@582" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2199, 1746)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@583" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@583" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2201, 2143)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@584" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@584" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2214, 2977)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@586" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@586" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2276, -600)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@587" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@587" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2269, -558)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@588" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@588" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2280, -240)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@590" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@590" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2269, 816)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@591" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@591" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2285, 1057)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@592" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@592" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2271, 2860)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@593" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@593" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2265, 3113)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@594" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@594" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2339, -2129)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@596" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@596" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2336, 142)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@597" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@597" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2330, 1357)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@598" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@598" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2395, -3040)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@599" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@599" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2382, -2720)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@600" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@600" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2404, -948)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@602" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@602" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2403, -175)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@603" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@603" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2420, 2157)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@604" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@604" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2413, 2324)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@605" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@605" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2407, 2638)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@606" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@606" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2403, 2790)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@608" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@608" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2453, -2861)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@609" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@609" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2481, 150)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@611" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@611" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2446, 1499)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@612" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@612" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2470, 1581)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@613" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@613" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2469, 2014)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@614" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@614" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2473, 2413)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@615" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@615" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2483, 2546)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@616" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@616" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2447, 3020)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@617" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@617" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2530, -2012)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@618" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@618" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2531, -978)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@619" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@619" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2531, 348)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@620" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@620" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2529, 2985)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@621" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@621" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2591, -1135)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@622" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@622" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2603, -1037)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@623" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@623" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2599, -930)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@624" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@624" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2598, 155)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@625" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@625" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2590, 1896)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@626" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@626" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2587, 2733)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@627" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@627" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2668, -3098)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@628" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@628" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2663, -2318)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@629" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@629" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2666, -2161)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@630" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@630" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2645, -1243)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@631" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@631" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2643, 412)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@632" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@632" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2669, 1757)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@633" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@633" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2668, 2319)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@634" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@634" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2646, 2995)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@635" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@635" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2713, -3107)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@636" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@636" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2719, -2475)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@637" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@637" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2723, -1838)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@638" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@638" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2725, -1627)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@639" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@639" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2730, 530)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@641" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@641" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2738, 2144)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@642" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@642" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2700, 2580)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@643" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@643" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2766, -2721)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@644" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@644" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2795, -2157)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@645" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@645" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2771, -1494)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@646" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@646" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2792, -108)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@647" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@647" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2800, 220)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@649" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@649" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2802, 2159)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@650" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@650" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2791, 2208)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@651" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@651" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2774, 2279)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@652" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@652" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2796, 2957)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@654" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@654" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2861, -1395)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@657" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@657" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2838, -43)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@658" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@658" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2856, 168)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@659" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@659" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2863, 1484)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@661" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@661" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(2853, 2979)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@662" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@662" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2926, -2596)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@664" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@664" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2909, -1839)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@665" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@665" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2912, -1436)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@666" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@666" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2898, 542)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@668" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@668" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(2892, 2272)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@669" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@669" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2894, 3104)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@670" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@670" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2993, -2323)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@672" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@672" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2982, -537)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@673" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@673" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(2983, 1239)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@674" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@674" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(2984, 2611)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@675" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@675" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(3021, -1194)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@676" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@676" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3029, -924)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@677" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@677" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(3046, -495)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@678" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@678" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3054, -367)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@679" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@679" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3039, -224)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@680" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@680" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(3057, 364)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@681" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@681" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3028, 780)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@682" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@682" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(3032, 974)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@683" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@683" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(3099, -2970)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@686" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@686" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(3088, 1677)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@687" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@687" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(3174, -2902)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@688" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@688" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3158, -2450)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@689" type="Node2D" parent="." instance=ExtResource("1_fryey")]
+[node name="@Node2D@689" parent="." instance=ExtResource("1_fryey")]
 y_sort_enabled = true
 position = Vector2(3164, -2144)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@690" type="Node2D" parent="." instance=ExtResource("5_rh22f")]
-y_sort_enabled = true
+[node name="@Node2D@690" parent="." instance=ExtResource("5_rh22f")]
 position = Vector2(3162, -908)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@691" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@691" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3179, 533)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@692" type="Node2D" parent="." instance=ExtResource("3_0rxvv")]
-y_sort_enabled = true
+[node name="@Node2D@692" parent="." instance=ExtResource("3_0rxvv")]
 position = Vector2(3167, 1968)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")
 
-[node name="@Node2D@694" type="Node2D" parent="." instance=ExtResource("4_787nv")]
-y_sort_enabled = true
+[node name="@Node2D@694" parent="." instance=ExtResource("4_787nv")]
 position = Vector2(3175, 3021)
 scale = Vector2(-1, 1)
-script = ExtResource("2_xsfox")

@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="3_r6yod"]
 
 [node name="PurpleGrassLarge1" type="Node2D"]
-y_sort_enabled = true
+z_index = -1
+z_as_relative = false
 script = ExtResource("1_kklbs")
 
 [node name="SproutsTrees" type="Sprite2D" parent="."]

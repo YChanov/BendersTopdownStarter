@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://ckvk2j3xysg3h" path="res://Art/sprouts_trees.png" id="1_0qxq4"]
 [ext_resource type="Script" path="res://Scripts/ObstacleBase.gd" id="1_h6hxj"]
-[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="3_q7mjm"]
+[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="3_q7mjm"]
 
 [node name="PurpleGrass" type="Node2D"]
-y_sort_enabled = true
+z_index = -1
 script = ExtResource("1_h6hxj")
 
 [node name="SproutsTrees" type="Sprite2D" parent="."]

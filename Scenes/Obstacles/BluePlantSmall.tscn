@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="3_k8ate"]
 
 [node name="BluePlantSmall" type="Node2D"]
-y_sort_enabled = true
+z_index = -1
 script = ExtResource("1_8g0sl")
 
 [node name="StaticAssets" type="Sprite2D" parent="."]

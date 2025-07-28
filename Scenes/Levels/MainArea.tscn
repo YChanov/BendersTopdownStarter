@@ -1,9 +1,9 @@
-[gd_scene load_steps=26 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=27 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
 [ext_resource type="PackedScene" uid="uid://cgxgtdpi38vj1" path="res://Scenes/Interactables/teleporter.tscn" id="4_hri5c"]
-[ext_resource type="PackedScene" path="res://generated_level.tscn" id="5_grttd"]
+[ext_resource type="PackedScene" uid="uid://dc2dix8onc2fc" path="res://generated_level.tscn" id="5_grttd"]
 [ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="5_qwesu"]
 [ext_resource type="PackedScene" path="res://generated_level_tile_map.tscn" id="5_t7ius"]
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="9_bn2i2"]
@@ -19,8 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="17_l1jp1"]
 [ext_resource type="PackedScene" uid="uid://7rrcvcoqnt60" path="res://Scenes/Obstacles/PurpleTree1.tscn" id="18_eqgu3"]
-[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
+[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="PackedScene" uid="uid://bjhgts0f1550q" path="res://Scenes/Obstacles/PurpleTree2.tscn" id="19_hu4xp"]
+[ext_resource type="PackedScene" uid="uid://h20k1yukbi7m" path="res://Scenes/Obstacles/PurpleGrassLarge3.tscn" id="20_ttqas"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]
 
@@ -40,8 +41,6 @@ texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." instance=ExtResource("1_8obwv")]
-z_index = 10
-y_sort_enabled = true
 position = Vector2(-85, -117)
 health = 100
 
@@ -50,7 +49,6 @@ health = 100
 [node name="Interactables" type="Node" parent="."]
 
 [node name="Tree" parent="Interactables" instance=ExtResource("10_jj3sk")]
-y_sort_enabled = false
 position = Vector2(-63, 347)
 
 [node name="FactoryRoad" parent="Interactables" instance=ExtResource("3_10ytb")]
@@ -248,6 +246,9 @@ position = Vector2(1756, -451)
 
 [node name="PurpleTree24" parent="Scene" instance=ExtResource("18_eqgu3")]
 position = Vector2(2818, 202)
+
+[node name="PurpleGrassLarge3" parent="Scene" instance=ExtResource("20_ttqas")]
+position = Vector2(-75, -276)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 
