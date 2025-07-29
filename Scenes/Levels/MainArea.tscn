@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=28 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://h20k1yukbi7m" path="res://Scenes/Obstacles/PurpleGrassLarge3.tscn" id="20_ttqas"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]
+[ext_resource type="PackedScene" uid="uid://dtw3a3shc44pj" path="res://Scenes/NPC's/Grandma/GrandmaShip.tscn" id="24_6ww4f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eqc1o"]
 font = ExtResource("22_xjdqx")
@@ -269,6 +270,9 @@ shape = SubResource("RectangleShape2D_lxl76")
 [node name="PointLight2D" parent="Scene/Area2D" instance=ExtResource("23_m1haj")]
 position = Vector2(-166, -174)
 scale = Vector2(0.503908, 0.494619)
+
+[node name="GrandmaShip" parent="Scene" instance=ExtResource("24_6ww4f")]
+position = Vector2(70, 2)
 
 [node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
 
