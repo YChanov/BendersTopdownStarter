@@ -21,15 +21,15 @@ func _process(delta: float) -> void:
 		dialog.visible = false
 
 var dialogs := [
-	"Are we there yet honey?",
-	"Oh my leg's killing me :(",
-	"Did you turned off the lights again honey?",
-	"We would not be in this problem if you listen to me",
-	"Did you hear about the weather?",
+	"You can run and place roads at the same time",
+	"Slimes are not dangerous alone",
+	"My capacitor of the exitatrix is broken",
+	"There are some strange trees out there",
+	"I detect teleporter signar at ~70 meters",
 ]
 
 func say_something() :
-	dialog.text = dialogs[randi() % dialogs.size()]
+	dialog.text = "Ship AI: "+dialogs[randi() % dialogs.size()]
 	dialog.visible = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
