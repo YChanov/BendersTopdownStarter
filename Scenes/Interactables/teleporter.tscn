@@ -1,11 +1,76 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgxgtdpi38vj1"]
+[gd_scene load_steps=16 format=3 uid="uid://cgxgtdpi38vj1"]
 
-[ext_resource type="Texture2D" uid="uid://d01snk1wtk05e" path="res://Art/teleporter_activated.png" id="1_2cdjx"]
 [ext_resource type="Script" path="res://Scripts/teleporter.gd" id="1_j3lae"]
+[ext_resource type="Texture2D" uid="uid://0moqvucdjlp2" path="res://Art/Sprites/Teleporter.png" id="2_acqx2"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_ngrej"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="4_fhbvw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anx1m"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(0, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xamwn"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(128, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikenc"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(256, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e46tb"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(384, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuttr"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(0, 192, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqge"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(128, 192, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dji1"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(256, 192, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq011"]
+atlas = ExtResource("2_acqx2")
+region = Rect2(384, 192, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7ehp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anx1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xamwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikenc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e46tb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuttr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dji1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq011")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h1s7d"]
-radius = 38.6394
+radius = 54.037
 
 [sub_resource type="LabelSettings" id="LabelSettings_i1bvo"]
 font = ExtResource("3_ngrej")
@@ -14,11 +79,14 @@ font_size = 32
 [node name="Teleporter" type="Node2D"]
 script = ExtResource("1_j3lae")
 
-[node name="TeleporterActivated" type="Sprite2D" parent="."]
-scale = Vector2(0.253886, 0.253886)
-texture = ExtResource("1_2cdjx")
+[node name="TeleporterActivated" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t7ehp")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.382875
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, 41)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_h1s7d")
@@ -30,6 +98,9 @@ offset_right = 95.0
 offset_bottom = -39.0
 text = "Press 'E' to teleport"
 label_settings = SubResource("LabelSettings_i1bvo")
+
+[node name="PointLight2D" parent="." instance=ExtResource("4_fhbvw")]
+position = Vector2(0, 41)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -57,7 +57,9 @@ y_sort_enabled = false
 position = Vector2(26, -199)
 
 [node name="Teleporter" parent="Interactables" groups=["T1"] instance=ExtResource("4_hri5c")]
-position = Vector2(3123, 2802)
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-377, -86)
 target_level = "res://Scenes/Levels/FinalCity.tscn"
 
 [node name="OneTimeSpawner" parent="Interactables" instance=ExtResource("11_7rqc0")]
