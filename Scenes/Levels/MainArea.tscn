@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="17_l1jp1"]
 [ext_resource type="PackedScene" uid="uid://7rrcvcoqnt60" path="res://Scenes/Obstacles/PurpleTree1.tscn" id="18_eqgu3"]
-[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="PackedScene" uid="uid://bjhgts0f1550q" path="res://Scenes/Obstacles/PurpleTree2.tscn" id="19_hu4xp"]
 [ext_resource type="PackedScene" uid="uid://h20k1yukbi7m" path="res://Scenes/Obstacles/PurpleGrassLarge3.tscn" id="20_ttqas"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
@@ -250,13 +250,11 @@ position = Vector2(2818, 202)
 [node name="PurpleGrassLarge3" parent="Scene" instance=ExtResource("20_ttqas")]
 position = Vector2(-75, -276)
 
-[node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(3.73071, -53.337)
+[node name="Area2D" type="Area2D" parent="Scene"]
+position = Vector2(4, -56)
 script = ExtResource("15_3g731")
 
-[node name="Label" type="Label" parent="Area2D"]
+[node name="Label" type="Label" parent="Scene/Area2D"]
 offset_left = -187.0
 offset_top = -196.0
 offset_right = -117.0
@@ -264,13 +262,15 @@ offset_bottom = -167.0
 text = "Controls"
 label_settings = SubResource("LabelSettings_eqc1o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Area2D"]
 position = Vector2(-151, -178.668)
 shape = SubResource("RectangleShape2D_lxl76")
 
-[node name="PointLight2D" parent="Area2D" instance=ExtResource("23_m1haj")]
+[node name="PointLight2D" parent="Scene/Area2D" instance=ExtResource("23_m1haj")]
 position = Vector2(-166, -174)
 scale = Vector2(0.503908, 0.494619)
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[node name="Score_UI" parent="." instance=ExtResource("15_q3yq5")]
+
+[connection signal="body_entered" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_exited"]

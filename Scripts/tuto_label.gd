@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var welcome_label: Label = $"../Scene/Welcome Label"
+@onready var welcome_label: Label = $"../Welcome Label"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
