@@ -23,9 +23,11 @@ func _process(delta: float) -> void:
 var dialogs := [
 	"You can run and place roads at the same time",
 	"Slimes are not dangerous alone",
-	"My capacitor of the exitatrix is broken",
+	"All my communication systems are down",
 	"There are some strange trees out there",
 	"I detect teleporter signar at ~70 meters",
+	"You can get wood if you punch enough",
+	"I detect safe places nearby",
 ]
 
 func say_something() :

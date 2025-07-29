@@ -57,10 +57,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "You are stranded on an alien planet.
-Your grandma is sick and need some medicine.
+Your grandma is waiting for you in the nearest setlement.
 Hurry! You have only one breath on the outside!
-Collect resourses, build roads, and find a way
-to the city to get the precious medicaments!
+Collect resourses, build roads, and find the way!
 Good luck!"
 label_settings = SubResource("LabelSettings_bhdo7")
 horizontal_alignment = 1
