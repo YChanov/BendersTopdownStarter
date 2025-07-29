@@ -16,9 +16,10 @@ config/version="1.0"
 config/tags=PackedStringArray("starterkit")
 run/main_scene="res://Scenes/Misc/game_screens.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/image="res://Art/Icons/icon.png"
+boot_splash/bg_color=Color(0.241691, 0.0537272, 0.183192, 1)
+boot_splash/image="res://Art/crushed_ship.png"
 boot_splash/use_filter=false
-config/icon="res://Art/Icons/icon.png"
+config/icon="res://Art/Icon.png"
 
 [audio]
 
