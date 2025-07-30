@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bhdl1i6aci6dm"]
+[gd_scene load_steps=15 format=4 uid="uid://bhdl1i6aci6dm"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_a7xb6"]
 [ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="2_nip2i"]
@@ -10,10 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="7_j6hpc"]
 [ext_resource type="PackedScene" uid="uid://b5bqbjojwuvuc" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="8_qh2mv"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="10_2ixi2"]
+[ext_resource type="Texture2D" uid="uid://buu1r861s2jak" path="res://Art/statue.png" id="11_j4nyh"]
+[ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="12_tdp6x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1s51q"]
 font = ExtResource("10_2ixi2")
 font_size = 36
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oeps8"]
+radius = 26.0
+height = 82.0
 
 [node name="Scene_Root" type="Node2D"]
 z_as_relative = false
@@ -21,7 +27,7 @@ y_sort_enabled = true
 texture_filter = 1
 
 [node name="Player" parent="." instance=ExtResource("1_a7xb6")]
-position = Vector2(-60, -130)
+position = Vector2(262, -146)
 
 [node name="NPCs" type="Node" parent="."]
 
@@ -55,7 +61,7 @@ tile_set = ExtResource("4_fk1nt")
 
 [node name="Teleporter" parent="Scene" groups=["T1"] instance=ExtResource("5_m3ltv")]
 z_index = -1
-position = Vector2(159, -170)
+position = Vector2(266, -193)
 
 [node name="BluePlantSmall" parent="Scene" instance=ExtResource("6_72thu")]
 position = Vector2(-327, 154)
@@ -93,3 +99,19 @@ offset_right = 302.0
 offset_bottom = 28.0
 text = "You won yay!!"
 label_settings = SubResource("LabelSettings_1s51q")
+
+[node name="PointLight2D" parent="." instance=ExtResource("12_tdp6x")]
+position = Vector2(10, -195)
+
+[node name="PointLight2D2" parent="." instance=ExtResource("12_tdp6x")]
+position = Vector2(9, -82)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Statue" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(8, -145)
+texture = ExtResource("11_j4nyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(9, -95)
+shape = SubResource("CapsuleShape2D_oeps8")

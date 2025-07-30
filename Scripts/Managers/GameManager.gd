@@ -4,7 +4,7 @@ var slime = 0
 var wood = 0
 var metal = 0
 var road = 10
-var movement_speed = 1
+var movement_speed : float = 1.0
 var t_group : String
 var health
 
@@ -15,10 +15,9 @@ func reset_money():
 	slime = 5
 	wood = 5
 	metal = 5
-	road = 0
-	movement_speed = 1
+	movement_speed = 1.0
 
-func set_movement_speed(setmovement_speed : int) :
+func set_movement_speed(setmovement_speed : float) :
 	movement_speed = setmovement_speed
 	
 func reset_movement_speed():

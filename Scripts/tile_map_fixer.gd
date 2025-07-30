@@ -1,7 +1,19 @@
 extends Node
 
 var tilemap_size = Vector2i(100,100)
-@export var tilemaps : Array[TileMapLayer]
+@onready var tile_map_roads: TileMapLayer = $"../Scene/TileMapRoads"
+@onready var grass: TileMapLayer = $"../Scene/grass"
+@onready var ground: TileMapLayer = $"../Scene/ground"
+@onready var river: TileMapLayer = $"../Scene/river"
+@onready var bottom: TileMapLayer = $"../Scene/bottom"
+
+@export var tilemaps : Array[TileMapLayer] = [
+	tile_map_roads,
+	grass,
+	ground,
+	river,
+	bottom
+]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	fixStuff()
@@ -18,6 +30,7 @@ func fixStuff():
 
 func fixCollision(position : Vector2):
 	var disable_colision = false
+	var remove_under = false
 	for tilemap_layer in tilemaps:
 		if !tilemap_layer : 
 			continue
@@ -25,7 +38,12 @@ func fixCollision(position : Vector2):
 		var tile_source_id = tilemap_layer.get_cell_source_id(position)
 		if tile_source_id == -1:
 			continue
+			
 		if disable_colision :
-			tilemap_layer.get_cell_tile_data(position).set_collision_polygon_points(0, 0, [])
-		if tile_source_id != -1:
-			disable_colision = true
+			if remove_under and tile_source_id == 5 :
+				tilemap_layer.set_cell(position, -1)
+			else :
+				tilemap_layer.get_cell_tile_data(position).set_collision_polygon_points(0, 0, [])
+		
+		disable_colision = true
+		remove_under = tile_source_id == 1 or tile_source_id == 2 || tile_source_id == 4

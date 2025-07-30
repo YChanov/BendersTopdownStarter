@@ -5,6 +5,7 @@ class_name PlayerMain
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 
 @export var tilemap_layers : Array[TileMapLayer] = []
+@onready var river: TileMapLayer = $"../Scene/river"
 
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
@@ -64,14 +65,16 @@ func TileHandle(delta: float):
 		
 	if tile_source_id != 2:
 		if self.health > 0:
-			self._take_damage(1)#todo back to 5
+			self._take_damage(5)
 	else: 
 		if self.health > 0:	
 			self._take_damage(-15)
 	breath_time = BREATH_INTERVAL
 	
 	if GetCurrentTileSourceId(true) == 4 :
-		GameManager.set_movement_speed(2)
+		GameManager.set_movement_speed(2.0)
+	elif river and river.get_cell_source_id(river.local_to_map(position)) != -1 :
+		GameManager.set_movement_speed(0.5)
 	else :
 		GameManager.reset_movement_speed()
 

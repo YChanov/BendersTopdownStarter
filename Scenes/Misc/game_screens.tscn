@@ -56,13 +56,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "You crash land on an alien planet. The atmosphere is poison, 
-with few pockets of clean air allowing grass to grow. 
-The ground is muck that you can barely trudge through. 
-Luckily, you've crashed near a crafting bench. Collect resources to
- craft roads, explore and find the exit.
-Collect resourses, build roads, and find the way!
-Good luck!"
+text = "You crash land on an alien planet. You are the only one living person. 
+The atmosphere is poison, with few pockets of clean air allowing grass
+ to grow. The ground is muck that you can barely trudge through. 
+Luckily, you've crashed near a crafting bench. 
+
+Collect resources to craft roads, explore and find the 
+exit. You need to hold your 
+ONLY ONE breath"
 label_settings = SubResource("LabelSettings_bhdo7")
 horizontal_alignment = 1
 vertical_alignment = 1
