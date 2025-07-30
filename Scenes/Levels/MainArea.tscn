@@ -41,7 +41,7 @@ texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
 [node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers") instance=ExtResource("1_8obwv")]
-position = Vector2(-85, -117)
+position = Vector2(-1826.02, 1790.65)
 tilemap_layers = [NodePath("../Scene/grass"), NodePath("../Scene/ground"), NodePath("../Scene/river"), NodePath("../Scene/bottom")]
 health = 100
 
@@ -142,7 +142,17 @@ rotation = 1.5708
 [node name="AreaBlocker3" parent="Scene" instance=ExtResource("16_y24av")]
 position = Vector2(-1928, 1347)
 rotation = 1.5708
-scale = Vector2(0.88, 1)
+scale = Vector2(0.519998, 1)
+
+[node name="AreaBlocker4" parent="Scene" instance=ExtResource("16_y24av")]
+position = Vector2(-1928, 1347)
+rotation = 1.5708
+scale = Vector2(0.261624, 0.385017)
+
+[node name="AreaBlocker5" parent="Scene" instance=ExtResource("16_y24av")]
+position = Vector2(-1603, 1920)
+rotation = 1.5708
+scale = Vector2(0.416093, 0.170445)
 
 [node name="Interactables" type="Node" parent="."]
 
@@ -328,3 +338,5 @@ rotation = 1.5708
 
 [connection signal="body_entered" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_exited"]
+
+[editable path="Scene/AreaBlocker5"]
