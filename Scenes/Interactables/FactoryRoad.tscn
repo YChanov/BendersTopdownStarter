@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/factory_road.gd" id="1_maivq"]
 [ext_resource type="Texture2D" uid="uid://bepr4a6sutd3y" path="res://Art/factory_export.png" id="2_mp4k7"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_up0lg"]
-[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="4_koteh"]
+[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="4_koteh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fmc4h"]
 radius = 160.05

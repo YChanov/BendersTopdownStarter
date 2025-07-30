@@ -10,6 +10,9 @@ var player_in_range = false
 @export var damage := 50
 @export var value := 5
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+
 var enemy_in_range = false
 var attack_in_cooldown = true
 
@@ -49,11 +52,19 @@ func _die():
 	new_drop.value = value
 	get_parent().add_child(new_drop)
 
+		
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		
+		var tween = get_tree().create_tween()
+		tween.tween_method(_set_shader_blink_intensity, 1, 0.0, 0.3)
+		
 		enemy_in_range = true
 		attack_in_cooldown = true
 		timer.start()
+		
+func _set_shader_blink_intensity(new_value : float):
+	animated_sprite_2d.material.set_shader_parameter("blink_intencity", new_value)
 
 func _on_hit_box_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):

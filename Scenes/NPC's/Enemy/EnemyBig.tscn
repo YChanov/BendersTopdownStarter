@@ -1,13 +1,19 @@
-[gd_scene load_steps=23 format=3 uid="uid://bofrr0uffp314"]
+[gd_scene load_steps=25 format=3 uid="uid://bofrr0uffp314"]
 
 [ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/EnemyMain.gd" id="1_3h76c"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="2_rpanu"]
 [ext_resource type="Texture2D" uid="uid://bnn86qcci71k" path="res://Art/Sprites/Slime.png" id="3_pnkyw"]
+[ext_resource type="Shader" path="res://Scenes/NPC's/Enemy/Blink.gdshader" id="3_q0n76"]
 [ext_resource type="PackedScene" uid="uid://b82yimbxiflml" path="res://Art/Particles/hit_particles.tscn" id="4_nqe6w"]
 [ext_resource type="Script" path="res://Scripts/FSM/FiniteStateMachine.gd" id="5_3m3hm"]
 [ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/States/EnemyIdleState.gd" id="6_xwc4p"]
 [ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/States/EnemyChaseState.gd" id="7_ukvvk"]
 [ext_resource type="Texture2D" uid="uid://bw36ig60cpuaq" path="res://Art/Sprites/Square.png" id="8_wln3n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4th40"]
+shader = ExtResource("3_q0n76")
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_intencity = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8bm03"]
 atlas = ExtResource("3_pnkyw")
@@ -103,6 +109,7 @@ hit_particles = NodePath("HitParticles")
 color = Color(1, 0.27451, 1, 0.443137)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_4th40")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_toimg")
 animation = &"new_animation"
