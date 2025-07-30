@@ -127,10 +127,10 @@ func fixYSorting():
 		var y_body = bodies[index]
 		y_body.z_index = z_index - 1 if y_body.position.y < position.y else z_index + 1
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group('Player') or body is not StaticBody2D:
+	if body.is_in_group('Player'):
 		return
-		
-	bodies[body.get_instance_id()] = body
+	if body is StaticBody2D or body is ObstacleBase :
+		bodies[body.get_instance_id()] = body
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	bodies.erase(body.get_instance_id())
