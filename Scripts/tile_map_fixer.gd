@@ -26,24 +26,27 @@ func _process(delta: float) -> void:
 func fixStuff():
 	for x in range(-tilemap_size.x,tilemap_size.x):
 		for y in range(-tilemap_size.y,tilemap_size.y):
+	#for x in range(-2973,-2300):
+		#for y in range(460,767):
 			fixCollision(Vector2(x,y))
 
-func fixCollision(position : Vector2):
+func fixCollision(target_position : Vector2):
 	var disable_colision = false
 	var remove_under = false
+	var data = null
 	for tilemap_layer in tilemaps:
-		if !tilemap_layer : 
-			continue
-		
-		var tile_source_id = tilemap_layer.get_cell_source_id(position)
+		data = null
+		#var tile_source_id = tilemap_layer.get_cell_source_id(tilemap_layer.local_to_map(target_position))
+		var tile_source_id = tilemap_layer.get_cell_source_id(target_position)
 		if tile_source_id == -1:
+			disable_colision = false
+			remove_under = false
 			continue
-			
-		if disable_colision :
-			if remove_under and tile_source_id == 5 :
-				tilemap_layer.set_cell(position, -1)
-			else :
-				tilemap_layer.get_cell_tile_data(position).set_collision_polygon_points(0, 0, [])
-		
+		if remove_under and (tile_source_id == 5) :
+			tilemap_layer.set_cell(target_position, -1)
+			continue
+		elif disable_colision :
+			tilemap_layer.set_cell(target_position, 1, Vector2i(13,7), 1)
+			continue
 		disable_colision = true
-		remove_under = tile_source_id == 1 or tile_source_id == 2 || tile_source_id == 4
+		remove_under = tile_source_id == 1 or tile_source_id == 2 or tile_source_id == 4

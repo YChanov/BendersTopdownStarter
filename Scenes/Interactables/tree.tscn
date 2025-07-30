@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bblpsy4fvi76f" path="res://Scenes/Interactables/Wood.tscn" id="2_ajsex"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="3_rfnwl"]
 [ext_resource type="Texture2D" uid="uid://m73tqy1rqi2x" path="res://Art/tree.png" id="4_6u45u"]
-[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="5_b71ok"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="5_b71ok"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw31t"]
 radius = 125.036

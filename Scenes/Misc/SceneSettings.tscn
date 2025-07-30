@@ -12,5 +12,4 @@ glow_bloom = 0.5
 environment = SubResource("Environment_pbegk")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.144063, 0.144063, 0.144062, 1)
