@@ -44,7 +44,7 @@ func fixCollision(target_position : Vector2):
 			tilemap_layer.set_cell(target_position, -1)
 			continue
 		elif disable_colision :
-			tilemap_layer.set_cell(target_position, 5, Vector2i(0,1))
+			tilemap_layer.set_cell(target_position, 1, Vector2i(10,1))
 			continue
 		disable_colision = true
 		remove_under = tile_source_id == 1 or tile_source_id == 2 or tile_source_id == 4
