@@ -58,9 +58,7 @@ func RoadOverlay() :
 	var real_target_position = tile_map.map_to_local(target_position)
 	tile_overlay.global_position = real_target_position
 	
-	
 func TileHandle(delta: float):
-	fixCollisions()
 	breath_time -= delta
 	if breath_time > 0:
 		return
@@ -78,20 +76,7 @@ func TileHandle(delta: float):
 		GameManager.set_movement_speed(2)
 	else :
 		GameManager.reset_movement_speed()
-	
-func fixCollisions():
-	var disable_colision = false
-	var my_coors = tile_map_roads.local_to_map(position)
-	for tilemap_layer in tilemap_layers:
-		if !tilemap_layer : 
-			continue
-		var tile_source_id = tilemap_layer.get_cell_source_id(my_coors)
-		if tile_source_id == -1:
-			continue
-		if disable_colision :
-			tilemap_layer.get_cell_tile_data(my_coors).set_collision_polygon_points(0, 0, [])
-		if tile_source_id != -1:
-			disable_colision = true
+
 func GetCurrentTileSourceId(is_road : bool = false):
 	var tile_map = getParentTileMap(is_road)
 	var current_position = tile_map.local_to_map(position)
