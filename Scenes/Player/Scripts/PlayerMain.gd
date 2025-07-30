@@ -32,11 +32,11 @@ func _process(delta: float) -> void:
 	RoadOverlay()
 	toggleRoadPlacement && PutRoad()
 	TileHandle(delta)
+	fixYSorting()
 	
 const BREATH_INTERVAL = 0.5
 var breath_time: float = BREATH_INTERVAL
 var target_position : Vector2i = Vector2i.ZERO
-
 func RoadOverlay() :
 	if GameManager.road <= 0:
 		tile_overlay.visible = false
@@ -117,3 +117,20 @@ func _die():
 	fsm.force_change_state("Die")
 	GameManager.load_next_level(load("res://Scenes/Misc/end_game_screen.tscn"))
 	#add_child(death_scene)
+
+var bodies : Dictionary
+func fixYSorting():
+	if !bodies.size():
+		return
+		
+	for index in bodies:
+		var y_body = bodies[index]
+		y_body.z_index = z_index - 1 if y_body.position.y < position.y else z_index + 1
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group('Player') or body is not StaticBody2D:
+		return
+		
+	bodies[body.get_instance_id()] = body
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	bodies.erase(body.get_instance_id())

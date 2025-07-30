@@ -282,16 +282,16 @@ position = Vector2(872, 1299)
 position = Vector2(-672, 1218)
 
 [node name="Tree18" parent="Interactables" instance=ExtResource("10_jj3sk")]
-position = Vector2(-636, -964)
+position = Vector2(-721, -941)
 
 [node name="Tree19" parent="Interactables" instance=ExtResource("10_jj3sk")]
-position = Vector2(1151, -1161)
+position = Vector2(1199, -1110)
 
 [node name="Tree20" parent="Interactables" instance=ExtResource("10_jj3sk")]
 position = Vector2(1330, -48)
 
 [node name="Tree21" parent="Interactables" instance=ExtResource("10_jj3sk")]
-position = Vector2(163, -1566)
+position = Vector2(104, -1555)
 
 [node name="OneTimeSpawner18" parent="Interactables" instance=ExtResource("11_7rqc0")]
 position = Vector2(1259, 724)
