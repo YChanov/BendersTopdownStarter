@@ -8,6 +8,7 @@ var player_in_range = false
 @export var chase_node : Node
 @export var drop : PackedScene
 @export var damage := 50
+@export var value := 5
 
 var enemy_in_range = false
 var attack_in_cooldown = true
@@ -45,7 +46,8 @@ func _die():
 	var new_drop = drop.instantiate()
 	new_drop.initial_position = position;
 	new_drop.position = position;
-	get_parent().get_parent().add_child(new_drop)
+	new_drop.value = value
+	get_parent().add_child(new_drop)
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

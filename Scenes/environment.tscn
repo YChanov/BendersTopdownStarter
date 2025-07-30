@@ -1,0 +1,546 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfpefi3fgamap"]
+
+[ext_resource type="PackedScene" uid="uid://b6xcjbyu4h2me" path="res://Scenes/Obstacles/OasisSpring.tscn" id="1_gyufl"]
+[ext_resource type="PackedScene" uid="uid://cppgyp05djber" path="res://Scenes/Obstacles/BlueRockHorizontal.tscn" id="4_g3cu7"]
+[ext_resource type="PackedScene" uid="uid://dgjsmqtohmt2n" path="res://Scenes/Obstacles/BlueRockCluster.tscn" id="5_0pl8h"]
+[ext_resource type="PackedScene" uid="uid://c51vn6bqbdt8i" path="res://Scenes/Obstacles/BlueRockMedium.tscn" id="6_1icvy"]
+[ext_resource type="PackedScene" uid="uid://ba0ssqluvsuw3" path="res://Scenes/Obstacles/BlueRockSmall.tscn" id="7_mpax7"]
+[ext_resource type="PackedScene" uid="uid://c7lfn5kjortg2" path="res://Scenes/Obstacles/BrownRockMedium.tscn" id="8_lbydl"]
+[ext_resource type="PackedScene" uid="uid://biytyoc1wh4q2" path="res://Scenes/Obstacles/BrownRocksCluster.tscn" id="9_k46nu"]
+[ext_resource type="PackedScene" uid="uid://vfshad4x5poh" path="res://Scenes/Obstacles/ColoredRock.tscn" id="10_2pf4t"]
+[ext_resource type="PackedScene" uid="uid://dubdjb5dpyroh" path="res://Scenes/Obstacles/MushroomsSmall.tscn" id="11_ahk00"]
+[ext_resource type="PackedScene" uid="uid://cjru7rre3bmkf" path="res://Scenes/Obstacles/BlueRockTall.tscn" id="12_hhqf4"]
+[ext_resource type="PackedScene" uid="uid://f00nnn7vrsi6" path="res://Scenes/Obstacles/PurpleGrassLarge1.tscn" id="14_qng16"]
+[ext_resource type="PackedScene" uid="uid://bbn3s2yyod4ee" path="res://Scenes/Obstacles/BluePlantSmall.tscn" id="19_hf0fx"]
+[ext_resource type="PackedScene" uid="uid://xukudt1kf5i2" path="res://Scenes/Obstacles/BluePlantLarge.tscn" id="20_pb8c6"]
+[ext_resource type="PackedScene" uid="uid://b5bqbjojwuvuc" path="res://Scenes/Obstacles/PurpleGrass.tscn" id="21_hk1my"]
+[ext_resource type="PackedScene" uid="uid://fbf74j6q1vxe" path="res://Scenes/Interactables/Spawner.tscn" id="22_b8thv"]
+
+[node name="Node" type="Node"]
+
+[node name="OasisSpring" parent="." instance=ExtResource("1_gyufl")]
+position = Vector2(-2815, -126)
+
+[node name="OasisSpring2" parent="." instance=ExtResource("1_gyufl")]
+position = Vector2(2820, -196)
+
+[node name="OasisSpring3" parent="." instance=ExtResource("1_gyufl")]
+position = Vector2(4, -3013)
+
+[node name="OasisSpring4" parent="." instance=ExtResource("1_gyufl")]
+position = Vector2(-3, 2744)
+
+[node name="Foliage_Obstacles" type="Node" parent="."]
+
+[node name="BlueRockHorizontal" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(1801, -2804)
+scale = Vector2(1.92239, 2.35005)
+
+[node name="BlueRockCluster" parent="Foliage_Obstacles" instance=ExtResource("5_0pl8h")]
+position = Vector2(434, -2948)
+
+[node name="BlueRockMedium" parent="Foliage_Obstacles" instance=ExtResource("6_1icvy")]
+position = Vector2(159, -2905)
+
+[node name="BlueRockSmall" parent="Foliage_Obstacles" instance=ExtResource("7_mpax7")]
+position = Vector2(-781, -2889)
+
+[node name="BlueRockMedium2" parent="Foliage_Obstacles" instance=ExtResource("8_lbydl")]
+position = Vector2(-889, -2460)
+scale = Vector2(1.77171, 2.30056)
+
+[node name="BlueRocksCluster" parent="Foliage_Obstacles" instance=ExtResource("9_k46nu")]
+position = Vector2(945, -2625)
+scale = Vector2(2.22396, 2.09037)
+
+[node name="BlueRocksCluster2" parent="Foliage_Obstacles" instance=ExtResource("9_k46nu")]
+position = Vector2(-881, -2814)
+scale = Vector2(3.10744, 3.48423)
+
+[node name="BlueRockSmall2" parent="Foliage_Obstacles" instance=ExtResource("7_mpax7")]
+position = Vector2(-1525, -2386)
+
+[node name="BlueRockSmall3" parent="Foliage_Obstacles" instance=ExtResource("7_mpax7")]
+position = Vector2(-2967, -3052)
+
+[node name="ColoredRock" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(-2781, -3049)
+
+[node name="BlueRockHorizontal7" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(592, 2837)
+scale = Vector2(1.18903, 1.18006)
+
+[node name="BlueRocksCluster3" parent="Foliage_Obstacles" instance=ExtResource("9_k46nu")]
+position = Vector2(-2970, -2789)
+
+[node name="ColoredRock2" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(2831, -401)
+
+[node name="ColoredRock3" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(2942, 25)
+
+[node name="ColoredRock4" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(2499, -22)
+
+[node name="ColoredRock5" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(2379, -216)
+
+[node name="ColoredRock6" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(2443, -355)
+
+[node name="MushroomsSmall" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(2119, 415)
+
+[node name="MushroomsSmall2" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(2056, 86)
+
+[node name="MushroomsSmall3" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(-439, -2330)
+
+[node name="MushroomsSmall4" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(-53, -2397)
+
+[node name="MushroomsSmall5" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(330, -2397)
+
+[node name="MushroomsSmall6" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(1301, 1899)
+
+[node name="BlueRocksCluster4" parent="Foliage_Obstacles" instance=ExtResource("9_k46nu")]
+position = Vector2(1161, 1964)
+
+[node name="MushroomsSmall9" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(1147, 1934)
+
+[node name="BlueRockHorizontal6" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(-627, 2835)
+scale = Vector2(1.10848, 1.22345)
+
+[node name="BlueRockTall" parent="Foliage_Obstacles" instance=ExtResource("12_hhqf4")]
+position = Vector2(1356, 1874)
+
+[node name="MushroomsSmall7" parent="Foliage_Obstacles/BlueRockTall" instance=ExtResource("11_ahk00")]
+position = Vector2(0, -18)
+
+[node name="MushroomsSmall10" parent="Foliage_Obstacles/BlueRockTall" instance=ExtResource("11_ahk00")]
+position = Vector2(19, 22)
+rotation = 0.261799
+
+[node name="MushroomsSmall8" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(1364, 1765)
+rotation = 0.523598
+
+[node name="BlueRockHorizontal5" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(-465, 2837)
+scale = Vector2(1.10801, 1.27538)
+
+[node name="BlueRockSmall4" parent="Foliage_Obstacles" instance=ExtResource("7_mpax7")]
+position = Vector2(904, 2154)
+
+[node name="Obstacles" type="Node2D" parent="Foliage_Obstacles"]
+visible = false
+
+[node name="PurpleGrassLarge1" parent="Foliage_Obstacles/Obstacles" instance=ExtResource("14_qng16")]
+position = Vector2(-881, 501)
+
+[node name="BlueRockTall" parent="Foliage_Obstacles/Obstacles" instance=ExtResource("12_hhqf4")]
+position = Vector2(-910, -83)
+
+[node name="BlueRockCluster" parent="Foliage_Obstacles/Obstacles" instance=ExtResource("5_0pl8h")]
+position = Vector2(703, -636)
+
+[node name="BlueRockSmall" parent="Foliage_Obstacles/Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(772, 401)
+
+[node name="BlueRockMedium" parent="Foliage_Obstacles/Obstacles" instance=ExtResource("8_lbydl")]
+position = Vector2(402, -479)
+
+[node name="Obstacles2" type="Node2D" parent="Foliage_Obstacles"]
+
+[node name="PurpleGrassLarge1" parent="Foliage_Obstacles/Obstacles2" instance=ExtResource("14_qng16")]
+visible = false
+position = Vector2(-881, 501)
+
+[node name="BlueRockTall" parent="Foliage_Obstacles/Obstacles2" instance=ExtResource("12_hhqf4")]
+visible = false
+position = Vector2(-910, -83)
+
+[node name="BlueRockCluster" parent="Foliage_Obstacles/Obstacles2" instance=ExtResource("5_0pl8h")]
+visible = false
+position = Vector2(703, -636)
+
+[node name="BlueRockSmall" parent="Foliage_Obstacles/Obstacles2" instance=ExtResource("4_g3cu7")]
+visible = false
+position = Vector2(772, 401)
+
+[node name="BlueRockMedium" parent="Foliage_Obstacles/Obstacles2" instance=ExtResource("8_lbydl")]
+visible = false
+position = Vector2(402, -479)
+
+[node name="BlueRockHorizontal4" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(-314, 2862)
+rotation = 0.261799
+scale = Vector2(1.21582, 1.52949)
+
+[node name="BlueRockHorizontal4" parent="Foliage_Obstacles/BlueRockHorizontal4" instance=ExtResource("4_g3cu7")]
+position = Vector2(478.906, -99.9752)
+rotation = -0.523598
+
+[node name="BlueRockHorizontal" parent="Foliage_Obstacles/BlueRockHorizontal4" instance=ExtResource("4_g3cu7")]
+position = Vector2(586.397, -139.793)
+rotation = -0.209862
+scale = Vector2(0.923027, 0.749498)
+skew = -0.115254
+
+[node name="BlueRockCluster2" parent="Foliage_Obstacles" instance=ExtResource("5_0pl8h")]
+position = Vector2(192, 2631)
+scale = Vector2(1.63453, 1.64894)
+
+[node name="BlueRockCluster3" parent="Foliage_Obstacles" instance=ExtResource("5_0pl8h")]
+position = Vector2(-198, 2628)
+rotation = -3.14159
+
+[node name="BlueRockHorizontal2" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(-105, 2885)
+rotation = -3.14159
+
+[node name="BlueRockHorizontal3" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(106, 2887)
+scale = Vector2(1.33927, 1.52062)
+
+[node name="ColoredRock7" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(-108, 2855)
+
+[node name="ColoredRock8" parent="Foliage_Obstacles" instance=ExtResource("10_2pf4t")]
+position = Vector2(103, 2859)
+
+[node name="MushroomsSmall10" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(105, 2822)
+
+[node name="MushroomsSmall7" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(-110, 2818)
+
+[node name="MushroomsSmall11" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(104, 2981)
+scale = Vector2(3.27887, 2.95394)
+
+[node name="MushroomsSmall12" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(-354, 2994)
+rotation = 0.523598
+
+[node name="BlueRockTall2" parent="Foliage_Obstacles" instance=ExtResource("12_hhqf4")]
+position = Vector2(-1026, 2693)
+scale = Vector2(1.84215, 1.65342)
+
+[node name="BlueRockTall3" parent="Foliage_Obstacles" instance=ExtResource("12_hhqf4")]
+position = Vector2(478, 2261)
+
+[node name="BlueRockTall4" parent="Foliage_Obstacles" instance=ExtResource("12_hhqf4")]
+position = Vector2(-637, 1875)
+scale = Vector2(1.25997, 1.37401)
+
+[node name="BlueRockTall5" parent="Foliage_Obstacles" instance=ExtResource("12_hhqf4")]
+position = Vector2(509, 1968)
+
+[node name="BlueRockHorizontal8" parent="Foliage_Obstacles" instance=ExtResource("4_g3cu7")]
+position = Vector2(-58, 1917)
+scale = Vector2(1.27394, 1.22244)
+
+[node name="BlueRockMedium3" parent="Foliage_Obstacles" instance=ExtResource("6_1icvy")]
+position = Vector2(-56, 1882)
+scale = Vector2(1.90199, 2.206)
+
+[node name="BlueRockMedium4" parent="Foliage_Obstacles" instance=ExtResource("6_1icvy")]
+position = Vector2(-3192, 266)
+scale = Vector2(1.26899, 1.25067)
+
+[node name="BlueRockMedium5" parent="Foliage_Obstacles" instance=ExtResource("6_1icvy")]
+position = Vector2(-2359, 272)
+
+[node name="MushroomsSmall13" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(-2362, 287)
+scale = Vector2(0.318546, 0.3094)
+
+[node name="MushroomsSmall14" parent="Foliage_Obstacles" instance=ExtResource("11_ahk00")]
+position = Vector2(-2198, 189)
+rotation = -0.261799
+scale = Vector2(0.341715, 0.403978)
+
+[node name="BlueRockCluster5" parent="Foliage_Obstacles" instance=ExtResource("5_0pl8h")]
+position = Vector2(-2223, 164)
+
+[node name="BlueRocksCluster4" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-156, -2599)
+scale = Vector2(3.15951, 3.10306)
+
+[node name="BlueRocksCluster" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-347, -2604)
+rotation = -0.261799
+scale = Vector2(2.30599, 2.61219)
+
+[node name="BlueRocksCluster2" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-302, -2605)
+rotation = 0.261799
+scale = Vector2(1.84914, 2.46234)
+
+[node name="BlueRocksCluster3" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-325, -2610)
+scale = Vector2(1.91439, 2.13448)
+
+[node name="BlueRockMedium" parent="." instance=ExtResource("8_lbydl")]
+position = Vector2(-329, -2581)
+scale = Vector2(2.3995, 2.66652)
+
+[node name="BlueRocksCluster6" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(358, -2614)
+rotation = 0.261799
+scale = Vector2(3.01338, 3.80292)
+
+[node name="BlueRocksCluster5" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(238, -2605)
+scale = Vector2(4.11899, 4.30709)
+
+[node name="MushroomsSmall" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-800, 2309)
+scale = Vector2(2.16375, 2.09748)
+
+[node name="BIG SHROOM" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(680, 2505)
+scale = Vector2(2.1183, 1.70657)
+
+[node name="MushroomsSmall3" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(632, 2137)
+scale = Vector2(1.36588, 1.2674)
+
+[node name="MushroomsSmall4" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-215, 2057)
+rotation = -3.14159
+scale = Vector2(1.78658, -1.96493)
+
+[node name="MushroomsSmall5" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(153, 2294)
+rotation = -3.14159
+scale = Vector2(1.98667, -1.92038)
+
+[node name="MushroomsSmall2" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(470, 2547)
+rotation = 0.261799
+scale = Vector2(0.422847, 0.448303)
+
+[node name="ColoredRock" parent="." instance=ExtResource("10_2pf4t")]
+position = Vector2(-2938, 115)
+
+[node name="MushroomsSmall6" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-2940, 80.0001)
+rotation = 0.261799
+scale = Vector2(0.883637, 0.86302)
+
+[node name="BlueRocksCluster7" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-20, -2625)
+rotation = -0.289406
+scale = Vector2(4.13716, 4.34782)
+skew = 0.0528044
+
+[node name="BlueRocksCluster8" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(87.9775, -2627.67)
+rotation = 0.289406
+scale = Vector2(3.31752, 4.09841)
+skew = -0.0528046
+
+[node name="BlueRocksCluster9" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(32.7889, -2641)
+scale = Vector2(3.40788, 3.57557)
+
+[node name="BlueRockMedium2" parent="." instance=ExtResource("8_lbydl")]
+position = Vector2(7, -2582)
+scale = Vector2(3.49141, 3.40843)
+
+[node name="BlueRockTall" parent="." instance=ExtResource("12_hhqf4")]
+position = Vector2(171, 2531)
+rotation = -3.14159
+scale = Vector2(0.96, -1)
+
+[node name="MushroomsSmall7" parent="BlueRockTall" instance=ExtResource("11_ahk00")]
+position = Vector2(0, -18)
+
+[node name="MushroomsSmall10" parent="BlueRockTall" instance=ExtResource("11_ahk00")]
+position = Vector2(19, 22)
+rotation = 0.261799
+
+[node name="MushroomsSmall8" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(179, 2422)
+rotation = -2.61799
+scale = Vector2(0.96, -1)
+
+[node name="BlueRockTall" parent="MushroomsSmall8" instance=ExtResource("12_hhqf4")]
+position = Vector2(257.309, 294.154)
+rotation = 0.523598
+scale = Vector2(-0.96, 1)
+
+[node name="MushroomsSmall7" parent="MushroomsSmall8/BlueRockTall" instance=ExtResource("11_ahk00")]
+position = Vector2(0, -18)
+
+[node name="MushroomsSmall10" parent="MushroomsSmall8/BlueRockTall" instance=ExtResource("11_ahk00")]
+position = Vector2(19, 22)
+rotation = 0.261799
+
+[node name="MushroomsSmall9" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-177, 2437)
+rotation = -0.541092
+scale = Vector2(0.950546, 0.970155)
+skew = 0.0353478
+
+[node name="ColoredRock2" parent="." instance=ExtResource("10_2pf4t")]
+position = Vector2(-2680, 120)
+rotation = -3.14159
+scale = Vector2(1.15492, -1.14266)
+
+[node name="MushroomsSmall7" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-2673, 80.0001)
+rotation = -2.87979
+scale = Vector2(1.02053, -0.986137)
+
+[node name="Enemies2" type="Node" parent="."]
+
+[node name="BlueRocksCluster10" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-1802, -2084)
+scale = Vector2(2.53409, 2.56308)
+
+[node name="BlueRocksCluster11" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-1728, -2086)
+rotation = -3.14159
+scale = Vector2(3.35883, -2.66669)
+
+[node name="BlueRockSmall" parent="." instance=ExtResource("7_mpax7")]
+position = Vector2(-1460, -2635)
+scale = Vector2(1.4587, 1.61166)
+
+[node name="BlueRockSmall2" parent="." instance=ExtResource("7_mpax7")]
+position = Vector2(-1426, -2627)
+
+[node name="BluePlantSmall" parent="." instance=ExtResource("19_hf0fx")]
+position = Vector2(-2359, 444)
+
+[node name="BluePlantLarge" parent="." instance=ExtResource("20_pb8c6")]
+position = Vector2(-3128, 503)
+
+[node name="PurpleGrass" parent="." instance=ExtResource("21_hk1my")]
+position = Vector2(-2615, 763)
+
+[node name="PurpleGrass2" parent="." instance=ExtResource("21_hk1my")]
+position = Vector2(-2869, 636)
+
+[node name="PurpleGrass3" parent="." instance=ExtResource("21_hk1my")]
+position = Vector2(-2491, 892)
+
+[node name="PurpleGrass4" parent="." instance=ExtResource("21_hk1my")]
+position = Vector2(-2291, 888)
+rotation = -3.14159
+scale = Vector2(1.09169, -1.38997)
+
+[node name="BluePlantLarge2" parent="." instance=ExtResource("20_pb8c6")]
+position = Vector2(457, 2440)
+scale = Vector2(0.876312, 0.697736)
+
+[node name="BluePlantLarge3" parent="." instance=ExtResource("20_pb8c6")]
+position = Vector2(215, 2411)
+
+[node name="BluePlantLarge4" parent="." instance=ExtResource("20_pb8c6")]
+position = Vector2(605, 2818)
+
+[node name="BluePlantLarge5" parent="." instance=ExtResource("20_pb8c6")]
+position = Vector2(-614, 2816)
+rotation = -3.14159
+scale = Vector2(1.08, -1)
+
+[node name="BluePlantSmall2" parent="." instance=ExtResource("19_hf0fx")]
+position = Vector2(-312, -2056)
+
+[node name="OneTimeSpawner" parent="." instance=ExtResource("22_b8thv")]
+visible = false
+z_as_relative = false
+position = Vector2(-504, 300)
+
+[node name="OneTimeSpawner2" parent="." instance=ExtResource("22_b8thv")]
+visible = false
+y_sort_enabled = false
+position = Vector2(616, 331)
+one_time = false
+spawn_range = 100
+
+[node name="BlueRockMedium3" parent="." instance=ExtResource("6_1icvy")]
+position = Vector2(-1409, -2653)
+scale = Vector2(1.86517, 2.23277)
+
+[node name="BlueRocksCluster12" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(890, -2809)
+rotation = -3.14159
+scale = Vector2(2.93511, -3.82185)
+
+[node name="BlueRockMedium4" parent="." instance=ExtResource("8_lbydl")]
+position = Vector2(1135, -2840)
+scale = Vector2(2.33998, 2.50691)
+
+[node name="BlueRocksCluster13" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(1051, -2818)
+scale = Vector2(2.70626, 3.30672)
+
+[node name="MushroomsSmall10" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(1154, -2910)
+scale = Vector2(0.4431, 0.542177)
+
+[node name="MushroomsSmall11" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(957, -2937)
+rotation = 0.261799
+scale = Vector2(0.570989, 0.634517)
+
+[node name="MushroomsSmall12" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(1065, -2855)
+scale = Vector2(0.341472, 0.589839)
+
+[node name="MushroomsSmall13" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(872, -2858)
+rotation = -0.261799
+scale = Vector2(0.379602, 0.478832)
+
+[node name="BlueRocksCluster14" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-973, -2820)
+rotation = -3.14159
+scale = Vector2(2.55435, -3.10338)
+
+[node name="BlueRockMedium5" parent="." instance=ExtResource("8_lbydl")]
+position = Vector2(-1055, -2835)
+scale = Vector2(1.88667, 2.6991)
+
+[node name="BlueRocksCluster15" parent="." instance=ExtResource("9_k46nu")]
+position = Vector2(-1147, -2822)
+scale = Vector2(2.87123, 3.13688)
+
+[node name="MushroomsSmall14" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-1055, -2804)
+
+[node name="MushroomsSmall15" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-1225, -2863)
+rotation = -3.14159
+scale = Vector2(0.84, -1)
+
+[node name="MushroomsSmall16" parent="." instance=ExtResource("11_ahk00")]
+position = Vector2(-812, -2891)
+
+[node name="BluePlantSmall3" parent="." instance=ExtResource("19_hf0fx")]
+position = Vector2(839, -2111)
+rotation = -1.309
+
+[node name="BluePlantSmall4" parent="." instance=ExtResource("19_hf0fx")]
+position = Vector2(847, -2116)
+rotation = 0.523598
+
+[node name="BluePlantLarge6" parent="." instance=ExtResource("20_pb8c6")]
+position = Vector2(841, -2123)
+scale = Vector2(1.35515, 1.36975)
+
+[node name="BluePlantSmall5" parent="." instance=ExtResource("19_hf0fx")]
+position = Vector2(-1207, -2053)
+
+[node name="BluePlantSmall6" parent="." instance=ExtResource("19_hf0fx")]
+position = Vector2(-869, -1862)

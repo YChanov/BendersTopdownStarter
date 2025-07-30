@@ -1,0 +1,170 @@
+[gd_scene load_steps=23 format=3 uid="uid://bofrr0uffp314"]
+
+[ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/EnemyMain.gd" id="1_3h76c"]
+[ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="2_rpanu"]
+[ext_resource type="Texture2D" uid="uid://bnn86qcci71k" path="res://Art/Sprites/Slime.png" id="3_pnkyw"]
+[ext_resource type="PackedScene" uid="uid://b82yimbxiflml" path="res://Art/Particles/hit_particles.tscn" id="4_nqe6w"]
+[ext_resource type="Script" path="res://Scripts/FSM/FiniteStateMachine.gd" id="5_3m3hm"]
+[ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/States/EnemyIdleState.gd" id="6_xwc4p"]
+[ext_resource type="Script" path="res://Scenes/NPC's/Enemy/Scripts/States/EnemyChaseState.gd" id="7_ukvvk"]
+[ext_resource type="Texture2D" uid="uid://bw36ig60cpuaq" path="res://Art/Sprites/Square.png" id="8_wln3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bm03"]
+atlas = ExtResource("3_pnkyw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a4h8"]
+atlas = ExtResource("3_pnkyw")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tjhr"]
+atlas = ExtResource("3_pnkyw")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vet01"]
+atlas = ExtResource("3_pnkyw")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73y23"]
+atlas = ExtResource("3_pnkyw")
+region = Rect2(0, 256, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_toimg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bm03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a4h8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tjhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vet01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73y23")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rismc"]
+radius = 25.0
+height = 72.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mbmt"]
+radius = 41.5
+height = 119.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_imcar"]
+radius = 352.172
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6b3o"]
+bg_color = Color(0.0352941, 0.0156863, 0.00784314, 0.427451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w435t"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Curve" id="Curve_aelqt"]
+_data = [Vector2(0, 1), 0.0, 0.0278013, 0, 0, Vector2(0.331081, 0.373626), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.11722, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_dwv2q"]
+curve = SubResource("Curve_aelqt")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6o6nb"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 6.5
+angle_min = -90.0
+angle_max = 90.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 98, 0)
+color = Color(0, 0, 0, 1)
+alpha_curve = SubResource("CurveTexture_dwv2q")
+
+[node name="EnemyBig" type="CharacterBody2D" node_paths=PackedStringArray("chase_node", "sprite", "healthbar", "hit_particles") groups=["Enemy"]]
+texture_filter = 1
+script = ExtResource("1_3h76c")
+chase_node = NodePath("FSM/enemy_chase_state")
+value = 25
+sprite = NodePath("AnimatedSprite2D")
+health = 275
+healthbar = NodePath("ProgressBar")
+hit_particles = NodePath("HitParticles")
+
+[node name="PointLight2D" parent="." instance=ExtResource("2_rpanu")]
+color = Color(1, 0.27451, 1, 0.443137)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_toimg")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.342338
+
+[node name="HitBox" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/HitBox"]
+position = Vector2(-0.5, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rismc")
+
+[node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("4_nqe6w")]
+
+[node name="BodyCollider" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3.5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4mbmt")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="DetectionShape" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_imcar")
+
+[node name="FSM" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("5_3m3hm")
+initial_state = NodePath("enemy_idle_state")
+
+[node name="enemy_idle_state" type="Node" parent="FSM"]
+script = ExtResource("6_xwc4p")
+
+[node name="enemy_chase_state" type="Node" parent="FSM"]
+script = ExtResource("7_ukvvk")
+move_speed = 150.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -46.0
+offset_top = -62.0
+offset_right = -36.0
+offset_bottom = 29.0
+rotation = -1.57079
+theme_override_styles/background = SubResource("StyleBoxFlat_x6b3o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_w435t")
+step = 1.0
+value = 51.0
+fill_mode = 2
+show_percentage = false
+
+[node name="HitParticles" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 60
+process_material = SubResource("ParticleProcessMaterial_6o6nb")
+texture = ExtResource("8_wln3n")
+one_shot = true
+explosiveness = 0.9
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="AnimatedSprite2D/HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_exited" from="AnimatedSprite2D/HitBox" to="." method="_on_hit_box_body_exited"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

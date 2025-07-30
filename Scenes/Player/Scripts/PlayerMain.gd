@@ -2,9 +2,7 @@ extends CharacterBase
 class_name PlayerMain
 
 @onready var fsm = $FSM as FiniteStateMachine
-@onready var enemy_spawn_points := $"../SpawnPoints"
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
-@onready var collision_shape_2d: CollisionShape2D = $AnimatedSprite2D/Hitboxes/Kick_Hitbox/CollisionShape2D
 
 @export var tilemap_layers : Array[TileMapLayer] = []
 

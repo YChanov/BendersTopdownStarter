@@ -1,15 +1,18 @@
-[gd_scene load_steps=21 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=24 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
+[ext_resource type="PackedScene" uid="uid://cfpefi3fgamap" path="res://Scenes/environment.tscn" id="2_ed8et"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
 [ext_resource type="PackedScene" uid="uid://dc2dix8onc2fc" path="res://generated_level.tscn" id="5_grttd"]
 [ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="5_qwesu"]
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="9_bn2i2"]
 [ext_resource type="PackedScene" uid="uid://bvo8oinf2kxiy" path="res://Scenes/Interactables/tree.tscn" id="10_jj3sk"]
+[ext_resource type="PackedScene" uid="uid://fbf74j6q1vxe" path="res://Scenes/Interactables/Spawner.tscn" id="11_7rqc0"]
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
 [ext_resource type="Script" path="res://Scripts/tuto_label.gd" id="15_3g731"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
 [ext_resource type="Script" path="res://Scripts/tile_map_fixer.gd" id="18_ilyua"]
+[ext_resource type="PackedScene" uid="uid://dv5h01j1yg6py" path="res://Scenes/Interactables/SpawnerBig.tscn" id="18_q6e4f"]
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]
@@ -37,7 +40,9 @@ position = Vector2(0.269287, -2.66302)
 [node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers") instance=ExtResource("1_8obwv")]
 position = Vector2(-85, -117)
 tilemap_layers = [NodePath("../Scene/grass"), NodePath("../Scene/ground"), NodePath("../Scene/river"), NodePath("../Scene/bottom")]
-health = 10000
+health = 100
+
+[node name="Doom" parent="." instance=ExtResource("2_ed8et")]
 
 [node name="Scene" type="Node" parent="."]
 
@@ -122,6 +127,119 @@ position = Vector2(-63, 347)
 [node name="FactoryRoad" parent="Interactables" instance=ExtResource("3_10ytb")]
 y_sort_enabled = false
 position = Vector2(26, -199)
+
+[node name="OneTimeBigSpawner" parent="Interactables" instance=ExtResource("18_q6e4f")]
+position = Vector2(-1216, -175)
+
+[node name="OneTimeSpawner" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-1473, -32)
+
+[node name="OneTimeSpawner2" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-1544, -322)
+
+[node name="OneTimeBigSpawner2" parent="Interactables" instance=ExtResource("18_q6e4f")]
+position = Vector2(-2489, 2417)
+
+[node name="OneTimeSpawner3" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-2894, 1941)
+one_time = false
+
+[node name="OneTimeBigSpawner3" parent="Interactables" instance=ExtResource("18_q6e4f")]
+position = Vector2(-2861, 2753)
+one_time = false
+
+[node name="OneTimeSpawner4" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-2567, -1773)
+
+[node name="OneTimeSpawner5" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-2929, -811)
+
+[node name="OneTimeSpawner6" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2400, 2187)
+
+[node name="OneTimeSpawner7" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2406, 1333)
+
+[node name="OneTimeSpawner8" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2881, 1005)
+
+[node name="OneTimeSpawner9" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2541, 869)
+
+[node name="OneTimeSpawner10" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2909, -1020)
+
+[node name="OneTimeSpawner11" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2711, -1201)
+
+[node name="OneTimeSpawner12" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2502, -969)
+
+[node name="OneTimeSpawner13" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(2711, -879)
+
+[node name="OneTimeBigSpawner4" parent="Interactables" instance=ExtResource("18_q6e4f")]
+position = Vector2(2722, -2236)
+
+[node name="OneTimeBigSpawner5" parent="Interactables" instance=ExtResource("18_q6e4f")]
+position = Vector2(2864, -2774)
+
+[node name="OneTimeSpawner14" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-558, -2921)
+
+[node name="OneTimeSpawner15" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(584, -2938)
+
+[node name="OneTimeSpawner16" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(-547, -3085)
+
+[node name="OneTimeSpawner17" parent="Interactables" instance=ExtResource("11_7rqc0")]
+position = Vector2(550, -3102)
+
+[node name="Tree2" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2836, 123)
+
+[node name="Tree3" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2572, 173)
+
+[node name="Tree4" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2785, 404)
+
+[node name="Tree5" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2480, 434)
+
+[node name="Tree6" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(3086, 243)
+
+[node name="Tree7" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2767, -451)
+
+[node name="Tree8" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2934, -365)
+
+[node name="Tree9" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2614, -399)
+
+[node name="Tree10" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2626, -650)
+
+[node name="Tree11" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2918, -718)
+
+[node name="Tree12" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(2954, -2479)
+
+[node name="FactoryRoad2" parent="Interactables" instance=ExtResource("3_10ytb")]
+position = Vector2(3061, -2356)
+
+[node name="Tree13" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(-648, 2719)
+
+[node name="Tree14" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(-40, 2431)
+
+[node name="Tree15" parent="Interactables" instance=ExtResource("10_jj3sk")]
+position = Vector2(456, 2544)
 
 [node name="Obstacles" type="Node" parent="."]
 

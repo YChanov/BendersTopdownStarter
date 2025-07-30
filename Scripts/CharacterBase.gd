@@ -26,9 +26,9 @@ func Turn():
 	var direction = -1 if flipped_horizontal == true else 1
 	
 	if(velocity.x < 0):
-		sprite.scale.x = -direction
+		sprite.scale.x = -direction * abs(sprite.scale.x)
 	elif(velocity.x > 0):
-		sprite.scale.x = direction
+		sprite.scale.x = direction * abs(sprite.scale.x)
 
 #region Taking Damage
 

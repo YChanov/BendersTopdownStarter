@@ -1,7 +1,7 @@
 extends State
 class_name enemy_chase_state
 
-var move_speed := float(60)
+@export var move_speed := float(60)
 
 @onready var body = $"../.."
 
