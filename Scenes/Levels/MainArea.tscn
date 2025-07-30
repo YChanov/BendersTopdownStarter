@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=27 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://cfpefi3fgamap" path="res://Scenes/environment.tscn" id="2_ed8et"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://bia7rrlxphfg2" path="res://Art/Audio/corridorsOgg.ogg" id="14_ph0ns"]
 [ext_resource type="Script" path="res://Scripts/tuto_label.gd" id="15_3g731"]
 [ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="15_q3yq5"]
+[ext_resource type="PackedScene" uid="uid://c54wepgpe1aju" path="res://Scenes/Interactables/Area_Blocker_small.tscn" id="16_y24av"]
 [ext_resource type="Script" path="res://Scripts/tile_map_fixer.gd" id="18_ilyua"]
 [ext_resource type="PackedScene" uid="uid://dv5h01j1yg6py" path="res://Scenes/Interactables/SpawnerBig.tscn" id="18_q6e4f"]
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
@@ -129,6 +130,19 @@ target_level = "res://Scenes/Levels/FinalCity.tscn"
 [node name="Teleporter2" parent="Scene" groups=["T1"] instance=ExtResource("4_hri5c")]
 position = Vector2(-3111, 2326)
 target_level = "res://Scenes/Levels/FinalCity.tscn"
+
+[node name="AreaBlocker" parent="Scene" instance=ExtResource("16_y24av")]
+position = Vector2(-2058, 265)
+rotation = 1.5708
+
+[node name="AreaBlocker2" parent="Scene" instance=ExtResource("16_y24av")]
+position = Vector2(-2060, 570)
+rotation = 1.5708
+
+[node name="AreaBlocker3" parent="Scene" instance=ExtResource("16_y24av")]
+position = Vector2(-1928, 1347)
+rotation = 1.5708
+scale = Vector2(0.88, 1)
 
 [node name="Interactables" type="Node" parent="."]
 
