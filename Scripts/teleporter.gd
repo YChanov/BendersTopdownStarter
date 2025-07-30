@@ -16,7 +16,6 @@ func _process(delta: float) -> void:
 		return
 	else:
 		label.visible = true
-		
 	if target_level && Input.is_action_just_pressed("Enter") :
 		GameManager.t_group = get_groups()[0]
 		GameManager.load_next_level(load(target_level))

@@ -14,7 +14,6 @@ func _process(delta: float) -> void:
 func fixStuff():
 	for x in range(-tilemap_size.x,tilemap_size.x):
 		for y in range(-tilemap_size.y,tilemap_size.y):
-			
 			fixCollision(Vector2(x,y))
 
 func fixCollision(position : Vector2):

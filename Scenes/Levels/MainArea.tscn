@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=26 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://cfpefi3fgamap" path="res://Scenes/environment.tscn" id="2_ed8et"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
+[ext_resource type="PackedScene" uid="uid://cgxgtdpi38vj1" path="res://Scenes/Interactables/teleporter.tscn" id="4_hri5c"]
 [ext_resource type="PackedScene" uid="uid://dc2dix8onc2fc" path="res://generated_level.tscn" id="5_grttd"]
 [ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="5_qwesu"]
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="9_bn2i2"]
@@ -120,6 +121,14 @@ scale = Vector2(0.503908, 0.494619)
 
 [node name="GrandmaShip" parent="Scene" instance=ExtResource("24_6ww4f")]
 position = Vector2(70, 2)
+
+[node name="Teleporter" parent="Scene" groups=["T1"] instance=ExtResource("4_hri5c")]
+position = Vector2(-3040, -3048)
+target_level = "res://Scenes/Levels/FinalCity.tscn"
+
+[node name="Teleporter2" parent="Scene" groups=["T1"] instance=ExtResource("4_hri5c")]
+position = Vector2(-3111, 2326)
+target_level = "res://Scenes/Levels/FinalCity.tscn"
 
 [node name="Interactables" type="Node" parent="."]
 
