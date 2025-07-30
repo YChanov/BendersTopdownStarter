@@ -91,7 +91,7 @@ func PutRoad():
 		if !road_amount:
 			return
 			
-		var tile_map_base : TileMapLayer = get_parent().get_node("Scene/TileMapBase")
+		var tile_map_base : TileMapLayer = get_parent().get_node("Scene/river")
 		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMapRoads")
 		if tile_map.get_cell_source_id(target_position) == ROADS_SOURCE_ID:
 			return
@@ -100,7 +100,11 @@ func PutRoad():
 		var is_water = data.get_custom_data('is_water')
 		if is_water :
 			data.set_collision_polygon_points(0, 0, [])
-		tile_map.set_cell(target_position, ROADS_SOURCE_ID, Vector2i(0,0))
+		var direction_placement = target_position - tile_map.local_to_map(position)
+		var road = Vector2i(1, 0)
+		if direction_placement == Vector2i.UP or direction_placement == Vector2i.DOWN:
+			road = Vector2i(0,2)
+		tile_map.set_cell(target_position, ROADS_SOURCE_ID, road)
 		GameManager.add_road(-1)
 	return
 	

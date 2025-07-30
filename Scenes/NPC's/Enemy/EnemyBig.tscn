@@ -137,7 +137,7 @@ script = ExtResource("6_xwc4p")
 
 [node name="enemy_chase_state" type="Node" parent="FSM"]
 script = ExtResource("7_ukvvk")
-move_speed = 150.0
+move_speed = 100.0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = -46.0

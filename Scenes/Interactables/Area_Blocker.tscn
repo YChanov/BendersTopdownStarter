@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://ceoo6gamb4olk"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_n3tw7"]
-a = Vector2(17, 3)
-b = Vector2(-11, 3)
+a = Vector2(7500, 0)
+b = Vector2(0, 0)
 
 [node name="AreaBlocker" type="StaticBody2D"]
 position = Vector2(13, 9)

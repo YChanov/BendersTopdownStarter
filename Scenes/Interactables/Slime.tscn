@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dyb5iqfj3tmwj" path="res://Art/Sprites/light.png" id="3_iwutt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ea2ve"]
-radius = 36.8824
+radius = 93.4678
 
 [node name="Slime" type="Sprite2D"]
 top_level = true

@@ -4,16 +4,17 @@ var tilemap_size = Vector2i(100,100)
 @export var tilemaps : Array[TileMapLayer]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	fixCollisions()
+	fixStuff()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func fixCollisions():
+func fixStuff():
 	for x in range(-tilemap_size.x,tilemap_size.x):
 		for y in range(-tilemap_size.y,tilemap_size.y):
+			
 			fixCollision(Vector2(x,y))
 
 func fixCollision(position : Vector2):
