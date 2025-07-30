@@ -100,7 +100,7 @@ func PutRoad():
 			return
 			
 		var data : TileData = tile_map_base.get_cell_tile_data(target_position)
-		var is_water = data.get_custom_data('is_water')
+		var is_water = data and data.get_custom_data('is_water')
 		if is_water :
 			data.set_collision_polygon_points(0, 0, [])
 		var direction_placement = target_position - tile_map.local_to_map(position)
