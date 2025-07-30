@@ -13,6 +13,9 @@ const ROADS_SOURCE_ID = 4
 @onready var tile_overlay: Node2D = $TileOverlay
 @onready var tile_map_roads: TileMapLayer = $"../Scene/TileMapRoads"
 
+@onready var death_message_label: Label = $DeathMessageLabel
+
+
 var triggered_tiles := {}
 var toggleRoadPlacement : bool = false
 var last_direction : Vector2 = Vector2(1, 0)
@@ -115,8 +118,18 @@ func _die():
 	super() #calls _die() on base-class CharacterBase
 	
 	fsm.force_change_state("Die")
-	GameManager.load_next_level(load("res://Scenes/Misc/end_game_screen.tscn"))
-	#add_child(death_scene)
+	
+	death_message_label.show()
+	var tree = get_tree()
+	await tree.create_timer(6).timeout
+	death_message_label.hide()
+	self.health = 100;
+	GameManager.set_health(100)
+	GameManager.set_all_money_to_zero()
+	
+	fsm.force_change_state("Idle")
+	
+	self.position = Vector2i(0,0);
 
 var bodies : Dictionary
 func fixYSorting():

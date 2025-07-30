@@ -16,6 +16,12 @@ func reset_money():
 	wood = 5
 	metal = 5
 	movement_speed = 1.0
+	
+func set_all_money_to_zero():
+	slime = 0
+	wood = 0
+	metal = 0
+	movement_speed = 1.0
 
 func set_movement_speed(setmovement_speed : float) :
 	movement_speed = setmovement_speed

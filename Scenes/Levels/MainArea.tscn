@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c54wepgpe1aju" path="res://Scenes/Interactables/Area_Blocker_small.tscn" id="16_y24av"]
 [ext_resource type="Script" path="res://Scripts/tile_map_fixer.gd" id="18_ilyua"]
 [ext_resource type="PackedScene" uid="uid://dv5h01j1yg6py" path="res://Scenes/Interactables/SpawnerBig.tscn" id="18_q6e4f"]
-[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
+[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="PackedScene" uid="uid://ceoo6gamb4olk" path="res://Scenes/Interactables/Area_Blocker.tscn" id="22_4ra58"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]

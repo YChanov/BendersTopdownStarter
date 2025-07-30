@@ -1,8 +1,8 @@
-[gd_scene load_steps=67 format=3 uid="uid://bvg5dny32iw0x"]
+[gd_scene load_steps=68 format=3 uid="uid://bvg5dny32iw0x"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PlayerMain.gd" id="1_y5oq4"]
 [ext_resource type="Texture2D" uid="uid://dotljha74t3mi" path="res://Art/Sprites/MC_attack.png" id="2_1sbc4"]
-[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="2_lffr6"]
+[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="2_lffr6"]
 [ext_resource type="Texture2D" uid="uid://b7ktdmlpcsle5" path="res://Art/Sprites/MC_death.png" id="3_nrgsn"]
 [ext_resource type="Texture2D" uid="uid://dege48efa7ot8" path="res://Art/Sprites/MC_idle.png" id="4_w8qrc"]
 [ext_resource type="Texture2D" uid="uid://73s7ih8tyw42" path="res://Art/Sprites/MC_running.png" id="5_l8u4i"]
@@ -510,6 +510,11 @@ bg_color = Color(0.391969, 0.478421, 0.97647, 1)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oy820"]
 radius = 107.229
 
+[sub_resource type="LabelSettings" id="LabelSettings_8lw8c"]
+font_size = 22
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.882353)
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "healthbar", "hit_particles") groups=["Player"]]
 top_level = true
 y_sort_enabled = true
@@ -628,6 +633,18 @@ show_percentage = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(23, 0)
 shape = SubResource("CircleShape2D_oy820")
+
+[node name="DeathMessageLabel" type="Label" parent="."]
+visible = false
+offset_left = -246.0
+offset_top = 54.0
+offset_right = 246.0
+offset_bottom = 221.0
+text = "Oh no! You fainted by holding touy breath!
+You will wake up after having crawled back to your safe place!
+Try your best again to reach the safe city!"
+label_settings = SubResource("LabelSettings_8lw8c")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="AnimatedSprite2D/Hitboxes/Punch_Hitbox" to="FSM/Attacking" method="_on_hitbox_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
