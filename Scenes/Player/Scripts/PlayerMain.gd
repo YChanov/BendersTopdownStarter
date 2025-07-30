@@ -6,10 +6,13 @@ class_name PlayerMain
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 @onready var collision_shape_2d: CollisionShape2D = $AnimatedSprite2D/Hitboxes/Kick_Hitbox/CollisionShape2D
 
+@export var tilemap_layers : Array[TileMapLayer] = []
+
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
 
 @onready var tile_overlay: Node2D = $TileOverlay
+@onready var tile_map_roads: TileMapLayer = $"../Scene/TileMapRoads"
 
 var triggered_tiles := {}
 var toggleRoadPlacement : bool = false
@@ -23,7 +26,6 @@ func _ready() -> void:
 		position = tele.position if tele else position
 	
 func _process(delta: float) -> void:
-	
 	super._process(delta)
 	var input_dir = Input.get_vector("MoveLeft", "MoveRight", "MoveUp", "MoveDown")
 	if input_dir != Vector2.ZERO && (abs(input_dir.x + input_dir.y) == 1) :
@@ -58,14 +60,15 @@ func RoadOverlay() :
 	
 	
 func TileHandle(delta: float):
+	fixCollisions()
 	breath_time -= delta
 	if breath_time > 0:
 		return
 	var tile_source_id = GetCurrentTileSourceId()
 		
 	if tile_source_id != 2:
-		if self.health > 0:		
-			self._take_damage(5)
+		if self.health > 0:
+			self._take_damage(1)#todo back to 5
 	else: 
 		if self.health > 0:	
 			self._take_damage(-15)
@@ -76,6 +79,19 @@ func TileHandle(delta: float):
 	else :
 		GameManager.reset_movement_speed()
 	
+func fixCollisions():
+	var disable_colision = false
+	var my_coors = tile_map_roads.local_to_map(position)
+	for tilemap_layer in tilemap_layers:
+		if !tilemap_layer : 
+			continue
+		var tile_source_id = tilemap_layer.get_cell_source_id(my_coors)
+		if tile_source_id == -1:
+			continue
+		if disable_colision :
+			tilemap_layer.get_cell_tile_data(my_coors).set_collision_polygon_points(0, 0, [])
+		if tile_source_id != -1:
+			disable_colision = true
 func GetCurrentTileSourceId(is_road : bool = false):
 	var tile_map = getParentTileMap(is_road)
 	var current_position = tile_map.local_to_map(position)
@@ -83,9 +99,7 @@ func GetCurrentTileSourceId(is_road : bool = false):
 	return tile_source_id
 
 func getParentTileMap(is_road : bool = false) -> TileMapLayer :
-	var basic_tile_map = get_parent().get_node("Scene/TileMap")
-	if !basic_tile_map :
-		basic_tile_map = get_parent().get_node("Generated/TileMap")
+	var basic_tile_map = get_parent().get_node("Scene/grass")
 	return basic_tile_map if !is_road else get_parent().get_node("Scene/TileMapRoads")
 	
 func PutRoad():
@@ -106,18 +120,6 @@ func PutRoad():
 		tile_map.set_cell(target_position, ROADS_SOURCE_ID, Vector2i(0,0))
 		GameManager.add_road(-1)
 	return
-	
-func NextToBreathable(tile_map: TileMapLayer, current_position: Vector2i):
-	if tile_map.get_cell_source_id(Vector2i(current_position.x - 1, current_position.y)) == BREATHABLE_SOURCE_ID:
-		return true
-	if tile_map.get_cell_source_id(Vector2i(current_position.x, current_position.y - 1)) == BREATHABLE_SOURCE_ID:
-		return true
-	if tile_map.get_cell_source_id(Vector2i(current_position.x + 1, current_position.y)) == BREATHABLE_SOURCE_ID:
-		return true
-	if tile_map.get_cell_source_id(Vector2i(current_position.x, current_position.y + 1)) == BREATHABLE_SOURCE_ID:
-		return true
-	
-	return false
 	
 func _die():
 	super() #calls _die() on base-class CharacterBase
