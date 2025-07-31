@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PlayerMain.gd" id="1_y5oq4"]
 [ext_resource type="Texture2D" uid="uid://dotljha74t3mi" path="res://Art/Sprites/MC_attack.png" id="2_1sbc4"]
-[ext_resource type="PackedScene" path="res://Scenes/light_big.tscn" id="2_lffr6"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="2_lffr6"]
 [ext_resource type="Texture2D" uid="uid://b7ktdmlpcsle5" path="res://Art/Sprites/MC_death.png" id="3_nrgsn"]
 [ext_resource type="Texture2D" uid="uid://dege48efa7ot8" path="res://Art/Sprites/MC_idle.png" id="4_w8qrc"]
 [ext_resource type="Texture2D" uid="uid://73s7ih8tyw42" path="res://Art/Sprites/MC_running.png" id="5_l8u4i"]
@@ -374,7 +374,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_fkgk5"]
 resource_name = "Death"
-length = 0.4
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -382,22 +382,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 4.56667, 5.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"Death"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
+"values": [&"Death", &"Death", &"Idle"]
 }
 
 [sub_resource type="Animation" id="Animation_1i780"]
@@ -417,23 +405,11 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/enabled = false
+tracks/1/path = NodePath("AnimatedSprite2D/Hitboxes/Punch_Hitbox/hitboxShape:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath("AnimatedSprite2D/Hitboxes/Punch_Hitbox/hitboxShape:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -456,21 +432,21 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"MoonKick"]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
 
 [sub_resource type="Animation" id="Animation_exa0s"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Death"]
+}
 
 [sub_resource type="Animation" id="Animation_wo7cn"]
 resource_name = "Walk"
@@ -535,7 +511,7 @@ color = Color(1, 1, 1, 0.843137)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_vax36")
-animation = &"Attack"
+animation = &"Death"
 autoplay = "Idle"
 
 [node name="HitParticles" parent="AnimatedSprite2D" instance=ExtResource("21_gooki")]

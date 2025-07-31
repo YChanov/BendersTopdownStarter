@@ -117,19 +117,9 @@ func PutRoad():
 func _die():
 	super() #calls _die() on base-class CharacterBase
 	
-	fsm.force_change_state("Die")
+	fsm.change_state(fsm.current_state, "Die")
 	
-	death_message_label.show()
-	var tree = get_tree()
-	await tree.create_timer(6).timeout
-	death_message_label.hide()
-	self.health = 100;
-	GameManager.set_health(100)
-	GameManager.set_all_money_to_zero()
 	
-	fsm.force_change_state("Idle")
-	
-	self.position = Vector2i(0,0);
 
 var bodies : Dictionary
 func fixYSorting():

@@ -22,6 +22,7 @@ func set_all_money_to_zero():
 	wood = 0
 	metal = 0
 	movement_speed = 1.0
+	road = 0
 
 func set_movement_speed(setmovement_speed : float) :
 	movement_speed = setmovement_speed
