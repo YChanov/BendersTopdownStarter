@@ -40,10 +40,9 @@ y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
-[node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers") instance=ExtResource("1_8obwv")]
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers") groups=["Persist"] instance=ExtResource("1_8obwv")]
 position = Vector2(-7.54413, -2.04163)
 tilemap_layers = [NodePath("../Scene/grass"), NodePath("../Scene/ground"), NodePath("../Scene/river"), NodePath("../Scene/bottom")]
-health = 100
 
 [node name="Doom" parent="." instance=ExtResource("2_ed8et")]
 
@@ -67,7 +66,7 @@ tile_map_data = PackedByteArray("AADO/9X/AQAPAAMAAADO/9b/AQAPAAUAAADO/9f/AQAQAAQ
 z_index = -2
 y_sort_enabled = true
 
-[node name="TileMapRoads" type="TileMapLayer" parent="Scene"]
+[node name="TileMapRoads" type="TileMapLayer" parent="Scene" groups=["Persist"]]
 z_index = -2
 z_as_relative = false
 y_sort_enabled = true

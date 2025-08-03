@@ -2,18 +2,21 @@ extends CharacterBody2D
 class_name CharacterBase
 
 @export var sprite : AnimatedSprite2D
-var health_max : int = 100
-@export var health : int
+@export var health_max : int = 100
+var health : int
 @export var healthbar : ProgressBar
 @export var flipped_horizontal : bool
 @export var hit_particles : GPUParticles2D
+@export var damage: int = 55
+
 var invincible : bool = false
 var is_dead : bool = false
 
 func _ready():
+	health = health_max
 	if healthbar :
-		healthbar.max_value = health
-		healthbar.value = health
+		healthbar.max_value = health_max
+		healthbar.value = health_max
 	
 func _process(_delta):
 	Turn()
@@ -70,4 +73,18 @@ func _die():
 	if is_instance_valid(self) and not is_in_group("Player"):
 		queue_free()
 
+#endregion
+
+#region save
+func save():
+	var save_dict = {
+		"filename" : get_scene_file_path(),
+		"parent" : get_parent().get_path(),
+		"position" : {"x" : position.x, "y" : position.y },
+		"current_health" : health,
+		"health_max" : health_max,
+		"damage" : damage,
+	}
+	
+	return save_dict
 #endregion

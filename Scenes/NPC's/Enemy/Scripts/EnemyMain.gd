@@ -7,7 +7,6 @@ var player_in_range = false
 
 @export var chase_node : Node
 @export var drop : PackedScene
-@export var damage := 50
 @export var value := 5
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
