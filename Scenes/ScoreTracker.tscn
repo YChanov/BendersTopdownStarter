@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6xb8nhlqtuhf"]
+[gd_scene load_steps=7 format=3 uid="uid://b6xb8nhlqtuhf"]
 
 [ext_resource type="Script" path="res://Scripts/GameUI.gd" id="1_3k7kl"]
+[ext_resource type="PackedScene" uid="uid://bq5pimm5ff45u" path="res://Scenes/Misc/PauseMenu.tscn" id="1_t40y5"]
 [ext_resource type="LabelSettings" uid="uid://1cnb4418rr7" path="res://Art/Fonts/pixelized_label_large.tres" id="2_ygwdu"]
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="3_fw1jh"]
 
@@ -29,6 +30,10 @@ wood_label = NodePath("WoodLabel")
 metal_label = NodePath("MetalLabel")
 road_label = NodePath("RoadLabel")
 healthbar = NodePath("ProgressBar")
+
+[node name="PauseMenu" parent="GameUI" instance=ExtResource("1_t40y5")]
+visible = false
+layout_mode = 1
 
 [node name="SlimeLabel" type="Label" parent="GameUI"]
 z_index = 1

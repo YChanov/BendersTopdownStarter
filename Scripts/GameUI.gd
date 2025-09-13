@@ -7,11 +7,13 @@ extends Control
 @export var healthbar : ProgressBar
 
 @onready var game_screens: GameScreens = $GameScreens
+@onready var pause_menu: Control = $PauseMenu
 
 
 func _ready() -> void:
 	healthbar.max_value = 100
 	healthbar.value = 100
+	pause_menu.visible = false
 	
 func _process(_delta):
 	

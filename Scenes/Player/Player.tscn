@@ -540,7 +540,7 @@ animator = NodePath("../../AnimationPlayer")
 [node name="Attacking" type="Node" parent="FSM" node_paths=PackedStringArray("animator", "attacks")]
 script = ExtResource("27_j1lrx")
 animator = NodePath("../../AnimationPlayer")
-attacks = [NodePath(""), null]
+attacks = [null, null]
 
 [node name="Moving" type="Node" parent="FSM" node_paths=PackedStringArray("animator")]
 script = ExtResource("29_bdbrv")

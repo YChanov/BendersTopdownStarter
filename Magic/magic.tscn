@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://eh8614jtc5wp"]
+
+[ext_resource type="Script" path="res://Magic/magic.gd" id="1_o4i1k"]
+
+[node name="Magic" type="Node2D"]
+script = ExtResource("1_o4i1k")
