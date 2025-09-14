@@ -100,7 +100,6 @@ texture_filter = 1
 script = ExtResource("1_db41y")
 chase_node = NodePath("FSM/enemy_chase_state")
 sprite = NodePath("AnimatedSprite2D")
-health = 1
 healthbar = NodePath("ProgressBar")
 hit_particles = NodePath("HitParticles")
 

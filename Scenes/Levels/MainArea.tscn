@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=29 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://cfpefi3fgamap" path="res://Scenes/environment.tscn" id="2_ed8et"]
@@ -23,9 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://b3bqped2b2mbo" path="res://Scenes/TileMaps/bottom.tscn" id="24_j8gfn"]
 [ext_resource type="PackedScene" uid="uid://eh8614jtc5wp" path="res://Magic/magic.tscn" id="25_2hug7"]
 [ext_resource type="PackedScene" uid="uid://bdps25y4imxjr" path="res://Scenes/TileMaps/river.tscn" id="25_pyu3y"]
-[ext_resource type="Script" path="res://Magic/keywords/keyword.gd" id="26_4ypfe"]
+[ext_resource type="PackedScene" uid="uid://bb257p1fkhan8" path="res://Magic/keywords/fire.tscn" id="26_40hlx"]
 [ext_resource type="PackedScene" uid="uid://cbftp6np1nyni" path="res://Scenes/TileMaps/ground.tscn" id="26_aa375"]
-[ext_resource type="Script" path="res://Magic/keywords/fire.gd" id="27_cey0x"]
 [ext_resource type="PackedScene" uid="uid://vmjfhat8r0wg" path="res://Scenes/TileMaps/grass.tscn" id="27_qfpc6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eqc1o"]
@@ -35,9 +34,6 @@ outline_size = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxl76"]
 size = Vector2(134, 161.337)
-
-[sub_resource type="Resource" id="Resource_vulet"]
-script = ExtResource("27_cey0x")
 
 [node name="Scene_Root" type="Node2D"]
 modulate = Color(0, 0, 0, 1)
@@ -342,7 +338,7 @@ rotation = 1.5708
 
 [node name="Magic" parent="." instance=ExtResource("25_2hug7")]
 position = Vector2(-476.269, 13.663)
-keywords = Array[ExtResource("26_4ypfe")]([SubResource("Resource_vulet")])
+keywords = Array[PackedScene]([ExtResource("26_40hlx")])
 
 [connection signal="body_entered" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_exited"]

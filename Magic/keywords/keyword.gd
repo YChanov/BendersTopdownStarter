@@ -1,11 +1,8 @@
-extends Resource
+extends Node
 class_name Keyword
 
-func ready(magic: Node):
-	pass
-
-func process(magic: Node):
+func create(magic: Magic):
 	pass
 	
-func exit(magic: Node):
+func exit(magic: Magic):
 	pass
