@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name CharacterBase
 
+@export var move_speed := float(60)
 @export var sprite : AnimatedSprite2D
 @export var health_max : int = 100
 var health : int
@@ -60,10 +61,14 @@ func _take_damage(amount):
 	health -= amount
 	if healthbar :
 		healthbar.value = health
-	
+	print(health)
 	if(health <= 0):
 		_die()
-		
+
+func _set_move_speed(newMoveSpeed):
+	move_speed = newMoveSpeed
+	print(move_speed)
+	
 func _die():
 	if(is_dead):
 		return

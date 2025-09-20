@@ -5,6 +5,8 @@ class_name PlayerMain
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 
 @export var tilemap_layers : Array[TileMapLayer] = []
+@export var magic1: Magic
+@export var magic2: Magic
 @onready var river: TileMapLayer = $"../Scene/river"
 
 const BREATHABLE_SOURCE_ID = 2
@@ -36,6 +38,7 @@ func _process(delta: float) -> void:
 	toggleRoadPlacement && PutRoad()
 	TileHandle(delta)
 	fixYSorting()
+	castMagic(delta)
 	
 const BREATH_INTERVAL = 0.5
 var breath_time: float = BREATH_INTERVAL
@@ -137,3 +140,31 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	bodies.erase(body.get_instance_id())
+
+var now: float
+func castMagic(delta) -> void:
+	now += delta
+	castMagic1()
+	castMagic2()
+	
+var last_cast1: float
+func castMagic1():
+	if !magic1 || !Input.is_action_just_pressed("Magic1") :
+		return
+	if last_cast1 && (now - last_cast1) < 1:
+		return
+	last_cast1 = now
+	var clone = magic1.duplicate()
+	get_parent().get_node("Magic").add_child(clone)
+	clone.cast(self)
+	
+var last_cast2: float
+func castMagic2():
+	if !magic2 || !Input.is_action_just_pressed("Magic2") :
+		return
+	if last_cast2 && (now - last_cast2) < 1:
+		return
+	last_cast2 = now
+	var clone = magic2.duplicate()
+	get_parent().get_node("Magic").add_child(clone)
+	clone.cast(self)

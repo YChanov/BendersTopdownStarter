@@ -1,7 +1,6 @@
 extends Keyword
-class_name fire
+class_name mud
 
-const WOOD_RESOURCE = preload("res://Art/wood_resource.png")
 var POWER
 var magic: Magic
 const COOLDOWN = 1
@@ -27,7 +26,7 @@ func _process(delta: float) -> void:
 	timer.start()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if !body.has_method('_take_damage') || body.name == magic.caster.name :
+	if !body.has_method('_set_move_speed') || body.name == magic.caster.name :
 		return
-	body._take_damage(POWER)
+	body._set_move_speed(body.move_speed - magic.power)
 	queue_free()

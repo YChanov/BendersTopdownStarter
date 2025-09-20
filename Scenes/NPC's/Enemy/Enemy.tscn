@@ -143,7 +143,6 @@ script = ExtResource("21_mks5l")
 script = ExtResource("24_pg8mu")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-visible = false
 offset_left = -14.0
 offset_top = -9.5
 offset_right = -11.0
