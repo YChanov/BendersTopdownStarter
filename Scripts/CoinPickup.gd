@@ -7,6 +7,7 @@ var time_passed = 0
 var initial_position := Vector2.ZERO
 @export var amplitude := 3.0
 @export var frequency := 4.0
+@export var item: InvItem
 
 func _ready():
 	initial_position = position
@@ -23,6 +24,6 @@ func body_hover(delta):
 #Get picked up by our player
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
-		GameManager.add_wood(value)
+		body.collect(item)
 		AudioManager.play_sound(AudioManager.COIN_PICK, 0, -10)
 		queue_free()

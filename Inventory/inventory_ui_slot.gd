@@ -5,7 +5,7 @@ extends Panel
 
 func update(slot: InvSlot):
 	var item = slot.item
-	if !item :
+	if !item || !slot.amount:
 		item_visual.visible = false
 		label.text = ""
 	else :
