@@ -2,13 +2,11 @@ extends Keyword
 class_name fire
 
 const WOOD_RESOURCE = preload("res://Art/wood_resource.png")
-var POWER
 var magic: Magic
 const COOLDOWN = 1
 @onready var timer: Timer = $Timer
 
 func create(newMagic: Magic):
-	POWER = newMagic.power
 	magic = newMagic
 	
 var enemies : Dictionary
@@ -21,13 +19,12 @@ func _process(delta: float) -> void:
 		var enemy = enemies[key]
 		if !enemy || !enemy.has_method('_take_damage'): 
 			continue
-		enemy._take_damage(POWER)
-		print('damage done')
+		enemy._take_damage(magic.power)
 	in_cooldow = true
 	timer.start()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if !body.has_method('_take_damage') || body.name == magic.caster.name :
 		return
-	body._take_damage(POWER)
-	queue_free()
+	body._take_damage(magic.power)
+	#queue_free()

@@ -16,11 +16,5 @@ func _ready() -> void:
 	pause_menu.visible = false
 	
 func _process(_delta):
-	
-
-	slime_label.text = "Slime: " + "%d" % GameManager.slime
-	wood_label.text = "Wood: " + "%d" % GameManager.wood
-	metal_label.text = "Metal: " + "%d" % GameManager.metal
-	road_label.text = "Road: " + "%d" % GameManager.road
 	healthbar.value = GameManager.health
 	

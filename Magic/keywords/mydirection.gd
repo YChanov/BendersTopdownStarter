@@ -11,10 +11,8 @@ func create(newMagic: Magic):
 	magic = newMagic
 	global_position = newMagic.global_position
 	mouse_pos = newMagic.get_global_mouse_position()
-	print(mouse_pos)
 	target = mouse_pos - global_position
 	target = target.normalized()
-	print(target)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

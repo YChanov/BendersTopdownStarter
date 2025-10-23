@@ -28,7 +28,9 @@ func _process(delta: float) -> void:
 		return
 
 func hasEnough() -> bool:
-	return GameManager.slime > 0 && GameManager.wood > 0
+	return false
+	pass
+	#return GameManager.slime > 0 && GameManager.wood > 0
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('Player') :

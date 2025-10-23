@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt7qe85lr8lqj"]
+[gd_scene load_steps=6 format=3 uid="uid://bt7qe85lr8lqj"]
 
 [ext_resource type="Texture2D" uid="uid://bvvnjl0pmt0e3" path="res://Art/slime_resource.png" id="1_3yq4k"]
 [ext_resource type="Script" path="res://Scripts/SlimePickup.gd" id="2_mfdvv"]
+[ext_resource type="Resource" uid="uid://c7skjdcbimonh" path="res://Inventory/items/slime_item.tres" id="3_eayyv"]
 [ext_resource type="Texture2D" uid="uid://dyb5iqfj3tmwj" path="res://Art/Sprites/light.png" id="3_iwutt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ea2ve"]
@@ -13,6 +14,7 @@ rotation = -0.000358462
 scale = Vector2(0.406698, 0.406698)
 texture = ExtResource("1_3yq4k")
 script = ExtResource("2_mfdvv")
+item = ExtResource("3_eayyv")
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -8,6 +8,7 @@ class_name PlayerMain
 @export var magic1: Magic
 @export var magic2: Magic
 @onready var river: TileMapLayer = $"../Scene/river"
+@export var inv: Inv
 
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
@@ -44,6 +45,7 @@ const BREATH_INTERVAL = 0.5
 var breath_time: float = BREATH_INTERVAL
 var target_position : Vector2i = Vector2i.ZERO
 func RoadOverlay() :
+	return
 	if GameManager.road <= 0:
 		tile_overlay.visible = false
 		toggleRoadPlacement = false
@@ -120,9 +122,7 @@ func PutRoad():
 func _die():
 	super() #calls _die() on base-class CharacterBase
 	
-	fsm.change_state(fsm.current_state, "Die")
-	
-	
+	fsm.change_state(fsm.current_state, "Die")	
 
 var bodies : Dictionary
 func fixYSorting():
@@ -168,3 +168,7 @@ func castMagic2():
 	var clone = magic2.duplicate()
 	get_parent().get_node("Magic").add_child(clone)
 	clone.cast(self)
+
+func collect(item):
+	print(item)
+	inv.insert(item)

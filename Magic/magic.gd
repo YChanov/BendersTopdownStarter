@@ -16,6 +16,7 @@ func cast(newCaster: CharacterBase):
 	for child in get_children():
 		remove_child(child)
 		child.queue_free()
+		
 	for keyword in keywords:
 		var instance : Keyword = keyword.instantiate()
 		instance.create(self)

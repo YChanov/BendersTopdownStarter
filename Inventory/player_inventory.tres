@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=16 format=3 uid="uid://yks3n8gsasxd"]
+
+[ext_resource type="Script" path="res://Inventory/inv_slot.gd" id="2_xv18v"]
+[ext_resource type="Script" path="res://Inventory/inventory.gd" id="3_qg303"]
+[ext_resource type="Resource" uid="uid://c7skjdcbimonh" path="res://Inventory/items/slime_item.tres" id="3_s0n6n"]
+
+[sub_resource type="Resource" id="Resource_buu1w"]
+script = ExtResource("2_xv18v")
+item = ExtResource("3_s0n6n")
+amount = 5
+
+[sub_resource type="Resource" id="Resource_0jpxn"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_wdsmk"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_7pnw0"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_fpw15"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_1qscq"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_doh86"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_4gf3s"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_h552q"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_bfxbw"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_kh3e4"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_rvlk6"]
+script = ExtResource("2_xv18v")
+amount = 0
+
+[resource]
+script = ExtResource("3_qg303")
+slots = Array[ExtResource("2_xv18v")]([SubResource("Resource_buu1w"), SubResource("Resource_0jpxn"), SubResource("Resource_wdsmk"), SubResource("Resource_7pnw0"), SubResource("Resource_fpw15"), SubResource("Resource_1qscq"), SubResource("Resource_doh86"), SubResource("Resource_4gf3s"), SubResource("Resource_h552q"), SubResource("Resource_bfxbw"), SubResource("Resource_kh3e4"), SubResource("Resource_rvlk6")])
