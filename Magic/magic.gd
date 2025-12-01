@@ -4,7 +4,10 @@ class_name Magic
 @export var keywords : Array[PackedScene]
 @export var intensity: int = 500
 @export var power: int = 10
+@export var duration : int = 100
 @export var caster: CharacterBase
+@export var target: Vector2
+@export var cast_position: Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -12,7 +15,6 @@ func _ready() -> void:
 func cast(newCaster: CharacterBase):
 	caster = newCaster
 	global_position = caster.global_position
-	print('casting')
 	for child in get_children():
 		remove_child(child)
 		child.queue_free()

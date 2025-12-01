@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://di4uhwwdvadfc"]
+
+[ext_resource type="Script" path="res://Magic/keywords/explode.gd" id="1_82ckb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hbme"]
+radius = 25.02
+
+[node name="Explode" type="Node2D"]
+script = ExtResource("1_82ckb")
+
+[node name="detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+shape = SubResource("CircleShape2D_6hbme")
+
+[connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
