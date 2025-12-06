@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://dctrchsfy58k1"]
+
+[ext_resource type="Script" path="res://Magic/keywords/keyword_ui.gd" id="1_3kub2"]
+
+[node name="keyword_size" type="ReferenceRect"]
+offset_right = 320.0
+offset_bottom = 150.0
+size_flags_vertical = 3
+border_color = Color(0.417687, 0.52749, 0.784524, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("1_3kub2")
+
+[node name="keyword_name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="remove_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -15.5
+offset_right = -2.0
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Remove"
+
+[node name="add_1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -83.0
+offset_top = 28.0
+offset_bottom = 59.0
+grow_horizontal = 0
+text = "Add to #1"
+
+[node name="add_2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -60.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Add to #2"
+
+[connection signal="pressed" from="remove_btn" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="add_1" to="." method="_on_add_1_pressed"]
+[connection signal="pressed" from="add_2" to="." method="_on_add_2_pressed"]

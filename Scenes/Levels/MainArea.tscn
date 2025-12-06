@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://cfpefi3fgamap" path="res://Scenes/environment.tscn" id="2_ed8et"]
 [ext_resource type="PackedScene" uid="uid://dwqrat3bud8ij" path="res://Scenes/Interactables/FactoryRoad.tscn" id="3_10ytb"]
-[ext_resource type="PackedScene" uid="uid://c3glgx3bieuyh" path="res://Magic/keywords/mydirection.tscn" id="4_ckcrf"]
+[ext_resource type="PackedScene" uid="uid://c3glgx3bieuyh" path="res://Magic/keywords/move.tscn" id="4_ckcrf"]
 [ext_resource type="PackedScene" uid="uid://cgxgtdpi38vj1" path="res://Scenes/Interactables/teleporter.tscn" id="4_hri5c"]
 [ext_resource type="PackedScene" uid="uid://dc2dix8onc2fc" path="res://generated_level.tscn" id="5_grttd"]
 [ext_resource type="TileSet" uid="uid://dq35v86c1r304" path="res://Art/TileMapBreath.tres" id="5_qwesu"]
+[ext_resource type="PackedScene" uid="uid://c7cv55m833g42" path="res://Magic/keywords/teleport.tscn" id="6_md40q"]
 [ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="9_bn2i2"]
 [ext_resource type="PackedScene" uid="uid://bvo8oinf2kxiy" path="res://Scenes/Interactables/tree.tscn" id="10_jj3sk"]
 [ext_resource type="PackedScene" uid="uid://fbf74j6q1vxe" path="res://Scenes/Interactables/Spawner.tscn" id="11_7rqc0"]
@@ -17,17 +18,16 @@
 [ext_resource type="Script" path="res://Scripts/tile_map_fixer.gd" id="18_ilyua"]
 [ext_resource type="PackedScene" uid="uid://dv5h01j1yg6py" path="res://Scenes/Interactables/SpawnerBig.tscn" id="18_q6e4f"]
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
+[ext_resource type="PackedScene" uid="uid://b2rtk4p5ronfn" path="res://Magic/station/MagicStation.tscn" id="21_prg35"]
 [ext_resource type="PackedScene" uid="uid://ceoo6gamb4olk" path="res://Scenes/Interactables/Area_Blocker.tscn" id="22_4ra58"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]
 [ext_resource type="PackedScene" uid="uid://dtw3a3shc44pj" path="res://Scenes/NPC's/Grandma/GrandmaShip.tscn" id="24_6ww4f"]
 [ext_resource type="PackedScene" uid="uid://b3bqped2b2mbo" path="res://Scenes/TileMaps/bottom.tscn" id="24_j8gfn"]
-[ext_resource type="PackedScene" uid="uid://eh8614jtc5wp" path="res://Magic/magic.tscn" id="25_2hug7"]
 [ext_resource type="PackedScene" uid="uid://bdps25y4imxjr" path="res://Scenes/TileMaps/river.tscn" id="25_pyu3y"]
 [ext_resource type="PackedScene" uid="uid://bb257p1fkhan8" path="res://Magic/keywords/fire.tscn" id="26_40hlx"]
 [ext_resource type="PackedScene" uid="uid://cbftp6np1nyni" path="res://Scenes/TileMaps/ground.tscn" id="26_aa375"]
 [ext_resource type="PackedScene" uid="uid://vmjfhat8r0wg" path="res://Scenes/TileMaps/grass.tscn" id="27_qfpc6"]
-[ext_resource type="Script" path="res://Magic/magic.gd" id="28_rgtrc"]
 [ext_resource type="PackedScene" uid="uid://bkul5up76pdr4" path="res://Magic/keywords/mud.tscn" id="29_yqt3x"]
 [ext_resource type="PackedScene" uid="uid://di4uhwwdvadfc" path="res://Magic/keywords/explode.tscn" id="30_t06gg"]
 
@@ -46,11 +46,10 @@ y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
-[node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers", "magic1", "magic2") groups=["Persist"] instance=ExtResource("1_8obwv")]
-position = Vector2(-7.54413, -2.04163)
+[node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers") groups=["Persist"] instance=ExtResource("1_8obwv")]
+position = Vector2(-283, -189)
 tilemap_layers = [NodePath("../Scene/grass"), NodePath("../Scene/ground"), NodePath("../Scene/river"), NodePath("../Scene/bottom")]
-magic1 = NodePath("../Magic/Magic")
-magic2 = NodePath("../Magic/Magic3")
+keywords = Array[PackedScene]([ExtResource("30_t06gg"), ExtResource("26_40hlx"), ExtResource("4_ckcrf"), ExtResource("29_yqt3x"), ExtResource("6_md40q")])
 
 [node name="Doom" parent="." instance=ExtResource("2_ed8et")]
 
@@ -318,6 +317,9 @@ position = Vector2(944, 1613)
 [node name="OneTimeSpawner22" parent="Interactables" instance=ExtResource("11_7rqc0")]
 position = Vector2(-932, 1101)
 
+[node name="MagicStation" parent="Interactables" instance=ExtResource("21_prg35")]
+position = Vector2(-474, -422)
+
 [node name="Obstacles" type="Node" parent="."]
 
 [node name="Generated" parent="Obstacles" instance=ExtResource("5_grttd")]
@@ -343,19 +345,6 @@ position = Vector2(3146.73, -3309.34)
 rotation = 1.5708
 
 [node name="Magic" type="Node" parent="."]
-
-[node name="Magic" parent="Magic" instance=ExtResource("25_2hug7")]
-position = Vector2(-7.54413, -2.04163)
-keywords = Array[PackedScene]([ExtResource("26_40hlx"), ExtResource("4_ckcrf")])
-
-[node name="Magic2" type="Node2D" parent="Magic"]
-script = ExtResource("28_rgtrc")
-keywords = Array[PackedScene]([ExtResource("29_yqt3x"), ExtResource("4_ckcrf")])
-
-[node name="Magic3" type="Node2D" parent="Magic" node_paths=PackedStringArray("caster")]
-script = ExtResource("28_rgtrc")
-keywords = Array[PackedScene]([ExtResource("26_40hlx"), ExtResource("4_ckcrf"), ExtResource("30_t06gg")])
-caster = NodePath("../../Player")
 
 [connection signal="body_entered" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_exited"]

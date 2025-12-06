@@ -1,0 +1,139 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2rtk4p5ronfn"]
+
+[ext_resource type="Script" path="res://Magic/station/magic_station.gd" id="1_rh2cv"]
+[ext_resource type="Texture2D" uid="uid://wihbjxgggnhy" path="res://Art/magic_station.webp" id="1_yj8vb"]
+[ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="3_lga8b"]
+[ext_resource type="PackedScene" uid="uid://dctrchsfy58k1" path="res://Magic/keywords/keyword_ui.tscn" id="4_kgp45"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f83gv"]
+radius = 213.021
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2sm3j"]
+radius = 144.779
+
+[node name="MagicStation" type="Node2D"]
+script = ExtResource("1_rh2cv")
+
+[node name="PointLight2D" parent="." instance=ExtResource("3_lga8b")]
+scale = Vector2(3.27344, 3.2131)
+energy = 1.73
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_yj8vb")
+
+[node name="interaction" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction"]
+shape = SubResource("CircleShape2D_f83gv")
+
+[node name="body" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+shape = SubResource("CircleShape2D_2sm3j")
+
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Layout" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="ColorRect" parent="UI/Layout"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25098, 0.25098, 0.25098, 0.560784)
+
+[node name="keywords" type="VBoxContainer" parent="UI/Layout"]
+layout_mode = 1
+offset_left = 640.0
+offset_right = 1087.0
+offset_bottom = 640.0
+
+[node name="Magic1" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 640.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="UI/Magic1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.292729, 0.584708, 0.639064, 1)
+border_width = 5.0
+editor_only = false
+
+[node name="name" type="Label" parent="UI/Magic1"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Magic #1"
+horizontal_alignment = 1
+
+[node name="keyword_container" type="VBoxContainer" parent="UI/Magic1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="keyword_size" parent="UI/Magic1/keyword_container" instance=ExtResource("4_kgp45")]
+layout_mode = 2
+
+[node name="Magic2" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 320.0
+offset_right = 640.0
+offset_bottom = 640.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="UI/Magic2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.292729, 0.584708, 0.639064, 1)
+border_width = 5.0
+editor_only = false
+
+[node name="name" type="Label" parent="UI/Magic2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Magic #2"
+horizontal_alignment = 1
+
+[node name="keyword_container" type="VBoxContainer" parent="UI/Magic2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="keyword_size" parent="UI/Magic2/keyword_container" instance=ExtResource("4_kgp45")]
+layout_mode = 2
+
+[connection signal="body_entered" from="interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_exited" from="interaction" to="." method="_on_interaction_body_exited"]

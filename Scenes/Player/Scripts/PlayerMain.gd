@@ -7,9 +7,10 @@ class_name PlayerMain
 @export var tilemap_layers : Array[TileMapLayer] = []
 @export var magic1: Magic
 @export var magic2: Magic
+@export var keywords: Array[PackedScene]
 @onready var river: TileMapLayer = $"../Scene/river"
 @export var inv: Inv
-
+const MAGIC = preload("res://Magic/magic.tscn")
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
 
@@ -26,6 +27,9 @@ var last_direction : Vector2 = Vector2(1, 0)
 #or spread out over our states in the finite-state-manager, this class is almost empty 
 func _ready() -> void:
 	super._ready()
+	magic1 = MAGIC.instantiate()
+	magic2 = MAGIC.instantiate()
+	
 	if GameManager.t_group :
 		var tele = get_tree().get_first_node_in_group(GameManager.t_group)
 		position = tele.position if tele else position
@@ -131,7 +135,9 @@ func fixYSorting():
 		
 	for index in bodies:
 		var y_body = bodies[index]
+		print(y_body.get_instance_id())
 		y_body.z_index = z_index - 1 if y_body.position.y < position.y else z_index + 1
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('Player'):
 		return

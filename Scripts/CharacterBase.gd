@@ -61,7 +61,6 @@ func _take_damage(amount):
 	health -= amount
 	if healthbar :
 		healthbar.value = health
-	print(health)
 	if(health <= 0):
 		_die()
 

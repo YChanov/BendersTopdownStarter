@@ -6,3 +6,6 @@ func create(magic: Magic):
 	
 func exit(magic: Magic):
 	pass
+	
+func get_keyword_name():
+	return "Keyword"

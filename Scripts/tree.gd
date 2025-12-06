@@ -32,6 +32,7 @@ func _take_damage(_damage : int):
 		label.text = "Punch the tree (LMB)\nto get wood"
 	if drop == null :
 		return
+	print('ouch tree')
 	var new_drop = drop.instantiate()
 	new_drop.initial_position = position;
 	var rand_drop_position_x = randi_range(0, 64) * randi_range(-1,1)

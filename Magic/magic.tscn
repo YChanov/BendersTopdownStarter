@@ -3,6 +3,10 @@
 [ext_resource type="Script" path="res://Magic/magic.gd" id="1_o4i1k"]
 
 [node name="Magic" type="Node2D"]
-z_index = 2
+z_index = 1
 y_sort_enabled = true
 script = ExtResource("1_o4i1k")
+
+[node name="sprite" type="Sprite2D" parent="."]
+
+[node name="keywords" type="Node2D" parent="."]

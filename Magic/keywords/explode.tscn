@@ -3,9 +3,11 @@
 [ext_resource type="Script" path="res://Magic/keywords/explode.gd" id="1_82ckb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6hbme"]
-radius = 25.02
+radius = 45.0
 
 [node name="Explode" type="Node2D"]
+z_index = -1
+y_sort_enabled = true
 script = ExtResource("1_82ckb")
 
 [node name="detection" type="Area2D" parent="."]

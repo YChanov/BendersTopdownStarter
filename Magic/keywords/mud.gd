@@ -10,6 +10,9 @@ func create(newMagic: Magic):
 	
 var enemies : Dictionary
 var in_cooldow := false
+
+func get_keyword_name():
+	return "Slow"
 	
 func _process(delta: float) -> void:
 	if in_cooldow:
