@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PlayerMain.gd" id="1_y5oq4"]
 [ext_resource type="Texture2D" uid="uid://dotljha74t3mi" path="res://Art/Sprites/MC_attack.png" id="2_1sbc4"]
-[ext_resource type="Script" path="res://Magic/keywords/keyword.gd" id="2_csi7o"]
 [ext_resource type="Resource" uid="uid://yks3n8gsasxd" path="res://Inventory/player_inventory.tres" id="2_gwkj4"]
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="2_lffr6"]
 [ext_resource type="Texture2D" uid="uid://b7ktdmlpcsle5" path="res://Art/Sprites/MC_death.png" id="3_nrgsn"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://73s7ih8tyw42" path="res://Art/Sprites/MC_running.png" id="5_l8u4i"]
 [ext_resource type="PackedScene" uid="uid://cx8kkqawojm0m" path="res://Scenes/Misc/SceneSettings.tscn" id="15_bi65p"]
 [ext_resource type="PackedScene" uid="uid://br2lrowft8p6d" path="res://Inventory/Inventory.tscn" id="16_75ykb"]
+[ext_resource type="PackedScene" uid="uid://b6xb8nhlqtuhf" path="res://Scenes/ScoreTracker.tscn" id="17_vq52n"]
 [ext_resource type="Script" path="res://Scripts/FSM/FiniteStateMachine.gd" id="21_54cjv"]
 [ext_resource type="PackedScene" uid="uid://b82yimbxiflml" path="res://Art/Particles/hit_particles.tscn" id="21_gooki"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/States/PlayerIdleState.gd" id="26_28u22"]
@@ -500,7 +500,6 @@ texture_filter = 1
 floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("1_y5oq4")
-keywords = Array[ExtResource("2_csi7o")]([null, null, null])
 inv = ExtResource("2_gwkj4")
 sprite = NodePath("AnimatedSprite2D")
 healthbar = NodePath("ProgressBar")
@@ -565,6 +564,7 @@ animator = NodePath("../../AnimationPlayer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
+zoom = Vector2(0.5, 0.5)
 position_smoothing_speed = 15.0
 
 [node name="hit_particle_blood" type="GPUParticles2D" parent="."]
@@ -627,6 +627,8 @@ You will wake up after having crawled back to your safe place!
 Try your best again to reach the safe city!"
 label_settings = SubResource("LabelSettings_8lw8c")
 horizontal_alignment = 1
+
+[node name="Score_tracker_layer" parent="." instance=ExtResource("17_vq52n")]
 
 [connection signal="body_entered" from="AnimatedSprite2D/Hitboxes/Punch_Hitbox" to="FSM/Attacking" method="_on_hitbox_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

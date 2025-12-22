@@ -32,9 +32,12 @@ AudioManager="*res://Scripts/Managers/AudioManager.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=640
+window/size/viewport_width=640
+window/size/viewport_height=360
 window/size/mode=2
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
 [dotnet]
@@ -139,7 +142,7 @@ Inv={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_filter="Nearest"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

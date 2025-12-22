@@ -6,7 +6,6 @@ extends Control
 @export var road_label : Label
 @export var healthbar : ProgressBar
 
-@onready var game_screens: GameScreens = $GameScreens
 @onready var pause_menu: Control = $PauseMenu
 
 

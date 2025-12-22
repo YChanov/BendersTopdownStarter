@@ -4,7 +4,8 @@ class_name PlayerMain
 @onready var fsm = $FSM as FiniteStateMachine
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 
-@export var tilemap_layers : Array[TileMapLayer] = []
+@export var tilemap_grass : TileMapLayer
+@export var tilemap_roads : TileMapLayer
 @export var magic1: Magic
 @export var magic2: Magic
 @export var keywords: Array[PackedScene]
@@ -92,13 +93,14 @@ func TileHandle(delta: float):
 
 func GetCurrentTileSourceId(is_road : bool = false):
 	var tile_map = getParentTileMap(is_road)
+	if !tile_map:
+		return
 	var current_position = tile_map.local_to_map(position)
 	var tile_source_id = tile_map.get_cell_source_id(current_position)
 	return tile_source_id
 
 func getParentTileMap(is_road : bool = false) -> TileMapLayer :
-	var basic_tile_map = get_parent().get_node("Scene/grass")
-	return basic_tile_map if !is_road else get_parent().get_node("Scene/TileMapRoads")
+	return tilemap_grass if !is_road else tilemap_roads
 	
 func PutRoad():
 	if Input.is_action_pressed("Enter") :
@@ -106,8 +108,8 @@ func PutRoad():
 		if !road_amount:
 			return
 			
-		var tile_map_base : TileMapLayer = get_parent().get_node("Scene/river")
-		var tile_map : TileMapLayer = get_parent().get_node("Scene/TileMapRoads")
+		var tile_map_base : TileMapLayer = tilemap_roads
+		var tile_map : TileMapLayer = tilemap_roads
 		if tile_map.get_cell_source_id(target_position) == ROADS_SOURCE_ID:
 			return
 			
@@ -161,9 +163,18 @@ func castMagic1():
 		return
 	last_cast1 = now
 	var clone = magic1.duplicate()
-	get_parent().get_node("Magic").add_child(clone)
+	get_magic_node().add_child(clone)
 	clone.cast(self)
-	
+
+func get_magic_node() -> Node:
+	var node = get_parent().get_node("Magic")
+	if node:
+		return node
+	node = Node.new()
+	node.name = "Magic"
+	get_parent().add_child(node)
+	return node
+
 var last_cast2: float
 func castMagic2():
 	if !magic2 || !Input.is_action_just_pressed("Magic2") :
@@ -172,7 +183,7 @@ func castMagic2():
 		return
 	last_cast2 = now
 	var clone = magic2.duplicate()
-	get_parent().get_node("Magic").add_child(clone)
+	get_magic_node().add_child(clone)
 	clone.cast(self)
 
 func collect(item):

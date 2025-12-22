@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cbqlus1d5b4dc"]
+[gd_scene load_steps=34 format=4 uid="uid://cbqlus1d5b4dc"]
 
 [ext_resource type="PackedScene" uid="uid://bvg5dny32iw0x" path="res://Scenes/Player/Player.tscn" id="1_8obwv"]
 [ext_resource type="PackedScene" uid="uid://cfpefi3fgamap" path="res://Scenes/environment.tscn" id="2_ed8et"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c2vcuyjskshye" path="res://Scenes/light_big.tscn" id="19_gnlt0"]
 [ext_resource type="PackedScene" uid="uid://b2rtk4p5ronfn" path="res://Magic/station/MagicStation.tscn" id="21_prg35"]
 [ext_resource type="PackedScene" uid="uid://ceoo6gamb4olk" path="res://Scenes/Interactables/Area_Blocker.tscn" id="22_4ra58"]
+[ext_resource type="PackedScene" uid="uid://csnoq1x5y2d4w" path="res://Scenes/Levels/dungeon.tscn" id="22_22ggi"]
 [ext_resource type="FontFile" uid="uid://ci60w53hdbiqe" path="res://Art/Fonts/m3x6.ttf" id="22_xjdqx"]
 [ext_resource type="PackedScene" uid="uid://dc4wqa1eb2vwj" path="res://Scenes/light_small.tscn" id="23_m1haj"]
 [ext_resource type="PackedScene" uid="uid://dtw3a3shc44pj" path="res://Scenes/NPC's/Grandma/GrandmaShip.tscn" id="24_6ww4f"]
@@ -46,9 +47,15 @@ y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0.269287, -2.66302)
 
-[node name="Player" parent="." node_paths=PackedStringArray("tilemap_layers") groups=["Persist"] instance=ExtResource("1_8obwv")]
+[node name="Dungeon" parent="." instance=ExtResource("22_22ggi")]
+top_level = true
+z_index = -2
+position = Vector2(-825.269, -762.337)
+noise = false
+map_size = Vector2i(67, 64)
+
+[node name="Player" parent="." groups=["Persist"] instance=ExtResource("1_8obwv")]
 position = Vector2(-283, -189)
-tilemap_layers = [NodePath("../Scene/grass"), NodePath("../Scene/ground"), NodePath("../Scene/river"), NodePath("../Scene/bottom")]
 keywords = Array[PackedScene]([ExtResource("30_t06gg"), ExtResource("26_40hlx"), ExtResource("4_ckcrf"), ExtResource("29_yqt3x"), ExtResource("6_md40q")])
 
 [node name="Doom" parent="." instance=ExtResource("2_ed8et")]
@@ -105,11 +112,11 @@ label_settings = ExtResource("9_bn2i2")
 [node name="PointLight2D" parent="Scene/Welcome Label" instance=ExtResource("19_gnlt0")]
 position = Vector2(107, 97)
 
-[node name="Area2D" type="Area2D" parent="Scene"]
+[node name="TutorialArea" type="Area2D" parent="Scene"]
 position = Vector2(4, -56)
 script = ExtResource("15_3g731")
 
-[node name="Label" type="Label" parent="Scene/Area2D"]
+[node name="Label" type="Label" parent="Scene/TutorialArea"]
 offset_left = -187.0
 offset_top = -196.0
 offset_right = -117.0
@@ -117,11 +124,11 @@ offset_bottom = -167.0
 text = "Controls"
 label_settings = SubResource("LabelSettings_eqc1o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene/TutorialArea"]
 position = Vector2(-128, -114.668)
 shape = SubResource("RectangleShape2D_lxl76")
 
-[node name="PointLight2D" parent="Scene/Area2D" instance=ExtResource("23_m1haj")]
+[node name="PointLight2D" parent="Scene/TutorialArea" instance=ExtResource("23_m1haj")]
 position = Vector2(-166, -174)
 scale = Vector2(0.503908, 0.494619)
 
@@ -346,7 +353,7 @@ rotation = 1.5708
 
 [node name="Magic" type="Node" parent="."]
 
-[connection signal="body_entered" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Scene/Area2D" to="Scene/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Scene/TutorialArea" to="Scene/TutorialArea" method="_on_body_entered"]
+[connection signal="body_exited" from="Scene/TutorialArea" to="Scene/TutorialArea" method="_on_body_exited"]
 
 [editable path="Scene/AreaBlocker5"]
