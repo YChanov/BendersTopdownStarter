@@ -1,7 +1,8 @@
-@tool 
+#@tool 
 extends Node2D
 
-@export var frequency : float = 0.15 :
+const INVISIBLE_BARRIER = preload("res://GeneratedEnvironment/InvisibleBarrier.tscn")
+@export var frequency : float = 0.06 :
 	set(v):
 		frequency = v
 		afterSet()
@@ -27,6 +28,39 @@ extends Node2D
 		
 func _ready() -> void:
 	drawBackground()
+	setBorders()
+	
+func setBorders():
+	if !tilemap:
+		return
+	var tile_size = tilemap.tile_set.tile_size
+	tile_size = Vector2(tile_size.x, tile_size.y)
+	var origin = Vector2.ZERO
+	var end = Vector2(map_size.x, map_size.y) * tile_size
+	
+	var left_border = INVISIBLE_BARRIER.instantiate()
+	left_border.A = origin
+	left_border.position = origin
+	left_border.B = Vector2(origin.x, end.y)
+	add_child(left_border)
+	
+	var top_border = INVISIBLE_BARRIER.instantiate()
+	top_border.A = origin
+	top_border.position = origin
+	top_border.B = Vector2(end.x, origin.y)
+	add_child(top_border)
+	
+	var right_border = INVISIBLE_BARRIER.instantiate()
+	right_border.A = Vector2(end.x, origin.y)
+	right_border.position = end
+	right_border.B = end
+	add_child(right_border)
+	
+	var bottom_border = INVISIBLE_BARRIER.instantiate()
+	bottom_border.A = Vector2(origin.x, end.y)
+	bottom_border.position = end
+	bottom_border.B = end
+	add_child(bottom_border)
 
 func drawBackground() -> void:
 	if !tilemap or !tilemap.tile_set:
@@ -59,6 +93,8 @@ func _get_atlas_coords(noise_value : float, grid_size: Vector2):
 		value = value + chunk_size
 		tile_x = tile_x + 1
 	return Vector2i(tile_x, 0)
+	
 func afterSet() -> void :
 	drawBackground()
+	setBorders()
 	notify_property_list_changed()

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://csvhe838gt4b7"]
+
+[ext_resource type="Script" path="res://GeneratedEnvironment/invisible_barrier.gd" id="1_mx5ld"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nhlff"]
+b = Vector2(0, 4096)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_mx5ld")
+A = Vector2(0, 50)
+B = Vector2(0, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_nhlff")

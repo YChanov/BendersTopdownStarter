@@ -51,6 +51,7 @@ position = Vector2(0.269287, -2.66302)
 top_level = true
 z_index = -2
 position = Vector2(-825.269, -762.337)
+frequency = 0.15
 noise = false
 map_size = Vector2i(67, 64)
 

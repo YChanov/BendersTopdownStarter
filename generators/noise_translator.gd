@@ -2,6 +2,15 @@
 extends Node
 
 @export_group("Translator configuration")
+@export var obstacles : Array[PackedScene] :
+	set(v):
+		obstacles = v 
+		notify_property_list_changed()
+@export var obstacle_layer_index : int = 0
+@export var obstacle_chance : int = 2 :
+	set(v):
+		obstacle_chance = v
+		notify_property_list_changed()
 @export var noise_map : TileMapLayer :
 	set(v):
 		noise_map = v
@@ -24,6 +33,16 @@ extends Node
 func _ready() -> void:
 	translate()
 	
+func place_obstacles(position : Vector2) -> void:
+	var place = randf() < (obstacle_chance * 0.01)
+	if !place:
+		return
+	var to_place = obstacles[randi_range(0, obstacles.size() - 1)]
+	var instance = to_place.instantiate()
+	instance.position = position * 64
+	get_tree().root.add_child.call_deferred(instance)
+	print('placed ', position)
+	
 func translate() -> void:
 	if !noise_map or !target_map_layers.size():
 		return
@@ -39,6 +58,9 @@ func translate() -> void:
 		for y in range(start.y, end.y):
 			var noise_cell = noise_map.get_cell_atlas_coords(Vector2i(x,y))
 			terrains[noise_cell.x].push_back(Vector2i(x,y))
+			var target_place = noise_map.to_global(Vector2(x,y))
+			if noise_cell.x == obstacle_layer_index:
+				place_obstacles(target_place)
 	
 	for map in target_map_layers:
 		map.clear()
@@ -46,6 +68,7 @@ func translate() -> void:
 		var terrain_layer = terrains[index]
 		if !terrain_layer.size():
 			continue
+			
 		var tilemap : TileMapLayer = target_map_layers[index]
 		var terrain_index : int = terrain_index_layers[index]
 		tilemap.set_cells_terrain_connect(terrain_layer, 0, terrain_index)
