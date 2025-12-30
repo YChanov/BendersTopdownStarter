@@ -1,7 +1,8 @@
-#@tool
+@tool
 extends Node
 
 @export_group("Translator configuration")
+@export var root_node : Node2D
 @export var obstacles : Array[PackedScene] :
 	set(v):
 		obstacles = v 
@@ -33,10 +34,12 @@ extends Node
 @export var terrain_set : int = 0:
 	set(v):
 		terrain_set = v
+		translate()
 		notify_property_list_changed()
 @export var terrain_index_layers : Array[int] :
 	set(v):
 		terrain_index_layers = v
+		translate()
 		notify_property_list_changed()
 
 func _ready() -> void:
@@ -49,7 +52,7 @@ func place_obstacles(position : Vector2) -> void:
 	var to_place = obstacles[randi_range(0, obstacles.size() - 1)]
 	var instance = to_place.instantiate()
 	instance.position = position * 64
-	get_tree().root.add_child.call_deferred(instance)
+	root_node.add_child.call_deferred(instance)
 	
 func place_enemies(position : Vector2) -> void:
 	var place = randf() < (enemies_chance * 0.01)
@@ -58,7 +61,7 @@ func place_enemies(position : Vector2) -> void:
 	var to_place = enemies[randi_range(0, enemies.size() - 1)]
 	var instance = to_place.instantiate()
 	instance.position = position * 64
-	get_tree().root.add_child.call_deferred(instance)
+	root_node.add_child.call_deferred(instance)
 	
 func translate() -> void:
 	if !noise_map or !target_map_layers.size():
@@ -66,7 +69,8 @@ func translate() -> void:
 	var rect := noise_map.get_used_rect()
 	var start := rect.position
 	var end := rect.position + rect.size
-
+	for child in root_node.get_children():
+		child.queue_free()   
 	var terrains = []
 	terrains.resize(terrain_index_layers.size())
 	for i in terrain_index_layers.size():
