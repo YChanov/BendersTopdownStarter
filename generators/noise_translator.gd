@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node
 
 @export_group("Translator configuration")
@@ -6,7 +6,16 @@ extends Node
 	set(v):
 		obstacles = v 
 		notify_property_list_changed()
-@export var obstacle_layer_index : int = 0
+@export var enemies : Array[PackedScene] :
+	set(v):
+		enemies = v 
+		notify_property_list_changed()
+@export var obstacle_layer_indexes : Array[int] = []
+@export var enemy_layer_indexes : Array[int] = []
+@export var enemies_chance : int = 2 :
+	set(v):
+		enemies_chance = v
+		notify_property_list_changed()
 @export var obstacle_chance : int = 2 :
 	set(v):
 		obstacle_chance = v
@@ -41,7 +50,15 @@ func place_obstacles(position : Vector2) -> void:
 	var instance = to_place.instantiate()
 	instance.position = position * 64
 	get_tree().root.add_child.call_deferred(instance)
-	print('placed ', position)
+	
+func place_enemies(position : Vector2) -> void:
+	var place = randf() < (enemies_chance * 0.01)
+	if !place || !enemies.size():
+		return
+	var to_place = enemies[randi_range(0, enemies.size() - 1)]
+	var instance = to_place.instantiate()
+	instance.position = position * 64
+	get_tree().root.add_child.call_deferred(instance)
 	
 func translate() -> void:
 	if !noise_map or !target_map_layers.size():
@@ -59,8 +76,10 @@ func translate() -> void:
 			var noise_cell = noise_map.get_cell_atlas_coords(Vector2i(x,y))
 			terrains[noise_cell.x].push_back(Vector2i(x,y))
 			var target_place = noise_map.to_global(Vector2(x,y))
-			if noise_cell.x == obstacle_layer_index:
+			if obstacle_layer_indexes.find(noise_cell.x) != -1:
 				place_obstacles(target_place)
+			if enemy_layer_indexes.find(noise_cell.x) != -1:
+				place_enemies(target_place)
 	
 	for map in target_map_layers:
 		map.clear()

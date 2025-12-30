@@ -4,19 +4,21 @@ class_name PlayerMain
 @onready var fsm = $FSM as FiniteStateMachine
 @export var enemy_scene:= preload("res://Scenes/NPC's/Enemy/Enemy.tscn")
 
+@export var fix_sorting := true
+@export var oxygen_atmosphere := false
 @export var tilemap_grass : TileMapLayer
 @export var tilemap_roads : TileMapLayer
 @export var magic1: Magic
 @export var magic2: Magic
 @export var keywords: Array[PackedScene]
-@onready var river: TileMapLayer = $"../Scene/river"
+@export var river: TileMapLayer
 @export var inv: Inv
 const MAGIC = preload("res://Magic/magic.tscn")
 const BREATHABLE_SOURCE_ID = 2
 const ROADS_SOURCE_ID = 4
 
 @onready var tile_overlay: Node2D = $TileOverlay
-@onready var tile_map_roads: TileMapLayer = $"../Scene/TileMapRoads"
+@export var tile_map_roads: TileMapLayer
 
 @onready var death_message_label: Label = $DeathMessageLabel
 
@@ -43,7 +45,8 @@ func _process(delta: float) -> void:
 	RoadOverlay()
 	toggleRoadPlacement && PutRoad()
 	TileHandle(delta)
-	fixYSorting()
+	if fix_sorting:
+		fixYSorting()
 	castMagic(delta)
 	
 const BREATH_INTERVAL = 0.5
@@ -71,10 +74,22 @@ func RoadOverlay() :
 	tile_overlay.global_position = real_target_position
 	
 func TileHandle(delta: float):
+	var tile_source_id = GetCurrentTileSourceId()
+	breath(delta, tile_source_id)
+	
+	if GetCurrentTileSourceId(true) == 4 :
+		GameManager.set_movement_speed(2.0)
+	elif river and river.get_cell_source_id(river.local_to_map(position)) != -1 :
+		GameManager.set_movement_speed(0.5)
+	else :
+		GameManager.reset_movement_speed()
+		
+func breath(delta, tile_source_id):
+	if oxygen_atmosphere:
+		return
 	breath_time -= delta
 	if breath_time > 0:
 		return
-	var tile_source_id = GetCurrentTileSourceId()
 		
 	if tile_source_id != 2:
 		if self.health > 0:
@@ -84,13 +99,6 @@ func TileHandle(delta: float):
 			self._take_damage(-15)
 	breath_time = BREATH_INTERVAL
 	
-	if GetCurrentTileSourceId(true) == 4 :
-		GameManager.set_movement_speed(2.0)
-	elif river and river.get_cell_source_id(river.local_to_map(position)) != -1 :
-		GameManager.set_movement_speed(0.5)
-	else :
-		GameManager.reset_movement_speed()
-
 func GetCurrentTileSourceId(is_road : bool = false):
 	var tile_map = getParentTileMap(is_road)
 	if !tile_map:
